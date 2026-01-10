@@ -424,3 +424,189 @@ footer {
     box-shadow: 0 0 14px rgba(168, 85, 247, 0.65);
   }
 }
+/* Make nav work better on small screens */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(12px);
+  background: rgba(15, 23, 42, 0.9);
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  font-size: 1.05rem;
+}
+
+.nav-logo-img {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Gradient name */
+.nav-logo-text {
+  background: linear-gradient(90deg, #38bdf8, #a855f7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-dot {
+  color: #f97316;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #e5e5e5;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+/* Hero layout desktop */
+.hero {
+  max-width: 1100px;
+  margin: 40px auto 20px;
+  padding: 40px 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-content {
+  flex: 1.2;
+}
+
+.hero-image {
+  flex: 0.9;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-img {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Sections base */
+.section {
+  max-width: 900px;
+  margin: 26px auto;
+  padding: 22px 16px 26px;
+  border-radius: 18px;
+}
+
+/* Skills grid base */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 16px;
+  margin-top: 14px;
+}
+/* Tablets and below */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    margin-top: 24px;
+  }
+
+  .hero-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero-tag {
+    font-size: 0.75rem;
+  }
+
+  .profile-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .section {
+    margin: 20px 10px;
+    padding: 18px 14px 22px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .nav-container {
+    padding-inline: 10px;
+  }
+
+  .nav-logo-text {
+    font-size: 0.95rem;
+  }
+
+  .nav-links {
+    gap: 12px;
+  }
+
+  .nav-links a {
+    font-size: 0.85rem;
+  }
+
+  .hero h1 {
+    font-size: 1.7rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    padding: 14px 12px;
+  }
+}
+
+
