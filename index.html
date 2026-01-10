@@ -4,69 +4,158 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sudarshan Patil | Web Developer</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+
+  <!-- NAVBAR -->
+  <nav class="nav">
+    <div class="nav-container">
+      <div class="nav-logo">Sudarshan <span>.</span></div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <header>
-<img src="PHOTO.jpg" alt="Profile Picture" class="profile-img">
-    <h1>Sudarshan Patil</h1>
-    <p>Student | Web Developer | Firebase Enthusiast</p>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-content fade-in">
+      <p class="hero-tag">Full-Stack & MERN Developer • Firebase Enthusiast</p>
+      <h1>Hi, I'm <span>Sudarshan Patil H J</span></h1>
+      <p class="hero-subtitle">
+        Building modern web and mobile apps with clean UI, smooth UX, and real-world impact.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn primary-btn">View Projects</a>
+        <a href="#contact" class="btn ghost-btn">Contact Me</a>
+      </div>
+    </div>
+    <div class="hero-image float-in">
+      <img src="/images/PHOTO.jpg" alt="Profile Picture" class="profile-img">
+    </div>
   </header>
 
-  <section id="about">
+  <!-- ABOUT -->
+  <section id="about" class="section reveal">
     <h2>About Me</h2>
-    <p>I’m a passionate 18-year-old developer building modern web apps using HTML, CSS, JS, Firebase, and more. Currently building civic apps, productivity tools, and expanding my skills by joining Scaler School of Technology.
-    Quailified for 2nd round in BITS-PILANI internal Hackathon [S.I.H(2025)]. </p>
+    <p>
+      I'm an 18-year-old full-stack developer focused on building modern web and mobile applications using HTML, CSS, JavaScript, Tailwind CSS, Node.js, Express, React Native, MongoDB, and Firebase (MERN-stack backend).
+    </p>
+    <p>
+      I love working on civic apps, task managers, and productivity tools that solve real problems, while sharpening my fundamentals and preparing to join Scaler School of Technology.
+    </p>
   </section>
 
-  <section id="skills">
+  <!-- SKILLS -->
+  <section id="skills" class="section reveal">
     <h2>Skills</h2>
-    <ul>
-      <li>HTML, CSS, JavaScript</li>
-      <li>Firebase Auth & Firestore</li>
-      <li>Cloudinary API</li>
-      <li>Git & GitHub</li>
-    </ul>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Frontend</h3>
+        <p>HTML5, CSS3, Tailwind CSS, Vanilla JavaScript, Responsive Design</p>
+      </div>
+      <div class="skill-card">
+        <h3>Mobile</h3>
+        <p>React Native, Expo, Component-based UI, Basic State Management</p>
+      </div>
+      <div class="skill-card">
+        <h3>Backend</h3>
+        <p>Node.js, Express.js, REST APIs, JWT Auth (MERN-ready backend)</p>
+      </div>
+      <div class="skill-card">
+        <h3>Database & Cloud</h3>
+        <p>MongoDB (Mongoose), Firebase Auth, Firestore, Cloudinary API</p>
+      </div>
+      <div class="skill-card">
+        <h3>Tools</h3>
+        <p>Git, GitHub, VS Code, Render, MongoDB Atlas</p>
+      </div>
+      <div class="skill-card">
+        <h3>Languages</h3>
+        <p>JavaScript, Basic Python, Learning React</p>
+      </div>
+    </div>
   </section>
 
-  <section id="projects">
+  <!-- PROJECTS -->
+  <section id="projects" class="section reveal">
     <h2>Projects</h2>
 
-    <div class="project">
-      <h3>Civic Reporter App</h3>
-      <p>Report civic issues with login, admin panel, Cloudinary, and map integration.</p>
-      <a href="https://civic-reporter-2007.web.app" target="_blank">Live Demo</a> |
-      <a href="https://github.com/Sudarshan25092007/portfolio/blob/main/index.html" target="_blank">Source Code</a>
+    <!-- React Native Task Manager (top project) -->
+    <div class="project-card">
+      <div class="project-header">
+        <h3>ToDo App – React Native </h3>
+        <span class="project-tag">React Native • Mobile • Productivity</span>
+      </div>
+      <p>
+        A cross-platform task management app built with React Native and Expo, allowing users to add, edit, and track tasks with a clean, mobile-first interface.
+      </p>
+      <p>
+        Focused on smooth UX, simple navigation, and practical features for students and professionals to manage their daily work on the go.
+      </p>
+      <p><strong>Tech Stack:</strong> React Native, Expo, JavaScript, Async Storage (or basic local state), Component-based UI</p>
+      <div class="project-links">
+        <!-- Add your GitHub / demo links here when deployed -->
+        <!-- <a href="YOUR_RN_DEMO_LINK" target="_blank">Live Demo</a> -->
+        <!-- <a href="YOUR_RN_GITHUB_LINK" target="_blank">Source Code</a> -->
+      </div>
+    </div>
+
+    <!-- TaskFlow Web App -->
+    <div class="project-card">
+      <div class="project-header">
+        <h3>TaskFlow – Full-Stack Task Management App</h3>
+        <span class="project-tag">Full-Stack • JWT • Tailwind</span>
+      </div>
+      <p>
+        TaskFlow is a full-stack task management app that lets users create tasks with priority and due dates, and automatically organizes them into Today, Upcoming, and Backlog so they can focus on what matters most.
+      </p>
+      <p>
+        Includes JWT-based authentication, protected routes, live task counters, task filters, and a fully responsive UI with a smooth UX designed for real-world use.
+      </p>
+      <p><strong>Tech Stack:</strong> HTML5, Tailwind CSS, Vanilla JavaScript, Node.js, Express.js, MongoDB (Mongoose), JWT Auth, Render, MongoDB Atlas</p>
+      <div class="project-links">
+        <a href="https://task-flow-frontend-nb7t.onrender.com/" target="_blank">Live Demo</a>
+        <a href="https://github.com/Sudarshan25092007/TaskFlow-Full-stack-application-" target="_blank">Source Code</a>
+      </div>
+    </div>
+
+    <!-- Civic Reporter -->
+    <div class="project-card">
+      <div class="project-header">
+        <h3>Civic Reporter App</h3>
+        <span class="project-tag">Firebase • Cloudinary • Maps</span>
+      </div>
+      <p>
+        A web app to report civic issues with user authentication, admin panel, Cloudinary image uploads, and map integration for precise location reporting.
+      </p>
+      <p>
+        Built to make it easier for citizens to raise issues and for admins to manage and resolve them efficiently.
+      </p>
+      <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript, Firebase Auth, Firestore, Cloudinary, Maps API</p>
+      <div class="project-links">
+        <a href="https://civic-reporter-2007.web.app" target="_blank">Live Demo</a>
+        <a href="https://github.com/Sudarshan25092007/Civic-Reporter-App" target="_blank">Source Code</a>
+      </div>
     </div>
 
   </section>
 
-  <section id="contact">
+  <!-- CONTACT -->
+  <section id="contact" class="section reveal">
     <h2>Contact</h2>
+    <p>Open to internships, freelance projects, and collaborations.</p>
     <p>Email: <a href="mailto:ddaarrsshuu@gmail.com">ddaarrsshuu@gmail.com</a></p>
-    <p>Linked-In: <a href="https://www.linkedin.com/in/sudarshan-patil-hj259227/">Sudarshan Patil H J</a></p>
-     
   </section>
 
   <footer>
     <p>© 2025 Sudarshan Patil. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
-
-
-
-
-
-
-
