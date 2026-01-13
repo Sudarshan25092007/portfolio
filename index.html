@@ -9,26 +9,32 @@
 </head>
 <body>
 
+  <!-- 3D / animated background layer -->
+  <div id="bg-layer">
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+    <div class="bg-blob blob-3"></div>
+  </div>
+
   <!-- NAVBAR -->
   <nav class="nav">
-  <div class="nav-container">
-    <div class="nav-logo">
-      <img src="logo.jpg" alt="Logo" class="nav-logo-img">
-      <span class="nav-logo-text">Sudarshan</span><span class="nav-dot">.</span>
+    <div class="nav-container">
+      <div class="nav-logo">
+        <img src="logo.jpg" alt="Logo" class="nav-logo-img">
+        <span class="nav-logo-text">Sudarshan</span><span class="nav-dot">.</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-</nav>
-
+  </nav>
 
   <!-- HERO -->
   <header class="hero">
-    <div class="hero-content fade-in">
+    <div class="hero-content fade-in slide-from-left">
       <p class="hero-tag">Full-Stack & MERN Developer • App developer</p>
       <h1>Hi, I'm <span>Sudarshan Patil H J</span></h1>
       <p class="hero-subtitle">
@@ -39,13 +45,13 @@
         <a href="#contact" class="btn ghost-btn">Contact Me</a>
       </div>
     </div>
-    <div class="hero-image float-in">
+    <div class="hero-image float-in slide-from-right">
       <img src="PHOTO.jpg" alt="Profile Picture" class="profile-img">
     </div>
   </header>
 
   <!-- ABOUT -->
-  <section id="about" class="section reveal">
+  <section id="about" class="section reveal slide-from-left">
     <h2>About Me</h2>
     <p>
       I'm an 18-year-old full-stack developer focused on building modern web and mobile applications using HTML, CSS, JavaScript, TypeScript, Tailwind CSS, Node.js, Express, React Native, MongoDB, and Firebase (MERN-stack backend).
@@ -56,30 +62,30 @@
   </section>
 
   <!-- SKILLS -->
-  <section id="skills" class="section reveal">
+  <section id="skills" class="section reveal slide-from-right">
     <h2>Skills</h2>
     <div class="skills-grid">
-      <div class="skill-card">
+      <div class="skill-card slide-from-left">
         <h3>Frontend</h3>
         <p>HTML5, CSS3, Tailwind CSS, Vanilla JavaScript, TypeScript, Responsive Design</p>
       </div>
-      <div class="skill-card">
+      <div class="skill-card slide-from-right">
         <h3>Mobile</h3>
         <p>React Native, Expo, Component-based UI, Basic State Management</p>
       </div>
-      <div class="skill-card">
+      <div class="skill-card slide-from-left">
         <h3>Backend</h3>
         <p>Node.js, Express.js, REST APIs, JWT Auth (MERN-ready backend)</p>
       </div>
-      <div class="skill-card">
+      <div class="skill-card slide-from-right">
         <h3>Database & Cloud</h3>
         <p>MongoDB (Mongoose), Firebase Auth, Firestore, Cloudinary API</p>
       </div>
-      <div class="skill-card">
+      <div class="skill-card slide-from-left">
         <h3>Tools</h3>
         <p>Git, GitHub, VS Code, Render, MongoDB Atlas</p>
       </div>
-      <div class="skill-card">
+      <div class="skill-card slide-from-right">
         <h3>Languages</h3>
         <p>JavaScript, Basic Python, Learning React</p>
       </div>
@@ -90,8 +96,7 @@
   <section id="projects" class="section reveal">
     <h2>Projects</h2>
 
-    <!-- React Native Task Manager (top project) -->
-    <div class="project-card">
+    <div class="project-card slide-from-left">
       <div class="project-header">
         <h3>ToDo App – React Native </h3>
         <span class="project-tag">React Native • Mobile • Productivity</span>
@@ -104,14 +109,12 @@
       </p>
       <p><strong>Tech Stack:</strong> React Native, Expo, TypeScript, Async Storage (or basic local state), Component-based UI</p>
       <div class="project-links">
-        <!-- Add your GitHub / demo links here when deployed -->
         <!-- <a href="YOUR_RN_DEMO_LINK" target="_blank">Live Demo</a> -->
         <!-- <a href="YOUR_RN_GITHUB_LINK" target="_blank">Source Code</a> -->
       </div>
     </div>
 
-    <!-- TaskFlow Web App -->
-    <div class="project-card">
+    <div class="project-card slide-from-right">
       <div class="project-header">
         <h3>TaskFlow – Full-Stack Task Management App</h3>
         <span class="project-tag">Full-Stack • JWT • Tailwind</span>
@@ -129,8 +132,7 @@
       </div>
     </div>
 
-    <!-- Civic Reporter -->
-    <div class="project-card">
+    <div class="project-card slide-from-left">
       <div class="project-header">
         <h3>Civic Reporter App</h3>
         <span class="project-tag">Firebase • Cloudinary • Maps</span>
@@ -151,19 +153,59 @@
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="section reveal">
+  <section id="contact" class="section reveal slide-from-right">
     <h2>Contact</h2>
     <p>Open to internships, freelance projects, and collaborations.</p>
-    <p>Email: <a href="mailto:ddaarrsshuu@gmail.com">ddaarrsshuu@gmail.com</a></p>
+    <p>Email: <a href="mailto:hjsudarshanpatil@gmail.com">hjsudarshanpatil@gmail.com</a></p>
   </section>
 
   <footer>
     <p>© 2026 Sudarshan Patil. All rights reserved.</p>
   </footer>
 
+  <script >
+    // Scroll-in / scroll-out animations
+const slideElements = document.querySelectorAll('.slide-from-left, .slide-from-right');
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+      } else {
+        entry.target.classList.remove('in-view');
+      }
+    });
+  },
+  {
+    threshold: 0.2,
+  }
+);
+
+slideElements.forEach((el) => observer.observe(el));
+
+// 3D parallax mouse move for background blobs (desktop only)
+const blobs = document.querySelectorAll('.bg-blob');
+const isTouch = window.matchMedia('(pointer: coarse)').matches;
+
+if (!isTouch) {
+  window.addEventListener('mousemove', (e) => {
+    const x = (e.clientX / window.innerWidth) - 0.5; // -0.5 to 0.5
+    const y = (e.clientY / window.innerHeight) - 0.5;
+
+    blobs.forEach((blob, index) => {
+      const depth = (index + 1) * 20; // different depth per blob
+      const translateX = -x * depth;
+      const translateY = -y * depth;
+      const rotateY = x * 10;
+      const rotateX = -y * 10;
+
+      blob.style.transform += ''; // keep existing animation transform base
+      blob.style.transform = `translate3d(${translateX}px, ${translateY}px, 0) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+  });
+}
+
+  </script>
 </body>
 </html>
-
-
-
-
