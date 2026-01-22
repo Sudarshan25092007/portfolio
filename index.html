@@ -14,7 +14,7 @@
   <nav class="nav">
     <div class="nav-container">
       <div class="nav-logo">
-        <img src="logo.jpg" alt="Logo" class="nav-logo-img">
+        <img src="/images/PHOTO.jpg" alt="Logo" class="nav-logo-img">
         <span class="nav-logo-text">Sudarshan</span><span class="nav-dot">.</span>
       </div>
       <ul class="nav-links">
@@ -28,7 +28,7 @@
 
   <header class="hero">
     <div class="hero-content fade-in slide-from-left">
-      <p class="hero-tag">Full-Stack & MERN Developer • App developer</p>
+      <p class="hero-tag">Full-Stack & MERN Developer • App Developer</p>
       <h1>Hi, I'm <span>Sudarshan Patil H J</span></h1>
       <p class="hero-subtitle">
         Building modern web and mobile apps with clean UI, smooth UX, and real-world impact.
@@ -39,7 +39,7 @@
       </div>
     </div>
     <div class="hero-image float-in slide-from-right">
-      <img src="PHOTO.jpg" alt="Profile Picture" class="profile-img">
+      <img src="images/PHOTO.jpg" alt="Profile Picture" class="profile-img">
     </div>
   </header>
 
@@ -47,10 +47,12 @@
   <section id="about" class="section reveal slide-from-left">
     <h2>About Me</h2>
     <p>
-      I'm an 18-year-old full-stack developer focused on building modern web and mobile applications using HTML, CSS, JavaScript, TypeScript, Tailwind CSS, Node.js, Express, React Native, MongoDB, and Firebase (MERN-stack backend).
+      I'm an 18-year-old full-stack developer focused on building modern web and mobile applications using
+      React, Next.js, Node.js, Express, and cloud databases like Supabase and MongoDB.
     </p>
     <p>
-      I love working on civic apps, task managers, and productivity tools that solve real problems, while sharpening my fundamentals and Studying @ Scaler School of Technology.
+      I love working on civic apps, task managers, and productivity tools that solve real problems,
+      while sharpening my fundamentals and studying @ Scaler School of Technology.
     </p>
   </section>
 
@@ -60,7 +62,7 @@
     <div class="skills-grid">
       <div class="skill-card slide-from-left">
         <h3>Frontend</h3>
-        <p>HTML5, CSS3, Tailwind CSS, Vanilla JavaScript, TypeScript, Responsive Design</p>
+        <p>HTML5, CSS3, Tailwind CSS, Vanilla JavaScript, TypeScript, React, Next.js (App Router)</p>
       </div>
       <div class="skill-card slide-from-right">
         <h3>Mobile</h3>
@@ -68,38 +70,65 @@
       </div>
       <div class="skill-card slide-from-left">
         <h3>Backend</h3>
-        <p>Node.js, Express.js, REST APIs, JWT Auth (MERN-ready backend)</p>
+        <p>Node.js, Express.js, REST APIs, JWT Auth, Server Components with Next.js</p>
       </div>
       <div class="skill-card slide-from-right">
         <h3>Database & Cloud</h3>
-        <p>MongoDB (Mongoose), Firebase Auth, Firestore, Cloudinary API</p>
+        <p>Supabase (Auth, Postgres, Storage), MongoDB (Mongoose), Firebase Auth, Firestore, Cloudinary API</p>
       </div>
       <div class="skill-card slide-from-left">
         <h3>Tools</h3>
-        <p>Git, GitHub, VS Code, Render, MongoDB Atlas</p>
+        <p>Git, GitHub, VS Code, Vercel, Render, MongoDB Atlas</p>
       </div>
       <div class="skill-card slide-from-right">
         <h3>Languages</h3>
-        <p>JavaScript, Basic Python, Learning React</p>
+        <p>JavaScript, TypeScript, Basic Python</p>
       </div>
     </div>
   </section>
 
+  <!-- PROJECTS -->
   <section id="projects" class="section reveal">
     <h2>Projects</h2>
 
     <div class="project-card slide-from-left">
       <div class="project-header">
-        <h3>ToDo App – React Native </h3>
+        <h3>RoomFinder – Rental Room Finder</h3>
+        <span class="project-tag">Next.js • Supabase • Full-Stack</span>
+      </div>
+      <p>
+        A full-stack web app where users can browse and filter rental rooms by location, rent range,
+        property type, and tenant preference, and view a detailed page with an image carousel and
+        a direct call button to the owner.
+      </p>
+      <p>
+        Room owners can sign up, add listings with multiple images, edit or delete them, and manage
+        all their rooms from a dedicated “My Rooms” dashboard.
+      </p>
+      <p>
+        <strong>Tech Stack:</strong> Next.js (App Router), React, TypeScript, Tailwind CSS,
+        Supabase (Auth, Postgres, Storage), Vercel
+      </p>
+      <div class="project-links">
+        <a href="https://room-finder-web-rouge.vercel.app/" target="_blank">Live Demo</a>
+        <a href="https://github.com/Sudarshan25092007/Room-Finder-Web" target="_blank">Source Code</a>
+      </div>
+    </div>
+
+    <div class="project-card slide-from-left">
+      <div class="project-header">
+        <h3>ToDo App – React Native</h3>
         <span class="project-tag">React Native • Mobile • Productivity</span>
       </div>
       <p>
-        A cross-platform task management app built with React Native and Expo, allowing users to add, edit, and track tasks with a clean, mobile-first interface.
+        A cross-platform task management app built with React Native and Expo, allowing users to add,
+        edit, and track tasks with a clean, mobile-first interface.
       </p>
       <p>
-        Focused on smooth UX, simple navigation, and practical features for students and professionals to manage their daily work on the go.
+        Focused on smooth UX, simple navigation, and practical features for students and professionals
+        to manage their daily work on the go.
       </p>
-      <p><strong>Tech Stack:</strong> React Native, Expo, TypeScript, Async Storage (or basic local state), Component-based UI</p>
+      <p><strong>Tech Stack:</strong> React Native, Expo, TypeScript, Async Storage / local state</p>
       <div class="project-links">
         <!-- future links -->
       </div>
@@ -111,12 +140,15 @@
         <span class="project-tag">Full-Stack • JWT • Tailwind</span>
       </div>
       <p>
-        TaskFlow is a full-stack task management app that lets users create tasks with priority and due dates, and automatically organizes them into Today, Upcoming, and Backlog so they can focus on what matters most.
+        TaskFlow lets users create tasks with priority and due dates, and automatically organizes them
+        into Today, Upcoming, and Backlog so they can focus on what matters most.
       </p>
       <p>
-        Includes JWT-based authentication, protected routes, live task counters, task filters, and a fully responsive UI with a smooth UX designed for real-world use.
+        Includes JWT-based authentication, protected routes, live task counters, task filters, and a
+        fully responsive UI designed for real-world use.
       </p>
-      <p><strong>Tech Stack:</strong> HTML5, Tailwind CSS, Vanilla JavaScript, Node.js, Express.js, MongoDB (Mongoose), JWT Auth, Render, MongoDB Atlas</p>
+      <p><strong>Tech Stack:</strong> HTML5, Tailwind CSS, Vanilla JavaScript,
+        Node.js, Express.js, MongoDB (Mongoose), JWT Auth, Render, MongoDB Atlas</p>
       <div class="project-links">
         <a href="https://task-flow-frontend-nb7t.onrender.com/" target="_blank">Live Demo</a>
         <a href="https://github.com/Sudarshan25092007/TaskFlow-Full-stack-application-" target="_blank">Source Code</a>
@@ -129,7 +161,8 @@
         <span class="project-tag">Firebase • Cloudinary • Maps</span>
       </div>
       <p>
-        A web app to report civic issues with user authentication, admin panel, Cloudinary image uploads, and map integration for precise location reporting.
+        A web app to report civic issues with user authentication, an admin panel, Cloudinary image uploads,
+        and map integration for precise location reporting.
       </p>
       <p>
         Built to make it easier for citizens to raise issues and for admins to manage and resolve them efficiently.
@@ -153,7 +186,10 @@
     <p>© 2026 Sudarshan Patil. All rights reserved.</p>
   </footer>
 
+  <!-- your existing JS (intersection observer + three.js background) stays the same -->
   <script type="module">
+    /* keep your existing JS code here */
+    
 const slideElements = document.querySelectorAll('.slide-from-left, .slide-from-right');
 
 const observer = new IntersectionObserver(
@@ -205,8 +241,8 @@ gradientPlane.position.z = -10;
 scene.add(gradientPlane);
 
 const particlesCount = 1200; 
-const positions = new Float32Array(particlesCount * 3);
-const colors = new Float32Array(particlesCount * 3);
+const positions = new Float32Array(particlesCount * 2);
+const colors = new Float32Array(particlesCount * 2);
 const sizes = new Float32Array(particlesCount);
 
 for (let i = 0; i < particlesCount; i++) {
