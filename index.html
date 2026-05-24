@@ -3,348 +3,960 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sudarshan Patil | Web Developer</title>
+  <title>Sudarshan Patil H J | Portfolio & Story Timeline</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Portfolio and interactive 3D Story Timeline of Sudarshan Patil H J, an 18-year-old Full-Stack Developer & AI Engineer at Scaler School of Technology." />
+  <meta name="keywords" content="Sudarshan Patil, SST, Full-Stack Developer, AI Engineer, MERN, Next.js, Supabase, Three.js, GSAP Portfolio, Awwwards portfolio, Pychem-Pro, GSSOC" />
+  
+  <!-- CSS Stylesheets -->
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Fonts & Icons CDN -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  
+  <!-- GSAP for Awwwards-level Animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 <body>
 
+  <!-- Custom Glowing Cursor (Cyber-Flair) -->
+  <div id="cyber-cursor"></div>
+  <div id="cyber-cursor-glow"></div>
+
+  <!-- WebGL Background Canvas -->
   <canvas id="bg-canvas"></canvas>
 
+  <!-- Sticky Cyberpunk Navigation -->
   <nav class="nav">
     <div class="nav-container">
-      <div class="nav-logo">
-        <img src="logo.jpg" alt="Logo" class="nav-logo-img">
-        <span class="nav-logo-text">Sudarshan</span><span class="nav-dot">.</span>
+      <div class="nav-logo" id="nav-logo">
+        <img src="logo.jpg" alt="Logo" class="nav-logo-img" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=100&auto=format&fit=crop';">
+        <span class="nav-logo-text">Sudarshan</span><span class="nav-dot">Patil H J</span>
       </div>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#hero" class="nav-item">Start</a></li>
+        <li><a href="#about" class="nav-item">Foundation</a></li>
+        <li><a href="#projects" class="nav-item">Projects</a></li>
+        <li><a href="#highlight" class="nav-item">Milestone</a></li>
+        <li><a href="#community" class="nav-item">Community</a></li>
+        <li><a href="#analytics" class="nav-item">Metrics</a></li>
+        <li><a href="#contact" class="nav-item">Contact</a></li>
       </ul>
+      <div class="nav-socials">
+        <a href="https://github.com/Sudarshan25092007" target="_blank" title="GitHub" class="social-icon-nav"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/sudarshan-patil-hj259227" target="_blank" title="LinkedIn" class="social-icon-nav"><i class="fab fa-linkedin-in"></i></a>
+      </div>
     </div>
   </nav>
 
-  <header class="hero">
-    <div class="hero-content fade-in slide-from-left">
-      <p class="hero-tag">Full-Stack & MERN Developer • App Developer</p>
-      <h1>Hi, I'm <span>Sudarshan Patil H J</span></h1>
-      <p class="hero-subtitle">
-        Building modern web and mobile apps with clean UI, smooth UX, and real-world impact.
-      </p>
-      <div class="hero-actions">
-        <a href="#projects" class="btn primary-btn">View Projects</a>
-        <a href="#contact" class="btn ghost-btn">Contact Me</a>
-      </div>
-    </div>
-    <div class="hero-image float-in slide-from-right">
-      <img src="PHOTO.jpg" alt="Profile Picture" class="profile-img">
-    </div>
-  </header>
+  <!-- Main Scroll Container -->
+  <main class="scroll-container">
 
-  <!-- ABOUT -->
-  <section id="about" class="section reveal slide-from-left">
-    <h2>About Me</h2>
-    <p>
-      I'm an 18-year-old full-stack developer focused on building modern web and mobile applications using
-      React, Next.js, Node.js, Express, and cloud databases like Supabase and MongoDB.
-    </p>
-    <p>
-      I love working on civic apps, task managers, and productivity tools that solve real problems,
-      while sharpening my fundamentals and studying @ Scaler School of Technology.
-    </p>
-  </section>
+    <!-- HERO (THE HOOK) -->
+    <header id="hero" class="hero-section">
+      <div class="hero-wrapper">
+        <div class="hero-content">
+          <div class="cyber-badge fade-reveal"><i class="fas fa-microchip"></i> FULL-STACK & AI ENGINEER</div>
+          <h1 class="hero-title fade-reveal">
+            Hi, I'm <br><span class="glitch-text" data-text="Sudarshan Patil H J">Sudarshan Patil H J</span>
+          </h1>
+          <p class="hero-tagline fade-reveal">
+            Crafting premium, high-performance web applications & intelligent computing systems. Undergrad student @ <span class="accent-text">Scaler School of Technology</span>.
+          </p>
+          
+          <!-- Social Grid -->
+          <div class="social-links-grid fade-reveal">
+            <a href="https://github.com/Sudarshan25092007" target="_blank" class="social-button github">
+              <i class="fab fa-github"></i> <span>GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/sudarshan-patil-hj259227" target="_blank" class="social-button linkedin">
+              <i class="fab fa-linkedin-in"></i> <span>LinkedIn</span>
+            </a>
+            <a href="https://leetcode.com/Sudarshan_patil_h_j/" target="_blank" class="social-button leetcode">
+              <i class="fas fa-code"></i> <span>LeetCode</span>
+            </a>
+            <a href="https://www.instagram.com/sudarshanpatil.hj_/" target="_blank" class="social-button instagram">
+              <i class="fab fa-instagram"></i> <span>Instagram</span>
+            </a>
+          </div>
 
-  <!-- SKILLS -->
-  <section id="skills" class="section reveal slide-from-right">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-      <div class="skill-card slide-from-left">
-        <h3>Frontend</h3>
-        <p>HTML5, CSS3, Tailwind CSS, Vanilla JavaScript, TypeScript, React, Next.js (App Router)</p>
-      </div>
-      <div class="skill-card slide-from-right">
-        <h3>Mobile</h3>
-        <p>React Native, Expo, Component-based UI, Basic State Management</p>
-      </div>
-      <div class="skill-card slide-from-left">
-        <h3>Backend</h3>
-        <p>Node.js, Express.js, REST APIs, JWT Auth, Server Components with Next.js</p>
-      </div>
-      <div class="skill-card slide-from-right">
-        <h3>Database & Cloud</h3>
-        <p>Supabase (Auth, Postgres, Storage), MongoDB (Mongoose), Firebase Auth, Firestore, Cloudinary API</p>
-      </div>
-      <div class="skill-card slide-from-left">
-        <h3>Tools</h3>
-        <p>Git, GitHub, VS Code, Vercel, Render, MongoDB Atlas</p>
-      </div>
-      <div class="skill-card slide-from-right">
-        <h3>Languages</h3>
-        <p>JavaScript, TypeScript, Basic Python</p>
-      </div>
-    </div>
-  </section>
+          <div class="hero-actions fade-reveal">
+            <a href="#about" class="btn primary-btn scroll-trigger-btn"><i class="fas fa-chevron-down"></i> Begin Journey</a>
+            <a href="#contact" class="btn ghost-btn"><i class="far fa-paper-plane"></i> Get in Touch</a>
+          </div>
+        </div>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="section reveal">
-    <h2>Projects</h2>
-
-    <div class="project-card slide-from-left">
-      <div class="project-header">
-        <h3>RoomFinder – Rental Room Finder</h3>
-        <span class="project-tag">Next.js • Supabase • Full-Stack</span>
+        <div class="hero-visual fade-reveal">
+          <div class="hero-image-wrapper">
+            <div class="hero-image-3d">
+              <div class="cyber-overlay"></div>
+              <img src="PHOTO.jpg" alt="Sudarshan Patil H J" class="profile-img-3d" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop';">
+              <div class="corner-bracket top-left"></div>
+              <div class="corner-bracket top-right"></div>
+              <div class="corner-bracket bottom-left"></div>
+              <div class="corner-bracket bottom-right"></div>
+            </div>
+            <div class="glowing-halo"></div>
+          </div>
+        </div>
       </div>
-      <p>
-        A full-stack web app where users can browse and filter rental rooms by location, rent range,
-        property type, and tenant preference, and view a detailed page with an image carousel and
-        a direct call button to the owner.
-      </p>
-      <p>
-        Room owners can sign up, add listings with multiple images, edit or delete them, and manage
-        all their rooms from a dedicated “My Rooms” dashboard.
-      </p>
-      <p>
-        <strong>Tech Stack:</strong> Next.js (App Router), React, TypeScript, Tailwind CSS,
-        Supabase (Auth, Postgres, Storage), Vercel
-      </p>
-      <div class="project-links">
-        <a href="https://room-finder-web-rouge.vercel.app/" target="_blank">Live Demo</a>
-        <a href="https://github.com/Sudarshan25092007/Room-Finder-Web" target="_blank">Source Code</a>
+      <div class="scroll-down-hint">
+        <span>SCROLL DOWN TO TRAVEL</span>
+        <div class="mouse-icon"><div class="mouse-wheel"></div></div>
       </div>
-    </div>
+    </header>
 
-    <div class="project-card slide-from-left">
-      <div class="project-header">
-        <h3>ToDo App – React Native</h3>
-        <span class="project-tag">React Native • Mobile • Productivity</span>
+    <!-- CHAPTER 1: THE FOUNDATION (ABOUT & SKILLS) -->
+    <section id="about" class="timeline-section">
+      <div class="chapter-indicator">CHAPTER 1 // THE FOUNDATION</div>
+      
+      <div class="timeline-item centered">
+        <div class="timeline-node"><i class="fas fa-graduation-cap"></i></div>
+        <div class="timeline-content glass-card">
+          <div class="card-glow-cyan"></div>
+          <div class="card-header-meta">ABOUT ME</div>
+          <h2 class="section-title">An 18-Year-Old Engineer Shaping the Future</h2>
+          <p class="section-desc">
+            Currently undergoing rigorous software engineering residency at <span class="highlight-text">Scaler School of Technology</span>, where I combine theoretical computer science with heavy practical development. I don't just build websites; I engineer interactive platforms, deep tool integrations, and systems that address real-world problems.
+          </p>
+          <div class="foundation-meta">
+            <div class="meta-badge"><i class="fas fa-location-dot"></i> Bengaluru, India</div>
+            <div class="meta-badge"><i class="fas fa-university"></i> SST Undergrad</div>
+          </div>
+        </div>
       </div>
-      <p>
-        A cross-platform task management app built with React Native and Expo, allowing users to add,
-        edit, and track tasks with a clean, mobile-first interface.
-      </p>
-      <p>
-        Focused on smooth UX, simple navigation, and practical features for students and professionals
-        to manage their daily work on the go.
-      </p>
-      <p><strong>Tech Stack:</strong> React Native, Expo, TypeScript, Async Storage / local state</p>
-      <div class="project-links">
-        <!-- future links -->
+
+      <div class="timeline-item centered">
+        <div class="timeline-node"><i class="fas fa-network-wired"></i></div>
+        <div class="timeline-content glass-card">
+          <div class="card-glow-pink"></div>
+          <div class="card-header-meta">ENGINEERING SYSTEM MATRIX</div>
+          <h2 class="section-title">Core Skills</h2>
+          <div class="skills-matrix-container">
+            <div class="skill-category">
+              <h3><i class="fas fa-laptop-code"></i> Frontend & Mobile</h3>
+              <div class="skill-tags">
+                <span class="tag font-neon">
+                  <img src="https://skillicons.dev/icons?i=next" alt="Next.js">
+                  <span>Next.js</span>
+                </span>
+                <span class="tag font-neon">
+                  <img src="https://skillicons.dev/icons?i=react" alt="React">
+                  <span>React</span>
+                </span>
+                <span class="tag font-neon">
+                  <img src="https://skillicons.dev/icons?i=react" alt="React Native">
+                  <span>React Native</span>
+                </span>
+                <span class="tag">
+                  <img src="https://skillicons.dev/icons?i=threejs" alt="Three.js">
+                  <span>Three.js</span>
+                </span>
+                <span class="tag">
+                  <img src="https://skillicons.dev/icons?i=ts" alt="TypeScript">
+                  <span>TypeScript</span>
+                </span>
+                <span class="tag">
+                  <img src="https://skillicons.dev/icons?i=js" alt="JavaScript">
+                  <span>JavaScript</span>
+                </span>
+                <span class="tag">
+                  <img src="https://skillicons.dev/icons?i=tailwind" alt="Tailwind CSS">
+                  <span>Tailwind</span>
+                </span>
+                <span class="tag">
+                  <img src="https://skillicons.dev/icons?i=html" alt="HTML5">
+                  <span>HTML5</span>
+                </span>
+                <span class="tag">
+                  <img src="https://skillicons.dev/icons?i=css" alt="CSS3">
+                  <span>CSS3</span>
+                </span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3><i class="fas fa-server"></i> Backend, Database & Cloud</h3>
+              <div class="skill-tags">
+                <span class="tag font-neon">
+                  <img src="https://skillicons.dev/icons?i=nodejs" alt="Node.js">
+                  <span>Node.js</span>
+                </span>
+                <span class="tag font-neon">
+                  <img src="https://skillicons.dev/icons?i=express" alt="Express">
+                  <span>Express</span>
+                </span>
+                <span class="tag font-neon">
+                  <img src="https://skillicons.dev/icons?i=supabase" alt="Supabase">
+                  <span>Supabase</span>
+                </span>
+                <span class="tag">
+                  <img src="https://skillicons.dev/icons?i=mysql" alt="MySQL">
+                  <span>MySQL</span>
+                </span>
+                <span class="tag">
+                  <img src="https://skillicons.dev/icons?i=mongodb" alt="MongoDB">
+                  <span>MongoDB</span>
+                </span>
+                <span class="tag">
+                  <img src="https://skillicons.dev/icons?i=firebase" alt="Firebase">
+                  <span>Firebase</span>
+                </span>
+                <span class="tag">
+                  <img src="https://skillicons.dev/icons?i=docker" alt="Docker">
+                  <span>Docker</span>
+                </span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3><i class="fas fa-screwdriver-wrench"></i> Tools & Languages</h3>
+              <div class="skill-tags">
+                <span class="tag">
+                  <img src="https://skillicons.dev/icons?i=python" alt="Python">
+                  <span>Python</span>
+                </span>
+                <span class="tag">
+                  <img src="https://skillicons.dev/icons?i=java" alt="Java">
+                  <span>Java</span>
+                </span>
+                <span class="tag">
+                  <img src="https://skillicons.dev/icons?i=cpp" alt="C++">
+                  <span>C++</span>
+                </span>
+                <span class="tag">
+                  <img src="https://skillicons.dev/icons?i=git" alt="Git">
+                  <span>Git</span>
+                </span>
+                <span class="tag">
+                  <img src="https://skillicons.dev/icons?i=github" alt="GitHub">
+                  <span>GitHub</span>
+                </span>
+                <span class="tag">
+                  <img src="https://skillicons.dev/icons?i=vscode" alt="VS Code">
+                  <span>VS Code</span>
+                </span>
+                <span class="tag">
+                  <img src="https://skillicons.dev/icons?i=vercel" alt="Vercel">
+                  <span>Vercel</span>
+                </span>
+                <span class="tag">
+                  <img src="https://skillicons.dev/icons?i=postman" alt="Postman">
+                  <span>Postman</span>
+                </span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3><i class="fas fa-chart-line"></i> Specialized Domains</h3>
+              <div class="skill-tags">
+                <span class="tag font-neon-amber">
+                  <i class="fas fa-robot" style="color: var(--neon-amber);"></i>
+                  <span>Algorithmic Trading</span>
+                </span>
+                <span class="tag font-neon-amber">
+                  <i class="fas fa-chart-area" style="color: var(--neon-amber);"></i>
+                  <span>MetaTrader 5</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="project-card slide-from-right">
-      <div class="project-header">
-        <h3>TaskFlow – Full-Stack Task Management App</h3>
-        <span class="project-tag">Full-Stack • JWT • Tailwind</span>
+    <!-- CHAPTER 2: REAL-WORLD PROJECTS -->
+    <section id="projects" class="timeline-section">
+      <div class="chapter-indicator">CHAPTER 2 // REAL-WORLD APPLICATIONS</div>
+      
+      <!-- Interactive Progress Line -->
+      <div class="timeline-line-wrapper">
+        <div class="timeline-line"></div>
+        <div class="timeline-line-progress"></div>
       </div>
-      <p>
-        TaskFlow lets users create tasks with priority and due dates, and automatically organizes them
-        into Today, Upcoming, and Backlog so they can focus on what matters most.
-      </p>
-      <p>
-        Includes JWT-based authentication, protected routes, live task counters, task filters, and a
-        fully responsive UI designed for real-world use.
-      </p>
-      <p><strong>Tech Stack:</strong> HTML5, Tailwind CSS, Vanilla JavaScript,
-        Node.js, Express.js, MongoDB (Mongoose), JWT Auth, Render, MongoDB Atlas</p>
-      <div class="project-links">
-        <a href="https://task-flow-frontend-nb7t.onrender.com/" target="_blank">Live Demo</a>
-        <a href="https://github.com/Sudarshan25092007/TaskFlow-Full-stack-application-" target="_blank">Source Code</a>
+
+      <!-- Civic Reporter -->
+      <div class="timeline-item left">
+        <div class="timeline-node"><i class="fas fa-bullhorn"></i></div>
+        <div class="timeline-content glass-card">
+          <div class="card-glow-pink"></div>
+          <div class="card-date"><i class="far fa-calendar"></i> SEPTEMBER 2025</div>
+          <h3 class="project-title">Civic Reporter</h3>
+          <p class="project-description">
+            A hyper-localized reporting service bridging the gap between citizens and municipal authorities. Users upload photo proof of local issues with automatic metadata location tagging rendered cleanly on active Google Maps canvases.
+          </p>
+          <div class="tech-row">
+            <span class="tech-tag">Firebase Auth</span>
+            <span class="tech-tag">Firestore</span>
+            <span class="tech-tag">Cloudinary</span>
+            <span class="tech-tag">Google Maps API</span>
+          </div>
+          <div class="project-links">
+            <a href="https://civic-reporter-2007.web.app" target="_blank" class="cyber-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            <a href="https://github.com/Sudarshan25092007/Civic-Reporter-App" target="_blank" class="cyber-link"><i class="fab fa-github"></i> Repository</a>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div class="project-card slide-from-left">
-      <div class="project-header">
-        <h3>Civic Reporter App</h3>
-        <span class="project-tag">Firebase • Cloudinary • Maps</span>
+      <!-- TaskFlow -->
+      <div class="timeline-item right">
+        <div class="timeline-node"><i class="fas fa-tasks"></i></div>
+        <div class="timeline-content glass-card">
+          <div class="card-glow-purple"></div>
+          <div class="card-date"><i class="far fa-calendar"></i> DECEMBER 2025</div>
+          <h3 class="project-title">TaskFlow <span class="project-tag">MERN Stack</span></h3>
+          <p class="project-description">
+            A comprehensive work-orchestration app dividing workloads into Today, Upcoming, and Backlog modules. Implements strict JWT-based middleware, dynamic priority flags, task expiration timers, and persistent storage.
+          </p>
+          <div class="tech-row">
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Express</span>
+            <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag">JWT</span>
+            <span class="tech-tag">Tailwind</span>
+          </div>
+          <div class="project-links">
+            <a href="https://task-flow-frontend-nb7t.onrender.com/" target="_blank" class="cyber-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            <a href="https://github.com/Sudarshan25092007/TaskFlow-Full-stack-application-" target="_blank" class="cyber-link"><i class="fab fa-github"></i> Repository</a>
+          </div>
+        </div>
       </div>
-      <p>
-        A web app to report civic issues with user authentication, an admin panel, Cloudinary image uploads,
-        and map integration for precise location reporting.
-      </p>
-      <p>
-        Built to make it easier for citizens to raise issues and for admins to manage and resolve them efficiently.
-      </p>
-      <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript, Firebase Auth, Firestore, Cloudinary, Maps API</p>
-      <div class="project-links">
-        <a href="https://civic-reporter-2007.web.app" target="_blank">Live Demo</a>
-        <a href="https://github.com/Sudarshan25092007/Civic-Reporter-App" target="_blank">Source Code</a>
+
+      <!-- ToDo App Mobile -->
+      <div class="timeline-item left">
+        <div class="timeline-node"><i class="fas fa-mobile-alt"></i></div>
+        <div class="timeline-content glass-card">
+          <div class="card-glow-cyan"></div>
+          <div class="card-date"><i class="far fa-calendar"></i> JANUARY 2026</div>
+          <h3 class="project-title">ToDo App Mobile</h3>
+          <p class="project-description">
+            A native mobile client built to optimize everyday task entries. Implements modular state patterns, persistent local databases, custom tactile vibration feedback, and custom dark modes.
+          </p>
+          <div class="tech-row">
+            <span class="tech-tag">React Native</span>
+            <span class="tech-tag">Expo SDK</span>
+            <span class="tech-tag">Async Storage</span>
+            <span class="tech-tag">TypeScript</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Sudarshan25092007/react-native-todo-app" target="_blank" class="cyber-link"><i class="fab fa-github"></i> Repository</a>
+          </div>
+        </div>
       </div>
-    </div>
 
-  </section>
+      <!-- RoomFinder -->
+      <div class="timeline-item right">
+        <div class="timeline-node"><i class="fas fa-house-user"></i></div>
+        <div class="timeline-content glass-card">
+          <div class="card-glow-cyan"></div>
+          <div class="card-date"><i class="far fa-calendar"></i> FEBRUARY 2026</div>
+          <h3 class="project-title">RoomFinder <span class="project-tag">Full-Stack</span></h3>
+          <p class="project-description">
+            A secure, robust platform helping students and professionals locate rental housing. Features location query clustering, monthly rental filters, landlord verification, and a live image carousel alongside direct call capabilities.
+          </p>
+          <div class="tech-row">
+            <span class="tech-tag">Next.js</span>
+            <span class="tech-tag">Supabase</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">Tailwind CSS</span>
+            <span class="tech-tag">Vercel</span>
+          </div>
+          <div class="project-links">
+            <a href="https://room-finder-web-rouge.vercel.app/" target="_blank" class="cyber-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            <a href="https://github.com/Sudarshan25092007/Room-Finder-Web" target="_blank" class="cyber-link"><i class="fab fa-github"></i> Repository</a>
+          </div>
+        </div>
+      </div>
 
-  <section id="contact" class="section reveal slide-from-right">
-    <h2>Contact</h2>
-    <p>Open to internships, freelance projects, and collaborations.</p>
-    <p>Email: <a href="mailto:hjsudarshanpatil@gmail.com">hjsudarshanpatil@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/sudarshan-patil-hj259227/" target="_blank">Sudarshan Patil</a></p>
-  </section>
+      <!-- Pychem-Pro Core Contributor -->
+      <div class="timeline-item left">
+        <div class="timeline-node"><i class="fas fa-flask"></i></div>
+        <div class="timeline-content glass-card">
+          <div class="card-glow-pink"></div>
+          <div class="card-date"><i class="far fa-calendar"></i> LATE APRIL 2026</div>
+          <h3 class="project-title">Pychem-Pro <span class="project-tag">Core Contributor</span></h3>
+          <p class="project-description">
+            Contributed to Pychem-Pro, a molecular modeling tool suite. Refactored private adjacency couplings, transitioning private graph access models into modern public queries (`get_neighbor_bonds()`), enhancing computation speeds for graph traversal modules.
+          </p>
+          <div class="tech-row">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Computational Chemistry</span>
+            <span class="tech-tag">Graph Algorithms</span>
+            <span class="tech-tag">Refactoring</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <footer>
-    <p>© 2026 Sudarshan Patil. All rights reserved.</p>
-  </footer>
+    <!-- CHAPTER 3: THE NEXT LEVEL (EXPLODING MILESTONE HIGHLIGHT) -->
+    <section id="highlight" class="timeline-section highlight-anchor">
+      <div class="chapter-indicator">CHAPTER 3 // THE NEXT LEVEL</div>
+      
+      <div class="timeline-item centered">
+        <div class="timeline-node glow-node-gold"><i class="fas fa-crown"></i></div>
+        
+        <!-- Exploding Hologram Card -->
+        <div class="amazon-highlight-card">
+          <div class="hologram-scanline"></div>
+          <div class="highlight-glare"></div>
+          <div class="cyber-grid-bg"></div>
+          
+          <div class="card-header-glitch">
+            <div class="status-marker"><span class="pulse-amber"></span> CRITICAL INCOMING TRANSMISSION</div>
+            <div class="timestamp-marker">FEB 03, 2026 // 09:18 AM</div>
+          </div>
+          
+          <div class="amazon-logo-box">
+            <i class="fab fa-amazon amazon-icon"></i>
+            <div class="logo-subtext font-code">AMAZON SDE OPPORTUNITY</div>
+          </div>
+          
+          <div class="achievement-body">
+            <h2 class="achievement-title">INVITED FOR AMAZON SDE INTERVIEW</h2>
+            <div class="bracket-tag font-code">[ STATUS: ADVANCED TO SYSTEM EVALUATION VIA AMAZON UNIVERSITY TALENT ACQUISITION]</div>
+            
+            <p class="achievement-text">
+              I'm thrilled to announce that I have been invited to interview for the role of Software Development Engineer (SDE) at Amazon! This opportunity, extended through Amazon University Talent Acquisition, marks a significant milestone in my journey as a student developer.
+            </p>
+          </div>
+          
+          <div class="cyber-footer-decals">
+            <span class="decal-item font-code">SYS.STABILITY // 100%</span>
+            <span class="decal-item font-code">DECRYPT // VERIFIED</span>
+          </div>
+          
+          <!-- Outer Neon Brackets -->
+          <div class="hologram-bracket tl"></div>
+          <div class="hologram-bracket tr"></div>
+          <div class="hologram-bracket bl"></div>
+          <div class="hologram-bracket br"></div>
+        </div>
+      </div>
+    </section>
 
-  <!-- your existing JS (intersection observer + three.js background) stays the same -->
+    <!-- CHAPTER 4: OPEN SOURCE & COMMUNITY -->
+    <section id="community" class="timeline-section">
+      <div class="chapter-indicator">CHAPTER 4 // OPEN SOURCE & COMMUNITY</div>
+      
+      <!-- Entered Open Source -->
+      <div class="timeline-item left">
+        <div class="timeline-node"><i class="fas fa-door-open"></i></div>
+        <div class="timeline-content glass-card">
+          <div class="card-glow-purple"></div>
+          <div class="card-date"><i class="far fa-calendar"></i> APRIL 2026</div>
+          <h3 class="project-title">Entered Open Source Arena</h3>
+          <p class="project-description">
+            Commenced active development in decentralized, public software platforms. Shifted focus toward building accessible libraries, engineering API encapsulations, and working on large computational modules alongside international teams.
+          </p>
+          <div class="tech-row">
+            <span class="tech-tag">Git Integration</span>
+            <span class="tech-tag">API Design</span>
+            <span class="tech-tag">Community QA</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- GSSOC Selection -->
+      <div class="timeline-item right">
+        <div class="timeline-node"><i class="fas fa-trophy"></i></div>
+        <div class="timeline-content glass-card">
+          <div class="card-glow-cyan"></div>
+          <div class="card-date"><i class="far fa-calendar"></i> MAY 14, 2026</div>
+          <h3 class="project-title">Selected for GSSOC '26</h3>
+          <p class="project-description">
+            Selected as an active contributor for the prestigious **GirlScript Summer of Code** (GSSOC) global open-source program. Engaging in intensive sprints, reviewing pull requests, and pushing production code to open repositories.
+          </p>
+          <div class="tech-row">
+            <span class="tech-tag">Open Source</span>
+            <span class="tech-tag">Global Collaboration</span>
+            <span class="tech-tag">Git Workflows</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 5: THE ANALYTICS MATRIX -->
+    <section id="analytics" class="timeline-section">
+      <div class="chapter-indicator">CHAPTER 5 // LIVE COMPUTATIONAL METRICS</div>
+      
+      <div class="timeline-item centered">
+        <div class="timeline-node"><i class="fas fa-chart-bar"></i></div>
+        <div class="timeline-content glass-card">
+          <div class="card-glow-cyan"></div>
+          <div class="card-header-meta">ENGINEERING ANALYTICS</div>
+          <h2 class="section-title">GitHub Activity & Streak Stats</h2>
+          <p class="section-desc">
+            An active overview of my open-source commit velocity, active development streaks, and system details pulled live from GitHub servers.
+          </p>
+          
+          <div class="analytics-grid">
+            <div class="analytics-card">
+              <a href="https://github.com/Sudarshan25092007" target="_blank" title="View Live GitHub Contributions" style="display: block;">
+                <img src="https://github-readme-activity-graph.vercel.app/graph?username=Sudarshan25092007&theme=tokyo-night&hide_border=true&bg_color=030712" alt="GitHub Activity Graph" class="analytics-image">
+              </a>
+            </div>
+            
+            <div class="analytics-row">
+              <a href="https://github.com/Sudarshan25092007" target="_blank" title="View Live GitHub Streaks" style="display: block;">
+                <img src="https://github-readme-streak-stats.herokuapp.com/?user=Sudarshan25092007&theme=tokyonight&hide_border=true&background=030712" alt="GitHub Streak Stats" class="analytics-image">
+              </a>
+              <a href="https://github.com/Sudarshan25092007" target="_blank" title="View GitHub Details" style="display: block;">
+                <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Sudarshan25092007&theme=tokyonight" alt="GitHub Profile Details" class="analytics-image">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item centered">
+        <div class="timeline-node"><i class="fas fa-code-branch"></i></div>
+        <div class="timeline-content glass-card">
+          <div class="card-glow-purple"></div>
+          <div class="card-header-meta">ALGORITHMIC PERFECTION</div>
+          <h2 class="section-title">LeetCode Statistics</h2>
+          <p class="section-desc">
+            Tracking dynamic algorithmic problem-solving speed, technical proficiency, and active daily solution matrices. Click to explore my solve console!
+          </p>
+          
+          <div class="leetcode-box">
+            <a href="https://leetcode.com/Sudarshan_patil_h_j/" target="_blank" title="View Live LeetCode Solver Profile" style="display: block; width: 100%; text-align: center;">
+              <img src="https://leetcard.jacoblin.cool/Sudarshan_patil_h_j?theme=tokyonight&font=Fira%20Code&ext=activity" alt="LeetCode Stats" class="analytics-image">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item centered">
+        <div class="timeline-node"><i class="fas fa-dragon"></i></div>
+        <div class="timeline-content glass-card">
+          <div class="card-glow-pink"></div>
+          <div class="card-header-meta">SYSTEM HEATMAP</div>
+          <h2 class="section-title">Commit Velocity Snake</h2>
+          <p class="section-desc">
+            Visualizing structural contributions through an animated snake traversal vector across active matrix tiles.
+          </p>
+          
+          <div class="snake-box">
+            <a href="https://github.com/Sudarshan25092007" target="_blank" title="Explore GitHub Matrix Repo" style="display: block; width: 100%;">
+              <picture>
+                <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Sudarshan25092007/Sudarshan25092007/output/github-contribution-grid-snake-dark.svg">
+                <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Sudarshan25092007/Sudarshan25092007/output/github-contribution-grid-snake.svg">
+                <img src="https://raw.githubusercontent.com/Sudarshan25092007/Sudarshan25092007/output/github-contribution-grid-snake.svg" alt="GitHub Contribution Snake" class="analytics-image snake-img">
+              </picture>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EPILOGUE (CONTACT) -->
+    <section id="contact" class="timeline-section contact-wrapper">
+      <div class="chapter-indicator">EPILOGUE // DISPATCH MESSAGE</div>
+      
+      <div class="timeline-item centered">
+        <div class="timeline-node"><i class="far fa-paper-plane"></i></div>
+        
+        <div class="glass-card contact-card">
+          <div class="card-glow-cyan"></div>
+          <div class="cyber-grid-bg"></div>
+          
+          <h2 class="contact-title">Let's Build Something Revolutionary</h2>
+          <p class="contact-subtitle">
+            Open to premium engineering roles, software consultancies, complex full-stack contracts, and structural AI integrations. Drop a coordinate below!
+          </p>
+          
+          <div class="contact-details-grid">
+            <a href="mailto:hjsudarshanpatil@gmail.com" class="contact-detail-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <span class="label">SECURE EMAIL</span>
+                <span class="value">hjsudarshanpatil@gmail.com</span>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/sudarshan-patil-hj259227" target="_blank" class="contact-detail-item">
+              <i class="fab fa-linkedin-in"></i>
+              <div>
+                <span class="label">LINKEDIN CONSOLE</span>
+                <span class="value">Sudarshan Patil</span>
+              </div>
+            </a>
+          </div>
+
+          <hr class="cyber-separator">
+
+          <h3 class="contact-footer-title">ESTABLISH CHANNELS</h3>
+          <div class="social-channels-container">
+            <a href="https://github.com/Sudarshan25092007" target="_blank" class="circle-social-btn" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/sudarshan-patil-hj259227" target="_blank" class="circle-social-btn" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://leetcode.com/Sudarshan_patil_h_j/" target="_blank" class="circle-social-btn" title="LeetCode">
+              <i class="fas fa-code"></i>
+            </a>
+            <a href="https://www.instagram.com/sudarshanpatil.hj_/" target="_blank" class="circle-social-btn" title="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+
+          <div class="visitor-counter-wrapper">
+            <span class="status-marker font-code"><span class="pulse-cyan"></span> SECURE MATRIX TELEMETRY</span>
+            <img src="https://komarev.com/ghpvc/?username=Sudarshan25092007-portfolio&color=00f0ff&style=flat-square&label=PORTFOLIO+VIEWS" alt="Visitor Counter" class="visitor-counter-img">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="cyber-footer">
+      <div class="footer-content">
+        <p class="font-code">SUDARSHAN PATIL H J // FULL-STACK & AI ENGINEER</p>
+        <p class="copyright">© 2026. All operations verified. Designed with immersive WebGL & GSAP controllers.</p>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Interactive JavaScript Engine -->
   <script type="module">
-    /* keep your existing JS code here */
-    
-const slideElements = document.querySelectorAll('.slide-from-left, .slide-from-right');
+    import * as THREE from 'https://unpkg.com/three@0.161.0/build/three.module.js';
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in-view');
+    // ----------------------------------------------------
+    // 1. DEVICE PROFILE & DOM INITIALIZATION
+    // ----------------------------------------------------
+    const canvas = document.getElementById('bg-canvas');
+    const isTouch = window.matchMedia('(pointer: coarse)').matches;
+    const isMobile = window.innerWidth < 768;
+    
+    // Performance optimized particle limits requested by User
+    const particlesCount = isMobile ? 400 : 1200;
+
+    // Custom Cursor tracking
+    const cursor = document.getElementById('cyber-cursor');
+    const cursorGlow = document.getElementById('cyber-cursor-glow');
+
+    if (!isTouch && cursor && cursorGlow) {
+      document.addEventListener('mousemove', (e) => {
+        gsap.to(cursor, { x: e.clientX, y: e.clientY, duration: 0.1 });
+        gsap.to(cursorGlow, { x: e.clientX, y: e.clientY, duration: 0.25 });
+      });
+
+      // Expand cursor on hover
+      const interactiveElements = document.querySelectorAll('a, button, .timeline-content, .amazon-highlight-card, .btn');
+      interactiveElements.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+          cursor.classList.add('active');
+          cursorGlow.classList.add('active');
+        });
+        el.addEventListener('mouseleave', () => {
+          cursor.classList.remove('active');
+          cursorGlow.classList.remove('active');
+        });
+      });
+    }
+
+    // ----------------------------------------------------
+    // 2. THREE.JS 3D PARTICLE STARFIELD ENGINE
+    // ----------------------------------------------------
+    const renderer = new THREE.WebGLRenderer({
+      canvas,
+      antialias: !isMobile, // Disable on mobile for top-tier framerate
+      alpha: false,
+    });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setClearColor(0x020617, 1);
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(
+      60,
+      window.innerWidth / window.innerHeight,
+      0.1,
+      100
+    );
+    // Initial camera placement
+    camera.position.set(0, 0, 9);
+    scene.add(camera);
+
+    // Deep background canvas gradient plane
+    const gradientGeo = new THREE.PlaneGeometry(40, 25);
+    const gradientMat = new THREE.MeshBasicMaterial({
+      color: 0x020617,
+      side: THREE.BackSide,
+    });
+    const gradientPlane = new THREE.Mesh(gradientGeo, gradientMat);
+    gradientPlane.position.z = -12;
+    scene.add(gradientPlane);
+
+    // Create high-end circular neon soft particle textures dynamically
+    function createSoftParticleTexture() {
+      const c = document.createElement('canvas');
+      c.width = 64;
+      c.height = 64;
+      const ctx = c.getContext('2d');
+      const grad = ctx.createRadialGradient(32, 32, 0, 32, 32, 32);
+      grad.addColorStop(0, 'rgba(255, 255, 255, 1)');
+      grad.addColorStop(0.2, 'rgba(255, 255, 255, 0.85)');
+      grad.addColorStop(0.5, 'rgba(255, 255, 255, 0.25)');
+      grad.addColorStop(1, 'rgba(255, 255, 255, 0)');
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, 64, 64);
+      return new THREE.CanvasTexture(c);
+    }
+
+    const starTexture = createSoftParticleTexture();
+
+    // Starfield buffer creation
+    const positions = new Float32Array(particlesCount * 3);
+    const colors = new Float32Array(particlesCount * 3);
+    const sizes = new Float32Array(particlesCount);
+
+    for (let i = 0; i < particlesCount; i++) {
+      const i3 = i * 3;
+      const radius = 10;
+
+      // Layout in a broad timeline column
+      positions[i3 + 0] = (Math.random() - 0.5) * radius * 3.5;
+      positions[i3 + 1] = (Math.random() - 0.5) * radius * 4.5;
+      positions[i3 + 2] = (Math.random() - 0.6) * radius * 3.0; // Extend depth
+
+      // Vibrant Cyberpunk Color Palette: Neon Cyan, Magenta, Purple
+      const mix = Math.random();
+      let r, g, b;
+
+      if (mix < 0.4) {
+        // Cyan
+        r = 0.0; g = 0.95; b = 1.0;
+      } else if (mix < 0.75) {
+        // Magenta / Purple
+        r = 0.85; g = 0.1; b = 0.98;
       } else {
-        entry.target.classList.remove('in-view');
+        // Deep Orange / Amber highlight
+        r = 1.0; g = 0.65; b = 0.0;
+      }
+
+      colors[i3 + 0] = r;
+      colors[i3 + 1] = g;
+      colors[i3 + 2] = b;
+
+      sizes[i] = 0.08 + Math.random() * 0.15;
+    }
+
+    const particlesGeometry = new THREE.BufferGeometry();
+    particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+    particlesGeometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+    particlesGeometry.setAttribute('size', new THREE.BufferAttribute(sizes, 1));
+
+    const particlesMaterial = new THREE.PointsMaterial({
+      size: isMobile ? 0.22 : 0.18,
+      sizeAttenuation: true,
+      vertexColors: true,
+      transparent: true,
+      map: starTexture,
+      opacity: 0.85,
+      depthWrite: false,
+      blending: THREE.AdditiveBlending,
+    });
+
+    const particles = new THREE.Points(particlesGeometry, particlesMaterial);
+    scene.add(particles);
+
+    // Mouse position state for parallax
+    let mouseX = 0;
+    let mouseY = 0;
+
+    if (!isTouch) {
+      window.addEventListener('mousemove', (e) => {
+        mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
+        mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
+      });
+    }
+
+    // Handle full responsiveness of the viewport
+    window.addEventListener('resize', () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+
+    // ----------------------------------------------------
+    // 3. GSAP SCROLL-TRIGGER FOR TIMELINE PROGRESS
+    // ----------------------------------------------------
+    gsap.registerPlugin(ScrollTrigger);
+
+    let scrollProgress = 0;
+
+    // Track scroll depth globally
+    ScrollTrigger.create({
+      trigger: "body",
+      start: "top top",
+      end: "bottom bottom",
+      scrub: 1.2, // dynamic lag inertia
+      onUpdate: (self) => {
+        scrollProgress = self.progress;
       }
     });
-  },
-  {
-    threshold: 0.2,
-  }
-);
 
-slideElements.forEach((el) => observer.observe(el));
+    // Animate glowing timeline track fill
+    gsap.fromTo(".timeline-line-progress", 
+      { scaleY: 0 },
+      { 
+        scaleY: 1, 
+        ease: "none", 
+        scrollTrigger: {
+          trigger: "#projects",
+          start: "top 60%",
+          end: "bottom 80%",
+          scrub: true,
+        }
+      }
+    );
 
-import * as THREE from 'https://unpkg.com/three@0.161.0/build/three.module.js';
+    // ----------------------------------------------------
+    // 4. GSAP TIMELINE ENTRANCIES & REVEALS
+    // ----------------------------------------------------
+    
+    // Reveal Hero sections
+    gsap.fromTo(".fade-reveal", 
+      { opacity: 0, y: 30 },
+      { 
+        opacity: 1, 
+        y: 0, 
+        duration: 0.8, 
+        stagger: 0.15, 
+        ease: "power3.out",
+        delay: 0.2
+      }
+    );
 
-const canvas = document.getElementById('bg-canvas');
+    // Dynamic 3D mouse parallax on profile frame
+    const heroImage = document.querySelector('.hero-image-3d');
+    const heroWrapper = document.querySelector('.hero-image-wrapper');
+    if (heroImage && heroWrapper && !isTouch) {
+      heroWrapper.addEventListener('mousemove', (e) => {
+        const rect = heroWrapper.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const xc = rect.width / 2;
+        const yc = rect.height / 2;
+        const rotateY = (x - xc) / 8;
+        const rotateX = -(y - yc) / 8;
+        
+        gsap.to(heroImage, {
+          rotateY: rotateY,
+          rotateX: rotateX,
+          duration: 0.5,
+          ease: "power2.out"
+        });
+      });
 
-const renderer = new THREE.WebGLRenderer({
-  canvas,
-  antialias: true,
-});
-renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-renderer.setSize(window.innerWidth, window.innerHeight);
-renderer.setClearColor(0x020617, 1);
+      heroWrapper.addEventListener('mouseleave', () => {
+        gsap.to(heroImage, {
+          rotateY: 0,
+          rotateX: 0,
+          duration: 0.8,
+          ease: "elastic.out(1, 0.3)"
+        });
+      });
+    }
 
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(
-  60,
-  window.innerWidth / window.innerHeight,
-  0.1,
-  100
-);
-camera.position.set(0, 0, 9);
-scene.add(camera);
+    // Animate individual timeline items on scroll
+    const items = document.querySelectorAll('.timeline-item');
+    items.forEach(item => {
+      const card = item.querySelector('.timeline-content, .amazon-highlight-card, .contact-card');
+      const node = item.querySelector('.timeline-node');
+      
+      const direction = item.classList.contains('left') ? -60 : (item.classList.contains('right') ? 60 : 0);
+      const isCentred = !item.classList.contains('left') && !item.classList.contains('right');
 
-const gradientGeo = new THREE.PlaneGeometry(30, 18);
-const gradientMat = new THREE.MeshBasicMaterial({
-  color: 0x020617,
-  side: THREE.BackSide,
-});
-const gradientPlane = new THREE.Mesh(gradientGeo, gradientMat);
-gradientPlane.position.z = -10;
-scene.add(gradientPlane);
+      gsap.fromTo(card, 
+        { 
+          opacity: 0, 
+          x: isMobile ? 30 : direction, 
+          y: isCentred ? 40 : 15,
+          scale: 0.96 
+        },
+        { 
+          opacity: 1, 
+          x: 0, 
+          y: 0,
+          scale: 1,
+          duration: 0.85,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: item,
+            start: "top 85%",
+            end: "top 55%",
+            toggleActions: "play none none reverse",
+          }
+        }
+      );
 
-const particlesCount = 1200; 
-const positions = new Float32Array(particlesCount * 2);
-const colors = new Float32Array(particlesCount * 2);
-const sizes = new Float32Array(particlesCount);
+      gsap.fromTo(node, 
+        { scale: 0 },
+        { 
+          scale: 1,
+          duration: 0.6,
+          ease: "back.out(2)",
+          scrollTrigger: {
+            trigger: item,
+            start: "top 85%",
+            toggleActions: "play none none reverse",
+          }
+        }
+      );
+    });
 
-for (let i = 0; i < particlesCount; i++) {
-  const i3 = i * 3;
-  const radius = 8;
+    // ----------------------------------------------------
+    // 5. ANIMATION LOOP & THREE.JS RENDER LOOP
+    // ----------------------------------------------------
+    const clock = new THREE.Clock();
 
-  positions[i3 + 0] = (Math.random() - 0.5) * radius * 2;
-  positions[i3 + 1] = (Math.random() - 0.5) * radius * 2;
-  positions[i3 + 2] = (Math.random() - 0.5) * radius * 2;
+    let targetCamX = 0;
+    let targetCamY = 0;
+    let targetCamZ = 9;
 
-  const mix = Math.random();
-  let r, g, b;
+    function animate() {
+      const elapsed = clock.getElapsedTime();
 
-  if (mix < 0.33) {
-    r = 0.2 + Math.random() * 0.3;
-    g = 0.7 + Math.random() * 0.3;
-    b = 0.9 + Math.random() * 0.1;
-  } else if (mix < 0.66) {
-    r = 0.6 + Math.random() * 0.3;
-    g = 0.3 + Math.random() * 0.3;
-    b = 0.9 + Math.random() * 0.1;
-  } else {
-    r = 0.98;
-    g = 0.5 + Math.random() * 0.2;
-    b = 0.2 + Math.random() * 0.1;
-  }
+      // Dynamic space flight math based on scroll depth
+      // Sweep the camera down along an organic S-Curve corridor
+      targetCamZ = 9 - scrollProgress * 16;
+      targetCamY = -scrollProgress * 15;
+      targetCamX = Math.sin(scrollProgress * Math.PI * 1.5) * 2.8;
 
-  colors[i3 + 0] = r;
-  colors[i3 + 1] = g;
-  colors[i3 + 2] = b;
+      // Mouse Parallax Blend
+      let finalCamX = targetCamX;
+      let finalCamY = targetCamY;
+      
+      if (!isTouch) {
+        finalCamX += mouseX * 1.6;
+        finalCamY += -mouseY * 1.6;
+      }
 
-  sizes[i] = 0.04 + Math.random() * 0.08;
-}
+      // Smooth camera lerp (reduces camera snapping/jitter)
+      camera.position.x += (finalCamX - camera.position.x) * 0.06;
+      camera.position.y += (finalCamY - camera.position.y) * 0.06;
+      camera.position.z += (targetCamZ - camera.position.z) * 0.06;
 
-const particlesGeometry = new THREE.BufferGeometry();
-particlesGeometry.setAttribute(
-  'position',
-  new THREE.BufferAttribute(positions, 3)
-);
-particlesGeometry.setAttribute(
-  'color',
-  new THREE.BufferAttribute(colors, 3)
-);
-particlesGeometry.setAttribute(
-  'size',
-  new THREE.BufferAttribute(sizes, 1)
-);
+      // Particle system base spin + scroll acceleration
+      particles.rotation.y = elapsed * 0.03 + scrollProgress * Math.PI * 1.2;
+      particles.rotation.x = Math.sin(elapsed * 0.15) * 0.1 + scrollProgress * 0.3;
 
-const particlesMaterial = new THREE.PointsMaterial({
-  size: 0.08,
-  sizeAttenuation: true,
-  vertexColors: true,
-  transparent: true,
-  opacity: 0.9,
-  depthWrite: false,
-  blending: THREE.AdditiveBlending,
-});
+      // Dynamic particle pulsing sizes
+      const scale = 1.0 + Math.sin(elapsed * 0.4) * 0.08;
+      particles.scale.set(scale, scale, scale);
 
-const particles = new THREE.Points(particlesGeometry, particlesMaterial);
-scene.add(particles);
+      // Make camera lock its view direction forward along the corridor path
+      camera.lookAt(new THREE.Vector3(targetCamX * 0.5, targetCamY, targetCamZ - 6));
 
-let mouseX = 0;
-let mouseY = 0;
-const isTouch = window.matchMedia('(pointer: coarse)').matches;
+      renderer.render(scene, camera);
+      requestAnimationFrame(animate);
+    }
 
-if (!isTouch) {
-  window.addEventListener('mousemove', (e) => {
-    mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
-    mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
-  });
-}
-
-window.addEventListener('resize', () => {
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight);
-});
-
-const clock = new THREE.Clock();
-
-function animate() {
-  const elapsed = clock.getElapsedTime();
-
-  particles.rotation.y = elapsed * 0.06;
-  particles.rotation.x = Math.sin(elapsed * 0.25) * 0.2;
-
-  const scale = 1 + Math.sin(elapsed * 0.3) * 0.05;
-  particles.scale.set(scale, scale, scale);
-
-  if (!isTouch) {
-    particles.rotation.y += mouseX * 0.12;
-    particles.rotation.x += -mouseY * 0.12;
-  }
-
-  renderer.render(scene, camera);
-  requestAnimationFrame(animate);
-}
-
-animate();
+    animate();
 
   </script>
 </body>
 </html>
-
