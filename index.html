@@ -3,917 +3,545 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sudarshan Patil H J | Portfolio & Story Timeline</title>
-  
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Portfolio and interactive 3D Story Timeline of Sudarshan Patil H J, an 18-year-old Full-Stack Developer & AI Engineer at Scaler School of Technology." />
-  <meta name="keywords" content="Sudarshan Patil, SST, Full-Stack Developer, AI Engineer, MERN, Next.js, Supabase, Three.js, GSAP Portfolio, Awwwards portfolio, Pychem-Pro, GSSOC" />
-  
-  <!-- CSS Stylesheets -->
+  <title>Sudarshan Patil H J — Backend & AI Developer</title>
+  <meta name="description" content="Backend developer and open-source contributor. 6 merged PRs to InsForge (11.9K★ YC-backed). Algorithmic trading systems, AI pipelines, concurrent systems. First-year CS at SST + BITS Pilani." />
+  <meta name="keywords" content="Sudarshan Patil, backend developer, open source, InsForge, BITS Pilani, SST, AI developer, Node.js, TypeScript" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  
-  <!-- Fonts & Icons CDN -->
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  
-  <!-- GSAP for Awwwards-level Animations -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 <body>
 
-  <!-- Custom Glowing Cursor (Cyber-Flair) -->
-  <div id="cyber-cursor"></div>
-  <div id="cyber-cursor-glow"></div>
-
-  <!-- WebGL Background Canvas -->
-  <canvas id="bg-canvas"></canvas>
-
-  <!-- Sticky Cyberpunk Navigation -->
-  <nav class="nav">
-    <div class="nav-container">
-      <div class="nav-logo" id="nav-logo">
-        <img src="logo.jpg" alt="Logo" class="nav-logo-img" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=100&auto=format&fit=crop';">
-        <span class="nav-logo-text">Sudarshan</span><span class="nav-dot">Patil H J</span>
-      </div>
-      <ul class="nav-links">
-        <li><a href="#hero" class="nav-item">Start</a></li>
-        <li><a href="#about" class="nav-item">Foundation</a></li>
-        <li><a href="#projects" class="nav-item">Projects</a></li>
-        <li><a href="#highlight" class="nav-item">Milestone</a></li>
-        <li><a href="#community" class="nav-item">Community</a></li>
-        <li><a href="#analytics" class="nav-item">Metrics</a></li>
-        <li><a href="#contact" class="nav-item">Contact</a></li>
+  <!-- ── NAVIGATION ─────────────────────────────────────────── -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">Sudarshan<span class="accent-dot">.</span></a>
+      <ul class="nav-links" role="list">
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#oss" class="nav-link">Open Source</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
-      <div class="nav-socials">
-        <a href="https://github.com/Sudarshan25092007" target="_blank" title="GitHub" class="social-icon-nav"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/sudarshan-patil-hj259227" target="_blank" title="LinkedIn" class="social-icon-nav"><i class="fab fa-linkedin-in"></i></a>
+      <div class="nav-actions">
+        <a href="https://github.com/Sudarshan25092007" target="_blank" rel="noopener" class="nav-github">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          GitHub
+        </a>
       </div>
     </div>
   </nav>
 
-  <!-- Main Scroll Container -->
-  <main class="scroll-container">
+  <main>
 
-    <!-- HERO (THE HOOK) -->
-    <header id="hero" class="hero-section">
-      <div class="hero-wrapper">
-        <div class="hero-content">
-          <div class="cyber-badge fade-reveal"><i class="fas fa-microchip"></i> FULL-STACK & AI ENGINEER</div>
-          <h1 class="hero-title fade-reveal">
-            Hi, I'm <br><span class="glitch-text" data-text="Sudarshan Patil H J">Sudarshan Patil H J</span>
-          </h1>
-          <p class="hero-tagline fade-reveal">
-            Crafting premium, high-performance web applications & intelligent computing systems. Undergrad student @ <span class="accent-text">Scaler School of Technology</span>.
-          </p>
-          
-          <!-- Social Grid -->
-          <div class="social-links-grid fade-reveal">
-            <a href="https://github.com/Sudarshan25092007" target="_blank" class="social-button github">
-              <i class="fab fa-github"></i> <span>GitHub</span>
-            </a>
-            <a href="https://www.linkedin.com/in/sudarshan-patil-hj259227" target="_blank" class="social-button linkedin">
-              <i class="fab fa-linkedin-in"></i> <span>LinkedIn</span>
-            </a>
-            <a href="https://leetcode.com/Sudarshan_patil_h_j/" target="_blank" class="social-button leetcode">
-              <i class="fas fa-code"></i> <span>LeetCode</span>
-            </a>
-            <a href="https://www.instagram.com/sudarshanpatil.hj_/" target="_blank" class="social-button instagram">
-              <i class="fab fa-instagram"></i> <span>Instagram</span>
-            </a>
+    <!-- ── HERO ───────────────────────────────────────────────── -->
+    <section class="hero" id="home">
+      <div class="wrap">
+
+        <div class="avail-badge">
+          <span class="avail-dot" aria-hidden="true"></span>
+          Open to internships — Backend · AI · Full-Stack
+        </div>
+
+        <h1 class="hero-name">Sudarshan Patil H J</h1>
+        <p class="hero-role">Backend & AI Developer &nbsp;·&nbsp; Open Source Contributor</p>
+
+        <p class="hero-bio">
+          18-year-old CS student pursuing dual enrollment at
+          <strong>Scaler School of Technology</strong> (B.Tech CS & AI) and
+          <strong>BITS Pilani</strong> (BSc CS). I build backend infrastructure,
+          AI-powered pipelines, and contribute to production open-source codebases.
+          Currently: 6 merged PRs to InsForge — a YC-backed cloud platform with 11.9K GitHub stars.
+        </p>
+
+        <nav class="hero-ctas" aria-label="Primary actions">
+          <a href="https://github.com/Sudarshan25092007" target="_blank" rel="noopener" class="cta-primary">GitHub</a>
+          <a href="https://www.linkedin.com/in/sudarshan-patil-hj259227" target="_blank" rel="noopener" class="cta-outline">LinkedIn</a>
+          <a href="mailto:hjsudarshanpatil@gmail.com" class="cta-ghost">Email me</a>
+        </nav>
+
+        <div class="hero-metrics" role="list">
+          <div class="metric" role="listitem">
+            <span class="metric-val">6</span>
+            <span class="metric-lbl">Merged PRs · InsForge (11.9K ★)</span>
           </div>
-
-          <div class="hero-actions fade-reveal">
-            <a href="#about" class="btn primary-btn scroll-trigger-btn"><i class="fas fa-chevron-down"></i> Begin Journey</a>
-            <a href="#contact" class="btn ghost-btn"><i class="far fa-paper-plane"></i> Get in Touch</a>
+          <div class="metric-sep" aria-hidden="true"></div>
+          <div class="metric" role="listitem">
+            <span class="metric-val">2</span>
+            <span class="metric-lbl">OSS repos contributed</span>
+          </div>
+          <div class="metric-sep" aria-hidden="true"></div>
+          <div class="metric" role="listitem">
+            <span class="metric-val">8</span>
+            <span class="metric-lbl">Projects shipped</span>
           </div>
         </div>
 
-        <div class="hero-visual fade-reveal">
-          <div class="hero-image-wrapper">
-            <div class="hero-image-3d">
-              <div class="cyber-overlay"></div>
-              <img src="PHOTO.jpg" alt="Sudarshan Patil H J" class="profile-img-3d" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop';">
-              <div class="corner-bracket top-left"></div>
-              <div class="corner-bracket top-right"></div>
-              <div class="corner-bracket bottom-left"></div>
-              <div class="corner-bracket bottom-right"></div>
-            </div>
-            <div class="glowing-halo"></div>
-          </div>
+      </div>
+    </section>
+
+    <!-- ── SIGNAL HIGHLIGHTS ──────────────────────────────────── -->
+    <div class="wrap signals reveal">
+      <div class="signal signal-gold">
+        <div class="signal-icon" aria-hidden="true">⚡</div>
+        <div>
+          <div class="signal-title">Amazon SDE-I OA · Feb 2026</div>
+          <div class="signal-sub">University Talent Acquisition invite. Profile cleared human screening as a first-year student.</div>
         </div>
       </div>
-      <div class="scroll-down-hint">
-        <span>SCROLL DOWN TO TRAVEL</span>
-        <div class="mouse-icon"><div class="mouse-wheel"></div></div>
-      </div>
-    </header>
-
-    <!-- CHAPTER 1: THE FOUNDATION (ABOUT & SKILLS) -->
-    <section id="about" class="timeline-section">
-      <div class="chapter-indicator">CHAPTER 1 // THE FOUNDATION</div>
-      
-      <div class="timeline-item centered">
-        <div class="timeline-node"><i class="fas fa-graduation-cap"></i></div>
-        <div class="timeline-content glass-card">
-          <div class="card-glow-cyan"></div>
-          <div class="card-header-meta">ABOUT ME</div>
-          <h2 class="section-title">An 18-Year-Old Engineer Shaping the Future</h2>
-          <p class="section-desc">
-            Currently undergoing rigorous software engineering residency at <span class="highlight-text">Scaler School of Technology</span>, where I combine theoretical computer science with heavy practical development. I don't just build websites; I engineer interactive platforms, deep tool integrations, and systems that address real-world problems.
-          </p>
-          <div class="foundation-meta">
-            <div class="meta-badge"><i class="fas fa-location-dot"></i> Bengaluru, India</div>
-            <div class="meta-badge"><i class="fas fa-university"></i> SST Undergrad</div>
-          </div>
+      <div class="signal signal-blue">
+        <div class="signal-icon" aria-hidden="true">🎓</div>
+        <div>
+          <div class="signal-title">Dual Enrollment — BITS Pilani + SST</div>
+          <div class="signal-sub">BSc CS (BITS Pilani) + B.Tech CS & AI (Scaler SST) · 2025–2029 · Bengaluru</div>
         </div>
       </div>
+      <div class="signal signal-green">
+        <div class="signal-icon" aria-hidden="true">🌐</div>
+        <div>
+          <div class="signal-title">GSSOC '26 — Selected Contributor</div>
+          <div class="signal-sub">GirlScript Summer of Code · Global open source contributor program</div>
+        </div>
+      </div>
+    </div>
 
-      <div class="timeline-item centered">
-        <div class="timeline-node"><i class="fas fa-network-wired"></i></div>
-        <div class="timeline-content glass-card">
-          <div class="card-glow-pink"></div>
-          <div class="card-header-meta">ENGINEERING SYSTEM MATRIX</div>
-          <h2 class="section-title">Core Skills</h2>
-          <div class="skills-matrix-container">
-            <div class="skill-category">
-              <h3><i class="fas fa-laptop-code"></i> Frontend & Mobile</h3>
-              <div class="skill-tags">
-                <span class="tag font-neon">
-                  <img src="https://skillicons.dev/icons?i=next" alt="Next.js">
-                  <span>Next.js</span>
-                </span>
-                <span class="tag font-neon">
-                  <img src="https://skillicons.dev/icons?i=react" alt="React">
-                  <span>React</span>
-                </span>
-                <span class="tag font-neon">
-                  <img src="https://skillicons.dev/icons?i=react" alt="React Native">
-                  <span>React Native</span>
-                </span>
-                <span class="tag">
-                  <img src="https://skillicons.dev/icons?i=threejs" alt="Three.js">
-                  <span>Three.js</span>
-                </span>
-                <span class="tag">
-                  <img src="https://skillicons.dev/icons?i=ts" alt="TypeScript">
-                  <span>TypeScript</span>
-                </span>
-                <span class="tag">
-                  <img src="https://skillicons.dev/icons?i=js" alt="JavaScript">
-                  <span>JavaScript</span>
-                </span>
-                <span class="tag">
-                  <img src="https://skillicons.dev/icons?i=tailwind" alt="Tailwind CSS">
-                  <span>Tailwind</span>
-                </span>
-                <span class="tag">
-                  <img src="https://skillicons.dev/icons?i=html" alt="HTML5">
-                  <span>HTML5</span>
-                </span>
-                <span class="tag">
-                  <img src="https://skillicons.dev/icons?i=css" alt="CSS3">
-                  <span>CSS3</span>
-                </span>
-              </div>
+    <!-- ── PROJECTS ───────────────────────────────────────────── -->
+    <section class="section" id="projects">
+      <div class="wrap">
+
+        <header class="section-hd reveal">
+          <span class="eyebrow">Projects</span>
+          <h2 class="section-title">What I've built</h2>
+        </header>
+
+        <!-- Featured: XAUUSD -->
+        <article class="proj-featured reveal" aria-label="Featured project">
+          <div class="proj-featured-header">
+            <div class="proj-tags">
+              <span class="tag tag-ai">AI + Systems</span>
+              <span class="tag tag-muted">Jan – May 2026 &nbsp;·&nbsp; Paused</span>
             </div>
-            <div class="skill-category">
-              <h3><i class="fas fa-server"></i> Backend, Database & Cloud</h3>
-              <div class="skill-tags">
-                <span class="tag font-neon">
-                  <img src="https://skillicons.dev/icons?i=nodejs" alt="Node.js">
-                  <span>Node.js</span>
-                </span>
-                <span class="tag font-neon">
-                  <img src="https://skillicons.dev/icons?i=express" alt="Express">
-                  <span>Express</span>
-                </span>
-                <span class="tag font-neon">
-                  <img src="https://skillicons.dev/icons?i=supabase" alt="Supabase">
-                  <span>Supabase</span>
-                </span>
-                <span class="tag">
-                  <img src="https://skillicons.dev/icons?i=mysql" alt="MySQL">
-                  <span>MySQL</span>
-                </span>
-                <span class="tag">
-                  <img src="https://skillicons.dev/icons?i=mongodb" alt="MongoDB">
-                  <span>MongoDB</span>
-                </span>
-                <span class="tag">
-                  <img src="https://skillicons.dev/icons?i=firebase" alt="Firebase">
-                  <span>Firebase</span>
-                </span>
-                <span class="tag">
-                  <img src="https://skillicons.dev/icons?i=docker" alt="Docker">
-                  <span>Docker</span>
-                </span>
-              </div>
-            </div>
-            <div class="skill-category">
-              <h3><i class="fas fa-screwdriver-wrench"></i> Tools & Languages</h3>
-              <div class="skill-tags">
-                <span class="tag">
-                  <img src="https://skillicons.dev/icons?i=python" alt="Python">
-                  <span>Python</span>
-                </span>
-                <span class="tag">
-                  <img src="https://skillicons.dev/icons?i=java" alt="Java">
-                  <span>Java</span>
-                </span>
-                <span class="tag">
-                  <img src="https://skillicons.dev/icons?i=cpp" alt="C++">
-                  <span>C++</span>
-                </span>
-                <span class="tag">
-                  <img src="https://skillicons.dev/icons?i=git" alt="Git">
-                  <span>Git</span>
-                </span>
-                <span class="tag">
-                  <img src="https://skillicons.dev/icons?i=github" alt="GitHub">
-                  <span>GitHub</span>
-                </span>
-                <span class="tag">
-                  <img src="https://skillicons.dev/icons?i=vscode" alt="VS Code">
-                  <span>VS Code</span>
-                </span>
-                <span class="tag">
-                  <img src="https://skillicons.dev/icons?i=vercel" alt="Vercel">
-                  <span>Vercel</span>
-                </span>
-                <span class="tag">
-                  <img src="https://skillicons.dev/icons?i=postman" alt="Postman">
-                  <span>Postman</span>
-                </span>
-              </div>
-            </div>
-            <div class="skill-category">
-              <h3><i class="fas fa-chart-line"></i> Specialized Domains</h3>
-              <div class="skill-tags">
-                <span class="tag font-neon-amber">
-                  <i class="fas fa-robot" style="color: var(--neon-amber);"></i>
-                  <span>Algorithmic Trading</span>
-                </span>
-                <span class="tag font-neon-amber">
-                  <i class="fas fa-chart-area" style="color: var(--neon-amber);"></i>
-                  <span>MetaTrader 5</span>
-                </span>
-              </div>
+            <div class="proj-links-inline">
+              <a href="https://ai-command-center-nine.vercel.app/" target="_blank" rel="noopener" class="proj-link">Live Demo →</a>
+              <a href="https://github.com/Sudarshan25092007/AI_COMMAND_CENTER" target="_blank" rel="noopener" class="proj-link-ghost">Source</a>
             </div>
           </div>
+          <h3 class="proj-featured-title">XAUUSD Algorithmic Trading Engine</h3>
+          <div class="proj-body">
+            <p>Built a production-grade high-frequency trading system for XAUUSD (Gold). The core is a <strong>custom Native TCP bridge between Python and MetaTrader 5</strong> using persistent read buffers and newline-delimited packet framing — eliminating partial-read errors in a live tick stream processing 1,000–3,000 ticks per minute.</p>
+            <p>The statistical arbitrage engine triggers trades only when tick density crosses <code>μ + 1.5σ</code> (top ~7% of market events) AND directional order-flow imbalance confirms buyer/seller conviction. No chart patterns, no ML — pure real-time statistical decision-making. Session-level regime constants (μ, σ) are derived offline from 30–90 days of historical tick data per trading session (London, NY, Tokyo).</p>
+            <p>Supabase PostgreSQL "flight recorder" with automatic fallback to in-memory arrays during network failures. 10-second MT5 position sync protocol eliminates ghost trades. Docker-deployed with custom DNS hardening. Gemini 3 Flash generates AI trade rationale in a Next.js 15 Mission Control dashboard with live price tickers.</p>
+          </div>
+          <div class="stack-row">
+            <span class="stack">Python</span>
+            <span class="stack">FastAPI</span>
+            <span class="stack">MQL5 / MetaTrader 5</span>
+            <span class="stack">Next.js 15</span>
+            <span class="stack">Gemini API</span>
+            <span class="stack">Supabase</span>
+            <span class="stack">PostgreSQL</span>
+            <span class="stack">Docker</span>
+            <span class="stack">TCP Sockets</span>
+            <span class="stack">Pandas / NumPy</span>
+          </div>
+        </article>
+
+        <!-- Project Grid -->
+        <div class="proj-grid">
+
+          <article class="proj-card reveal">
+            <div class="proj-tags">
+              <span class="tag tag-backend">Concurrent Systems</span>
+              <span class="tag tag-muted">Jun 2026 · In progress</span>
+            </div>
+            <h3 class="proj-card-title">IPL Mock Auction Platform</h3>
+            <p class="proj-card-desc">Real-time concurrent auction system built to learn Redis in production. Redis atomic operations prevent race conditions (two teams can't win the same player). Pub/sub broadcasts live bids to all clients. Sorted sets manage leaderboard state across sessions.</p>
+            <div class="stack-row">
+              <span class="stack">Node.js</span>
+              <span class="stack">Redis</span>
+              <span class="stack">WebSockets</span>
+            </div>
+            <a href="https://github.com/Sudarshan25092007/ipl-auction-app" target="_blank" rel="noopener" class="proj-link-ghost">GitHub →</a>
+          </article>
+
+          <article class="proj-card reveal">
+            <div class="proj-tags">
+              <span class="tag tag-ai">AI Pipeline</span>
+              <span class="tag tag-muted">2026</span>
+            </div>
+            <h3 class="proj-card-title">Student Skill Gap Analyzer</h3>
+            <p class="proj-card-desc">AI-powered resume parser that extracts structured skills using Gemini API, cross-references them against job descriptions, and returns a prioritized gap report with learning paths. Three-service architecture: React/Vite frontend, Node.js/Express orchestrator, Python/FastAPI PDF microservice.</p>
+            <div class="stack-row">
+              <span class="stack">Python</span>
+              <span class="stack">Gemini API</span>
+              <span class="stack">FastAPI</span>
+              <span class="stack">React</span>
+              <span class="stack">PostgreSQL</span>
+            </div>
+          </article>
+
+          <article class="proj-card reveal">
+            <div class="proj-tags">
+              <span class="tag tag-fullstack">Full Stack</span>
+              <span class="tag tag-muted">Feb 2026</span>
+            </div>
+            <h3 class="proj-card-title">RoomFinder</h3>
+            <p class="proj-card-desc">Rental platform with Supabase Auth and PostgreSQL Row Level Security for secure multi-tenant data isolation. Image carousels, owner dashboards, and real-time search filtering. Server-side rendered via Next.js App Router, deployed on Vercel.</p>
+            <div class="stack-row">
+              <span class="stack">Next.js 15</span>
+              <span class="stack">Supabase</span>
+              <span class="stack">PostgreSQL</span>
+              <span class="stack">Tailwind CSS</span>
+            </div>
+            <a href="https://room-finder-web-rouge.vercel.app/" target="_blank" rel="noopener" class="proj-link-ghost">Live Demo →</a>
+          </article>
+
+          <article class="proj-card reveal">
+            <div class="proj-tags">
+              <span class="tag tag-fullstack">Civic Tech</span>
+              <span class="tag tag-muted">Sep 2025</span>
+            </div>
+            <h3 class="proj-card-title">Civic Reporter</h3>
+            <p class="proj-card-desc">Production civic issue reporting app. Firebase Auth + Firestore real-time DB + Cloudinary image uploads + Google Maps API for precise geo-tagging of reported issues. Live in production.</p>
+            <div class="stack-row">
+              <span class="stack">Firebase</span>
+              <span class="stack">Firestore</span>
+              <span class="stack">Google Maps API</span>
+              <span class="stack">Cloudinary</span>
+            </div>
+            <a href="https://civic-reporter-2007.web.app" target="_blank" rel="noopener" class="proj-link-ghost">Live Demo →</a>
+          </article>
+
+          <article class="proj-card reveal">
+            <div class="proj-tags">
+              <span class="tag tag-backend">MERN Stack</span>
+              <span class="tag tag-muted">Dec 2025</span>
+            </div>
+            <h3 class="proj-card-title">TaskFlow</h3>
+            <p class="proj-card-desc">Full-stack task manager with Node.js/Express REST API, JWT-based stateless authentication, MongoDB Atlas persistence, and a priority-queue categorization system. Deployed on Render.</p>
+            <div class="stack-row">
+              <span class="stack">Node.js</span>
+              <span class="stack">Express</span>
+              <span class="stack">MongoDB</span>
+              <span class="stack">JWT</span>
+            </div>
+            <a href="https://task-flow-frontend-nb7t.onrender.com/" target="_blank" rel="noopener" class="proj-link-ghost">Live Demo →</a>
+          </article>
+
+          <article class="proj-card reveal">
+            <div class="proj-tags">
+              <span class="tag tag-mobile">React Native</span>
+              <span class="tag tag-muted">Jan 2026</span>
+            </div>
+            <h3 class="proj-card-title">ToDo App — Mobile</h3>
+            <p class="proj-card-desc">Cross-platform iOS/Android task manager. TypeScript, Expo SDK, AsyncStorage for offline-persistent data, custom dark mode, and tactile haptic feedback patterns.</p>
+            <div class="stack-row">
+              <span class="stack">React Native</span>
+              <span class="stack">TypeScript</span>
+              <span class="stack">Expo</span>
+              <span class="stack">AsyncStorage</span>
+            </div>
+            <a href="https://github.com/Sudarshan25092007/react-native-todo-app" target="_blank" rel="noopener" class="proj-link-ghost">GitHub →</a>
+          </article>
+
         </div>
       </div>
     </section>
 
-    <!-- CHAPTER 2: REAL-WORLD PROJECTS -->
-    <section id="projects" class="timeline-section">
-      <div class="chapter-indicator">CHAPTER 2 // REAL-WORLD APPLICATIONS</div>
-      
-      <!-- Interactive Progress Line -->
-      <div class="timeline-line-wrapper">
-        <div class="timeline-line"></div>
-        <div class="timeline-line-progress"></div>
-      </div>
+    <!-- ── OPEN SOURCE ─────────────────────────────────────────── -->
+    <section class="section" id="oss">
+      <div class="wrap">
 
-      <!-- Civic Reporter -->
-      <div class="timeline-item left">
-        <div class="timeline-node"><i class="fas fa-bullhorn"></i></div>
-        <div class="timeline-content glass-card">
-          <div class="card-glow-pink"></div>
-          <div class="card-date"><i class="far fa-calendar"></i> SEPTEMBER 2025</div>
-          <h3 class="project-title">Civic Reporter</h3>
-          <p class="project-description">
-            A hyper-localized reporting service bridging the gap between citizens and municipal authorities. Users upload photo proof of local issues with automatic metadata location tagging rendered cleanly on active Google Maps canvases.
-          </p>
-          <div class="tech-row">
-            <span class="tech-tag">Firebase Auth</span>
-            <span class="tech-tag">Firestore</span>
-            <span class="tech-tag">Cloudinary</span>
-            <span class="tech-tag">Google Maps API</span>
-          </div>
-          <div class="project-links">
-            <a href="https://civic-reporter-2007.web.app" target="_blank" class="cyber-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-            <a href="https://github.com/Sudarshan25092007/Civic-Reporter-App" target="_blank" class="cyber-link"><i class="fab fa-github"></i> Repository</a>
-          </div>
-        </div>
-      </div>
+        <header class="section-hd reveal">
+          <span class="eyebrow">Open Source</span>
+          <h2 class="section-title">Contribution record</h2>
+        </header>
 
-      <!-- TaskFlow -->
-      <div class="timeline-item right">
-        <div class="timeline-node"><i class="fas fa-tasks"></i></div>
-        <div class="timeline-content glass-card">
-          <div class="card-glow-purple"></div>
-          <div class="card-date"><i class="far fa-calendar"></i> DECEMBER 2025</div>
-          <h3 class="project-title">TaskFlow <span class="project-tag">MERN Stack</span></h3>
-          <p class="project-description">
-            A comprehensive work-orchestration app dividing workloads into Today, Upcoming, and Backlog modules. Implements strict JWT-based middleware, dynamic priority flags, task expiration timers, and persistent storage.
-          </p>
-          <div class="tech-row">
-            <span class="tech-tag">Node.js</span>
-            <span class="tech-tag">Express</span>
-            <span class="tech-tag">MongoDB</span>
-            <span class="tech-tag">JWT</span>
-            <span class="tech-tag">Tailwind</span>
-          </div>
-          <div class="project-links">
-            <a href="https://task-flow-frontend-nb7t.onrender.com/" target="_blank" class="cyber-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-            <a href="https://github.com/Sudarshan25092007/TaskFlow-Full-stack-application-" target="_blank" class="cyber-link"><i class="fab fa-github"></i> Repository</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- ToDo App Mobile -->
-      <div class="timeline-item left">
-        <div class="timeline-node"><i class="fas fa-mobile-alt"></i></div>
-        <div class="timeline-content glass-card">
-          <div class="card-glow-cyan"></div>
-          <div class="card-date"><i class="far fa-calendar"></i> JANUARY 2026</div>
-          <h3 class="project-title">ToDo App Mobile</h3>
-          <p class="project-description">
-            A native mobile client built to optimize everyday task entries. Implements modular state patterns, persistent local databases, custom tactile vibration feedback, and custom dark modes.
-          </p>
-          <div class="tech-row">
-            <span class="tech-tag">React Native</span>
-            <span class="tech-tag">Expo SDK</span>
-            <span class="tech-tag">Async Storage</span>
-            <span class="tech-tag">TypeScript</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/Sudarshan25092007/react-native-todo-app" target="_blank" class="cyber-link"><i class="fab fa-github"></i> Repository</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- RoomFinder -->
-      <div class="timeline-item right">
-        <div class="timeline-node"><i class="fas fa-house-user"></i></div>
-        <div class="timeline-content glass-card">
-          <div class="card-glow-cyan"></div>
-          <div class="card-date"><i class="far fa-calendar"></i> FEBRUARY 2026</div>
-          <h3 class="project-title">RoomFinder <span class="project-tag">Full-Stack</span></h3>
-          <p class="project-description">
-            A secure, robust platform helping students and professionals locate rental housing. Features location query clustering, monthly rental filters, landlord verification, and a live image carousel alongside direct call capabilities.
-          </p>
-          <div class="tech-row">
-            <span class="tech-tag">Next.js</span>
-            <span class="tech-tag">Supabase</span>
-            <span class="tech-tag">PostgreSQL</span>
-            <span class="tech-tag">Tailwind CSS</span>
-            <span class="tech-tag">Vercel</span>
-          </div>
-          <div class="project-links">
-            <a href="https://room-finder-web-rouge.vercel.app/" target="_blank" class="cyber-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-            <a href="https://github.com/Sudarshan25092007/Room-Finder-Web" target="_blank" class="cyber-link"><i class="fab fa-github"></i> Repository</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Pychem-Pro Core Contributor -->
-      <div class="timeline-item left">
-        <div class="timeline-node"><i class="fas fa-flask"></i></div>
-        <div class="timeline-content glass-card">
-          <div class="card-glow-pink"></div>
-          <div class="card-date"><i class="far fa-calendar"></i> LATE APRIL 2026</div>
-          <h3 class="project-title">Pychem-Pro <span class="project-tag">Core Contributor</span></h3>
-          <p class="project-description">
-            Contributed to Pychem-Pro, a molecular modeling tool suite. Refactored private adjacency couplings, transitioning private graph access models into modern public queries (`get_neighbor_bonds()`), enhancing computation speeds for graph traversal modules.
-          </p>
-          <div class="tech-row">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">Computational Chemistry</span>
-            <span class="tech-tag">Graph Algorithms</span>
-            <span class="tech-tag">Refactoring</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/Sudarshan25092007/Pychem-Pro" target="_blank" class="cyber-link"><i class="fab fa-github"></i> Repository</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <!-- CHAPTER 4: OPEN SOURCE & COMMUNITY -->
-    <section id="community" class="timeline-section">
-      <div class="chapter-indicator">CHAPTER 4 // OPEN SOURCE & COMMUNITY</div>
-      
-      <!-- Entered Open Source -->
-      <div class="timeline-item left">
-        <div class="timeline-node"><i class="fas fa-door-open"></i></div>
-        <div class="timeline-content glass-card">
-          <div class="card-glow-purple"></div>
-          <div class="card-date"><i class="far fa-calendar"></i> APRIL 2026</div>
-          <h3 class="project-title">Entered Open Source Arena</h3>
-          <p class="project-description">
-            Commenced active development in decentralized, public software platforms. Shifted focus toward building accessible libraries, engineering API encapsulations, and working on large computational modules alongside international teams.
-          </p>
-          <div class="tech-row">
-            <span class="tech-tag">Git Integration</span>
-            <span class="tech-tag">API Design</span>
-            <span class="tech-tag">Community QA</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- GSSOC Selection -->
-      <div class="timeline-item right">
-        <div class="timeline-node"><i class="fas fa-trophy"></i></div>
-        <div class="timeline-content glass-card">
-          <div class="card-glow-cyan"></div>
-          <div class="card-date"><i class="far fa-calendar"></i> MAY 14, 2026</div>
-          <h3 class="project-title">Selected for GSSOC '26</h3>
-          <p class="project-description">
-            Selected as an active contributor for the prestigious **GirlScript Summer of Code** (GSSOC) global open-source program. Engaging in intensive sprints, reviewing pull requests, and pushing production code to open repositories.
-          </p>
-          <div class="tech-row">
-            <span class="tech-tag">Open Source</span>
-            <span class="tech-tag">Global Collaboration</span>
-            <span class="tech-tag">Git Workflows</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CHAPTER 5: THE ANALYTICS MATRIX -->
-    <section id="analytics" class="timeline-section">
-      <div class="chapter-indicator">CHAPTER 5 // LIVE COMPUTATIONAL METRICS</div>
-      
-      <div class="timeline-item centered">
-        <div class="timeline-node"><i class="fas fa-chart-bar"></i></div>
-        <div class="timeline-content glass-card">
-          <div class="card-glow-cyan"></div>
-          <div class="card-header-meta">ENGINEERING ANALYTICS</div>
-          <h2 class="section-title">GitHub Activity & Streak Stats</h2>
-          <p class="section-desc">
-            An active overview of my open-source commit velocity, active development streaks, and system details pulled live from GitHub servers.
-          </p>
-          
-          <div class="analytics-grid">
-            <div class="analytics-card">
-              <a href="https://github.com/Sudarshan25092007" target="_blank" title="View Live GitHub Contributions" style="display: block;">
-                <img src="https://github-readme-activity-graph.vercel.app/graph?username=Sudarshan25092007&theme=tokyo-night&hide_border=true&bg_color=030712" alt="GitHub Activity Graph" class="analytics-image">
-              </a>
+        <!-- InsForge -->
+        <article class="oss-card reveal" aria-label="InsForge contributions">
+          <div class="oss-card-header">
+            <div class="oss-repo-info">
+              <a href="https://github.com/InsForge/InsForge" target="_blank" rel="noopener" class="oss-repo-name">InsForge / InsForge</a>
+              <p class="oss-repo-meta">Node.js · TypeScript · PostgreSQL · Deno &nbsp;·&nbsp; YC-backed · 11.9K ★ · Cloud infrastructure platform</p>
             </div>
-            
-            <div class="analytics-row">
-              <a href="https://github.com/Sudarshan25092007" target="_blank" title="View Live GitHub Streaks" style="display: block;">
-                <img src="https://github-readme-streak-stats.herokuapp.com/?user=Sudarshan25092007&theme=tokyonight&hide_border=true&background=030712" alt="GitHub Streak Stats" class="analytics-image">
-              </a>
-              <a href="https://github.com/Sudarshan25092007" target="_blank" title="View GitHub Details" style="display: block;">
-                <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Sudarshan25092007&theme=tokyonight" alt="GitHub Profile Details" class="analytics-image">
-              </a>
+            <span class="oss-count-badge">6 Merged PRs</span>
+          </div>
+
+          <div class="git-log" role="list">
+            <div class="git-entry" role="listitem">
+              <span class="git-hash">#1351</span>
+              <span class="git-scope">config(arch)</span>
+              <span class="git-msg">Centralized 55+ scattered <code>process.env</code> reads across 21 backend files into a typed <code>AppConfig</code> interface; fixed critical PORT default bug (3000 → 7130); shipped 49 unit tests</span>
+            </div>
+            <div class="git-entry" role="listitem">
+              <span class="git-hash">#1494</span>
+              <span class="git-scope">perf(db)</span>
+              <span class="git-msg">Replaced <code>SELECT COUNT(*)</code> full table scans with trigger-backed O(1) row counters — eliminated the database metadata bottleneck on every agent interaction</span>
+            </div>
+            <div class="git-entry" role="listitem">
+              <span class="git-hash">#1519</span>
+              <span class="git-scope">fix(memory)</span>
+              <span class="git-msg">Added LRU-style size bounding to <code>tableCountCache</code> (previously an unbounded <code>Map.set()</code> with no eviction) to prevent memory leaks in long-running processes</span>
+            </div>
+            <div class="git-entry" role="listitem">
+              <span class="git-hash">#1526</span>
+              <span class="git-scope">fix(security)</span>
+              <span class="git-msg">AI gateway token cost caps to prevent financial abuse from runaway LLM API calls; cache stampede prevention via promise-lock pattern protecting concurrency correctness</span>
+            </div>
+            <div class="git-entry" role="listitem">
+              <span class="git-hash">#1443</span>
+              <span class="git-scope">chore</span>
+              <span class="git-msg">Deno global type safety, OAuth <code>AppError</code> standardization, and OpenAPI sunset policy headers across deprecated endpoints</span>
+            </div>
+            <div class="git-entry git-entry-review" role="listitem">
+              <span class="git-hash">#1541</span>
+              <span class="git-scope">chore(ai)</span>
+              <span class="git-msg">Externalized token cap configuration to <code>AppConfig</code>; added security boundary test suite for maxTokens validation — in review</span>
+              <span class="git-status">In Review</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PyChem-Pro -->
+        <article class="oss-card reveal" aria-label="PyChem-Pro contributions">
+          <div class="oss-card-header">
+            <div class="oss-repo-info">
+              <a href="https://github.com/vijaymasand/PyChem-Pro" target="_blank" rel="noopener" class="oss-repo-name">vijaymasand / PyChem-Pro</a>
+              <p class="oss-repo-meta">Python · Computational Chemistry · Molecular Modeling · Graph Algorithms</p>
+            </div>
+            <span class="oss-count-badge oss-count-purple">2 PRs</span>
+          </div>
+          <div class="git-log" role="list">
+            <div class="git-entry" role="listitem">
+              <span class="git-hash">#4</span>
+              <span class="git-scope">refactor</span>
+              <span class="git-msg">Centralized Euclidean distance calculation (<code>np.linalg.norm</code>) and standardized epsilon values across the MMFF94 force field module — eliminated code duplication across physics files</span>
+            </div>
+            <div class="git-entry" role="listitem">
+              <span class="git-hash">#6</span>
+              <span class="git-scope">refactor(api)</span>
+              <span class="git-msg">Replaced private <code>_adjacency</code> internal access with public <code>get_neighbor_bonds()</code> API in the atom_typing module — improved encapsulation and API surface clarity</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- GSSOC Banner -->
+        <div class="gssoc-banner reveal" role="complementary" aria-label="GSSOC selection">
+          <span class="gssoc-icon" aria-hidden="true">🌐</span>
+          <div>
+            <div class="gssoc-title">GirlScript Summer of Code '26 &mdash; Selected Contributor</div>
+            <div class="gssoc-sub">Active participant in global open source contributor program · May 2026</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── SKILLS ─────────────────────────────────────────────── -->
+    <section class="section" id="skills">
+      <div class="wrap">
+
+        <header class="section-hd reveal">
+          <span class="eyebrow">Skills</span>
+          <h2 class="section-title">Technical stack</h2>
+        </header>
+
+        <div class="skills-grid">
+          <div class="skill-group reveal">
+            <h4 class="skill-group-label">Languages</h4>
+            <div class="skill-tags">
+              <span class="sk">JavaScript (ES6+)</span>
+              <span class="sk">TypeScript</span>
+              <span class="sk">Python</span>
+              <span class="sk">Java</span>
+              <span class="sk">SQL</span>
+              <span class="sk">MQL5</span>
+            </div>
+          </div>
+          <div class="skill-group reveal">
+            <h4 class="skill-group-label">Backend</h4>
+            <div class="skill-tags">
+              <span class="sk">Node.js</span>
+              <span class="sk">Express.js</span>
+              <span class="sk">FastAPI</span>
+              <span class="sk">REST APIs</span>
+              <span class="sk">WebSockets</span>
+              <span class="sk">JWT Auth</span>
+              <span class="sk">TCP Sockets</span>
+            </div>
+          </div>
+          <div class="skill-group reveal">
+            <h4 class="skill-group-label">Databases & Cache</h4>
+            <div class="skill-tags">
+              <span class="sk">PostgreSQL</span>
+              <span class="sk">MongoDB</span>
+              <span class="sk">Redis</span>
+              <span class="sk">Firebase</span>
+              <span class="sk">Supabase</span>
+            </div>
+          </div>
+          <div class="skill-group reveal">
+            <h4 class="skill-group-label">Frontend & Mobile</h4>
+            <div class="skill-tags">
+              <span class="sk">Next.js 15</span>
+              <span class="sk">React</span>
+              <span class="sk">React Native</span>
+              <span class="sk">TypeScript</span>
+              <span class="sk">Tailwind CSS</span>
+              <span class="sk">Expo</span>
+            </div>
+          </div>
+          <div class="skill-group reveal">
+            <h4 class="skill-group-label">AI / Data</h4>
+            <div class="skill-tags">
+              <span class="sk">Gemini API</span>
+              <span class="sk">LLM Orchestration</span>
+              <span class="sk">Multi-agent Pipelines</span>
+              <span class="sk">Prompt Engineering</span>
+              <span class="sk">Statistical Modeling</span>
+              <span class="sk">Pandas</span>
+              <span class="sk">NumPy</span>
+            </div>
+          </div>
+          <div class="skill-group reveal">
+            <h4 class="skill-group-label">Infrastructure & Tools</h4>
+            <div class="skill-tags">
+              <span class="sk">Docker</span>
+              <span class="sk">Git / GitHub</span>
+              <span class="sk">Vercel</span>
+              <span class="sk">Render</span>
+              <span class="sk">Postman</span>
+              <span class="sk">MetaTrader 5</span>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="timeline-item centered">
-        <div class="timeline-node"><i class="fas fa-code-branch"></i></div>
-        <div class="timeline-content glass-card">
-          <div class="card-glow-purple"></div>
-          <div class="card-header-meta">ALGORITHMIC PERFECTION</div>
-          <h2 class="section-title">LeetCode Statistics</h2>
-          <p class="section-desc">
-            Tracking dynamic algorithmic problem-solving speed, technical proficiency, and active daily solution matrices. Click to explore my solve console!
-          </p>
-          
-          <div class="leetcode-box">
-            <a href="https://leetcode.com/Sudarshan_patil_h_j/" target="_blank" title="View Live LeetCode Solver Profile" style="display: block; width: 100%; text-align: center;">
-              <img src="https://leetcard.jacoblin.cool/Sudarshan_patil_h_j?theme=tokyonight&font=Fira%20Code&ext=activity" alt="LeetCode Stats" class="analytics-image">
-            </a>
+        <!-- Core CS Coursework -->
+        <div class="coursework reveal">
+          <span class="coursework-label">Currently studying</span>
+          <div class="coursework-tags">
+            <span class="sk sk-dim">Data Structures & Algorithms</span>
+            <span class="sk sk-dim">Operating Systems (Java)</span>
+            <span class="sk sk-dim">Data Analytics (Python)</span>
+            <span class="sk sk-dim">Database Design</span>
+            <span class="sk sk-dim">System Design Fundamentals</span>
           </div>
         </div>
-      </div>
 
-      <div class="timeline-item centered">
-        <div class="timeline-node"><i class="fas fa-dragon"></i></div>
-        <div class="timeline-content glass-card">
-          <div class="card-glow-pink"></div>
-          <div class="card-header-meta">SYSTEM HEATMAP</div>
-          <h2 class="section-title">Commit Velocity Snake</h2>
-          <p class="section-desc">
-            Visualizing structural contributions through an animated snake traversal vector across active matrix tiles.
+      </div>
+    </section>
+
+    <!-- ── EDUCATION ──────────────────────────────────────────── -->
+    <section class="section" id="education">
+      <div class="wrap">
+
+        <header class="section-hd reveal">
+          <span class="eyebrow">Education</span>
+          <h2 class="section-title">Academic background</h2>
+        </header>
+
+        <div class="edu-grid">
+          <div class="edu-card reveal">
+            <span class="edu-year">2025 – 2029</span>
+            <h3 class="edu-school">Scaler School of Technology</h3>
+            <p class="edu-degree">B.Tech in Computer Science & AI</p>
+            <p class="edu-note">Bengaluru · In-person engineering residency</p>
+          </div>
+          <div class="edu-card reveal">
+            <span class="edu-year">2025 – 2029</span>
+            <h3 class="edu-school">BITS Pilani</h3>
+            <p class="edu-degree">Bachelor of Science in Computer Science</p>
+            <p class="edu-note">Online program · Concurrent dual enrollment</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── CONTACT ────────────────────────────────────────────── -->
+    <section class="section contact-section" id="contact">
+      <div class="wrap">
+        <div class="contact-inner reveal">
+          <span class="eyebrow">Contact</span>
+          <h2 class="section-title">Let's talk.</h2>
+          <p class="contact-desc">
+            Open to backend internships, AI developer roles, and open source collaborations.
+            Based in Bengaluru — available for remote roles.
           </p>
-          
-          <div class="snake-box">
-            <a href="https://github.com/Sudarshan25092007" target="_blank" title="Explore GitHub Matrix Repo" style="display: block; width: 100%;">
-              <picture>
-                <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Sudarshan25092007/Sudarshan25092007/output/github-contribution-grid-snake-dark.svg">
-                <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Sudarshan25092007/Sudarshan25092007/output/github-contribution-grid-snake.svg">
-                <img src="https://raw.githubusercontent.com/Sudarshan25092007/Sudarshan25092007/output/github-contribution-grid-snake.svg" alt="GitHub Contribution Snake" class="analytics-image snake-img">
-              </picture>
+          <div class="contact-links" role="list">
+            <a href="mailto:hjsudarshanpatil@gmail.com" class="contact-link" role="listitem">
+              <span class="contact-icon" aria-hidden="true">✉</span>
+              hjsudarshanpatil@gmail.com
+            </a>
+            <a href="https://www.linkedin.com/in/sudarshan-patil-hj259227" target="_blank" rel="noopener" class="contact-link" role="listitem">
+              <span class="contact-icon" aria-hidden="true">in</span>
+              linkedin.com/in/sudarshan-patil-hj259227
+            </a>
+            <a href="https://github.com/Sudarshan25092007" target="_blank" rel="noopener" class="contact-link" role="listitem">
+              <span class="contact-icon" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              </span>
+              github.com/Sudarshan25092007
+            </a>
+            <a href="https://leetcode.com/Sudarshan_patil_h_j/" target="_blank" rel="noopener" class="contact-link" role="listitem">
+              <span class="contact-icon" aria-hidden="true">&lt;/&gt;</span>
+              LeetCode profile
             </a>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- EPILOGUE (CONTACT) -->
-    <section id="contact" class="timeline-section contact-wrapper">
-      <div class="chapter-indicator">EPILOGUE // DISPATCH MESSAGE</div>
-      
-      <div class="timeline-item centered">
-        <div class="timeline-node"><i class="far fa-paper-plane"></i></div>
-        
-        <div class="glass-card contact-card">
-          <div class="card-glow-cyan"></div>
-          <div class="cyber-grid-bg"></div>
-          
-          <h2 class="contact-title">Let's Build Something Revolutionary</h2>
-          <p class="contact-subtitle">
-            Open to premium engineering roles, software consultancies, complex full-stack contracts, and structural AI integrations. Drop a coordinate below!
-          </p>
-          
-          <div class="contact-details-grid">
-            <a href="mailto:hjsudarshanpatil@gmail.com" class="contact-detail-item">
-              <i class="fas fa-envelope"></i>
-              <div>
-                <span class="label">SECURE EMAIL</span>
-                <span class="value">hjsudarshanpatil@gmail.com</span>
-              </div>
-            </a>
-            <a href="https://www.linkedin.com/in/sudarshan-patil-hj259227" target="_blank" class="contact-detail-item">
-              <i class="fab fa-linkedin-in"></i>
-              <div>
-                <span class="label">LINKEDIN CONSOLE</span>
-                <span class="value">Sudarshan Patil</span>
-              </div>
-            </a>
-          </div>
-
-          <hr class="cyber-separator">
-
-          <h3 class="contact-footer-title">ESTABLISH CHANNELS</h3>
-          <div class="social-channels-container">
-            <a href="https://github.com/Sudarshan25092007" target="_blank" class="circle-social-btn" title="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/sudarshan-patil-hj259227" target="_blank" class="circle-social-btn" title="LinkedIn">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://leetcode.com/Sudarshan_patil_h_j/" target="_blank" class="circle-social-btn" title="LeetCode">
-              <i class="fas fa-code"></i>
-            </a>
-            <a href="https://www.instagram.com/sudarshanpatil.hj_/" target="_blank" class="circle-social-btn" title="Instagram">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </div>
-
-          <div class="visitor-counter-wrapper">
-            <span class="status-marker font-code"><span class="pulse-cyan"></span> SECURE MATRIX TELEMETRY</span>
-            <img src="https://komarev.com/ghpvc/?username=Sudarshan25092007-portfolio&color=00f0ff&style=flat-square&label=PORTFOLIO+VIEWS" alt="Visitor Counter" class="visitor-counter-img">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="cyber-footer">
-      <div class="footer-content">
-        <p class="font-code">SUDARSHAN PATIL H J // FULL-STACK & AI ENGINEER</p>
-        <p class="copyright">© 2026. All operations verified. Designed with immersive WebGL & GSAP controllers.</p>
-      </div>
-    </footer>
 
   </main>
 
-  <!-- Interactive JavaScript Engine -->
-  <script type="module">
-    import * as THREE from 'https://unpkg.com/three@0.161.0/build/three.module.js';
+  <!-- ── FOOTER ─────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>© 2026 Sudarshan Patil H J &nbsp;·&nbsp; Bengaluru, India</span>
+      <a href="https://sudarshan25092007.github.io/portfolio/" class="footer-link">sudarshan25092007.github.io/portfolio</a>
+    </div>
+  </footer>
 
-    // ----------------------------------------------------
-    // 1. DEVICE PROFILE & DOM INITIALIZATION
-    // ----------------------------------------------------
-    const canvas = document.getElementById('bg-canvas');
-    const isTouch = window.matchMedia('(pointer: coarse)').matches;
-    const isMobile = window.innerWidth < 768;
-    
-    // Performance optimized particle limits requested by User
-    const particlesCount = isMobile ? 400 : 1200;
-
-    // Custom Cursor tracking
-    const cursor = document.getElementById('cyber-cursor');
-    const cursorGlow = document.getElementById('cyber-cursor-glow');
-
-    if (!isTouch && cursor && cursorGlow) {
-      document.addEventListener('mousemove', (e) => {
-        gsap.to(cursor, { x: e.clientX, y: e.clientY, duration: 0.1 });
-        gsap.to(cursorGlow, { x: e.clientX, y: e.clientY, duration: 0.25 });
-      });
-
-      // Expand cursor on hover
-      const interactiveElements = document.querySelectorAll('a, button, .timeline-content, .amazon-highlight-card, .btn');
-      interactiveElements.forEach(el => {
-        el.addEventListener('mouseenter', () => {
-          cursor.classList.add('active');
-          cursorGlow.classList.add('active');
-        });
-        el.addEventListener('mouseleave', () => {
-          cursor.classList.remove('active');
-          cursorGlow.classList.remove('active');
-        });
-      });
-    }
-
-    // ----------------------------------------------------
-    // 2. THREE.JS 3D PARTICLE STARFIELD ENGINE
-    // ----------------------------------------------------
-    const renderer = new THREE.WebGLRenderer({
-      canvas,
-      antialias: !isMobile, // Disable on mobile for top-tier framerate
-      alpha: false,
-    });
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setClearColor(0x020617, 1);
-
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(
-      60,
-      window.innerWidth / window.innerHeight,
-      0.1,
-      100
-    );
-    // Initial camera placement
-    camera.position.set(0, 0, 9);
-    scene.add(camera);
-
-    // Deep background canvas gradient plane
-    const gradientGeo = new THREE.PlaneGeometry(40, 25);
-    const gradientMat = new THREE.MeshBasicMaterial({
-      color: 0x020617,
-      side: THREE.BackSide,
-    });
-    const gradientPlane = new THREE.Mesh(gradientGeo, gradientMat);
-    gradientPlane.position.z = -12;
-    scene.add(gradientPlane);
-
-    // Create high-end circular neon soft particle textures dynamically
-    function createSoftParticleTexture() {
-      const c = document.createElement('canvas');
-      c.width = 64;
-      c.height = 64;
-      const ctx = c.getContext('2d');
-      const grad = ctx.createRadialGradient(32, 32, 0, 32, 32, 32);
-      grad.addColorStop(0, 'rgba(255, 255, 255, 1)');
-      grad.addColorStop(0.2, 'rgba(255, 255, 255, 0.85)');
-      grad.addColorStop(0.5, 'rgba(255, 255, 255, 0.25)');
-      grad.addColorStop(1, 'rgba(255, 255, 255, 0)');
-      ctx.fillStyle = grad;
-      ctx.fillRect(0, 0, 64, 64);
-      return new THREE.CanvasTexture(c);
-    }
-
-    const starTexture = createSoftParticleTexture();
-
-    // Starfield buffer creation
-    const positions = new Float32Array(particlesCount * 3);
-    const colors = new Float32Array(particlesCount * 3);
-    const sizes = new Float32Array(particlesCount);
-
-    for (let i = 0; i < particlesCount; i++) {
-      const i3 = i * 3;
-      const radius = 10;
-
-      // Layout in a broad timeline column
-      positions[i3 + 0] = (Math.random() - 0.5) * radius * 3.5;
-      positions[i3 + 1] = (Math.random() - 0.5) * radius * 4.5;
-      positions[i3 + 2] = (Math.random() - 0.6) * radius * 3.0; // Extend depth
-
-      // Vibrant Cyberpunk Color Palette: Neon Cyan, Magenta, Purple
-      const mix = Math.random();
-      let r, g, b;
-
-      if (mix < 0.4) {
-        // Cyan
-        r = 0.0; g = 0.95; b = 1.0;
-      } else if (mix < 0.75) {
-        // Magenta / Purple
-        r = 0.85; g = 0.1; b = 0.98;
-      } else {
-        // Deep Orange / Amber highlight
-        r = 1.0; g = 0.65; b = 0.0;
-      }
-
-      colors[i3 + 0] = r;
-      colors[i3 + 1] = g;
-      colors[i3 + 2] = b;
-
-      sizes[i] = 0.08 + Math.random() * 0.15;
-    }
-
-    const particlesGeometry = new THREE.BufferGeometry();
-    particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-    particlesGeometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
-    particlesGeometry.setAttribute('size', new THREE.BufferAttribute(sizes, 1));
-
-    const particlesMaterial = new THREE.PointsMaterial({
-      size: isMobile ? 0.22 : 0.18,
-      sizeAttenuation: true,
-      vertexColors: true,
-      transparent: true,
-      map: starTexture,
-      opacity: 0.85,
-      depthWrite: false,
-      blending: THREE.AdditiveBlending,
-    });
-
-    const particles = new THREE.Points(particlesGeometry, particlesMaterial);
-    scene.add(particles);
-
-    // Mouse position state for parallax
-    let mouseX = 0;
-    let mouseY = 0;
-
-    if (!isTouch) {
-      window.addEventListener('mousemove', (e) => {
-        mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
-        mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
-      });
-    }
-
-    // Handle full responsiveness of the viewport
-    window.addEventListener('resize', () => {
-      camera.aspect = window.innerWidth / window.innerHeight;
-      camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
-    });
-
-    // ----------------------------------------------------
-    // 3. GSAP SCROLL-TRIGGER FOR TIMELINE PROGRESS
-    // ----------------------------------------------------
-    gsap.registerPlugin(ScrollTrigger);
-
-    let scrollProgress = 0;
-
-    // Track scroll depth globally
-    ScrollTrigger.create({
-      trigger: "body",
-      start: "top top",
-      end: "bottom bottom",
-      scrub: 1.2, // dynamic lag inertia
-      onUpdate: (self) => {
-        scrollProgress = self.progress;
-      }
-    });
-
-    // Animate glowing timeline track fill
-    gsap.fromTo(".timeline-line-progress", 
-      { scaleY: 0 },
-      { 
-        scaleY: 1, 
-        ease: "none", 
-        scrollTrigger: {
-          trigger: "#projects",
-          start: "top 60%",
-          end: "bottom 80%",
-          scrub: true,
+  <script>
+    // ── Reveal on scroll ───────────────────────────────────────
+    const reveals = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver(
+      (entries) => entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in-view');
+          revealObserver.unobserve(e.target);
         }
-      }
+      }),
+      { threshold: 0.08, rootMargin: '0px 0px -32px 0px' }
     );
+    reveals.forEach(el => revealObserver.observe(el));
 
-    // ----------------------------------------------------
-    // 4. GSAP TIMELINE ENTRANCIES & REVEALS
-    // ----------------------------------------------------
-    
-    // Reveal Hero sections
-    gsap.fromTo(".fade-reveal", 
-      { opacity: 0, y: 30 },
-      { 
-        opacity: 1, 
-        y: 0, 
-        duration: 0.8, 
-        stagger: 0.15, 
-        ease: "power3.out",
-        delay: 0.2
-      }
-    );
+    // ── Nav scroll state ──────────────────────────────────────
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('nav-scrolled', window.scrollY > 48);
+    }, { passive: true });
 
-    // Dynamic 3D mouse parallax on profile frame
-    const heroImage = document.querySelector('.hero-image-3d');
-    const heroWrapper = document.querySelector('.hero-image-wrapper');
-    if (heroImage && heroWrapper && !isTouch) {
-      heroWrapper.addEventListener('mousemove', (e) => {
-        const rect = heroWrapper.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const xc = rect.width / 2;
-        const yc = rect.height / 2;
-        const rotateY = (x - xc) / 8;
-        const rotateX = -(y - yc) / 8;
-        
-        gsap.to(heroImage, {
-          rotateY: rotateY,
-          rotateX: rotateX,
-          duration: 0.5,
-          ease: "power2.out"
-        });
-      });
-
-      heroWrapper.addEventListener('mouseleave', () => {
-        gsap.to(heroImage, {
-          rotateY: 0,
-          rotateX: 0,
-          duration: 0.8,
-          ease: "elastic.out(1, 0.3)"
-        });
-      });
-    }
-
-    // Animate individual timeline items on scroll
-    const items = document.querySelectorAll('.timeline-item');
-    items.forEach(item => {
-      const card = item.querySelector('.timeline-content, .amazon-highlight-card, .contact-card');
-      const node = item.querySelector('.timeline-node');
-      
-      const direction = item.classList.contains('left') ? -60 : (item.classList.contains('right') ? 60 : 0);
-      const isCentred = !item.classList.contains('left') && !item.classList.contains('right');
-
-      gsap.fromTo(card, 
-        { 
-          opacity: 0, 
-          x: isMobile ? 30 : direction, 
-          y: isCentred ? 40 : 15,
-          scale: 0.96 
-        },
-        { 
-          opacity: 1, 
-          x: 0, 
-          y: 0,
-          scale: 1,
-          duration: 0.85,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: item,
-            start: "top 85%",
-            end: "top 55%",
-            toggleActions: "play none none reverse",
+    // ── Active nav link highlighting ───────────────────────────
+    const sections = document.querySelectorAll('section[id], div.wrap.signals');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const linkObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            navLinks.forEach(link => {
+              link.classList.toggle(
+                'nav-link-active',
+                link.getAttribute('href') === '#' + entry.target.id
+              );
+            });
           }
-        }
-      );
-
-      gsap.fromTo(node, 
-        { scale: 0 },
-        { 
-          scale: 1,
-          duration: 0.6,
-          ease: "back.out(2)",
-          scrollTrigger: {
-            trigger: item,
-            start: "top 85%",
-            toggleActions: "play none none reverse",
-          }
-        }
-      );
-    });
-
-    // ----------------------------------------------------
-    // 5. ANIMATION LOOP & THREE.JS RENDER LOOP
-    // ----------------------------------------------------
-    const clock = new THREE.Clock();
-
-    let targetCamX = 0;
-    let targetCamY = 0;
-    let targetCamZ = 9;
-
-    function animate() {
-      const elapsed = clock.getElapsedTime();
-
-      // Dynamic space flight math based on scroll depth
-      // Sweep the camera down along an organic S-Curve corridor
-      targetCamZ = 9 - scrollProgress * 16;
-      targetCamY = -scrollProgress * 15;
-      targetCamX = Math.sin(scrollProgress * Math.PI * 1.5) * 2.8;
-
-      // Mouse Parallax Blend
-      let finalCamX = targetCamX;
-      let finalCamY = targetCamY;
-      
-      if (!isTouch) {
-        finalCamX += mouseX * 1.6;
-        finalCamY += -mouseY * 1.6;
-      }
-
-      // Smooth camera lerp (reduces camera snapping/jitter)
-      camera.position.x += (finalCamX - camera.position.x) * 0.06;
-      camera.position.y += (finalCamY - camera.position.y) * 0.06;
-      camera.position.z += (targetCamZ - camera.position.z) * 0.06;
-
-      // Particle system base spin + scroll acceleration
-      particles.rotation.y = elapsed * 0.03 + scrollProgress * Math.PI * 1.2;
-      particles.rotation.x = Math.sin(elapsed * 0.15) * 0.1 + scrollProgress * 0.3;
-
-      // Dynamic particle pulsing sizes
-      const scale = 1.0 + Math.sin(elapsed * 0.4) * 0.08;
-      particles.scale.set(scale, scale, scale);
-
-      // Make camera lock its view direction forward along the corridor path
-      camera.lookAt(new THREE.Vector3(targetCamX * 0.5, targetCamY, targetCamZ - 6));
-
-      renderer.render(scene, camera);
-      requestAnimationFrame(animate);
-    }
-
-    animate();
-
+        });
+      },
+      { rootMargin: '-40% 0px -55% 0px' }
+    );
+    sections.forEach(s => { if (s.id) linkObserver.observe(s); });
   </script>
 </body>
 </html>
