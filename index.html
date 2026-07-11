@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sudarshan Patil H J — Backend Infrastructure Engineer</title>
-  <meta name="description" content="Portfolio of Sudarshan Patil H J, Backend Infrastructure Engineer and Open Source Contributor based in Bengaluru, India. Custom low-latency systems and database optimizations.">
-  <meta name="keywords" content="Sudarshan Patil, Backend Infrastructure, Distributed Systems, Open Source, InsForge, BITS Pilani, Scaler School of Technology">
-  
+  <meta name="description"
+    content="Portfolio of Sudarshan Patil H J, Backend Infrastructure Engineer and Open Source Contributor based in Bengaluru, India. Custom low-latency systems and database optimizations.">
+  <meta name="keywords"
+    content="Sudarshan Patil, Backend Infrastructure, Distributed Systems, Open Source, InsForge, BITS Pilani, Scaler School of Technology">
+
   <!-- SEO Open Graph -->
   <meta property="og:title" content="Sudarshan Patil H J — Backend Infrastructure Engineer">
-  <meta property="og:description" content="Backend Infrastructure Engineer specializing in distributed systems, security patches, and database optimization. Contributor to InsForge.">
+  <meta property="og:description"
+    content="Backend Infrastructure Engineer specializing in distributed systems, security patches, and database optimization. Contributor to InsForge.">
   <meta property="og:type" content="website">
 
   <!-- Google Fonts Preconnect & Font Loading -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
 
   <style>
     /* ==========================================================================
@@ -31,10 +37,10 @@
       --accent-cyan: #06B6D4;
       --border-color: #1E293B;
       --card-bg: #111827;
-      
+
       --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
-      
+
       --max-width: 1100px;
       --nav-height: 64px;
       --transition-smooth: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -47,7 +53,9 @@
     }
 
     /* Reset */
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
@@ -122,7 +130,7 @@
     /* ==========================================================================
        LIGHTWEIGHT CUSTOM COMPONENT STYLES
        ========================================================================== */
-    
+
     /* Card Styles: 1px border, slight hover lift & soft amber left-border glow */
     .card {
       background: var(--card-bg);
@@ -254,7 +262,8 @@
       color: var(--text-secondary);
     }
 
-    .nav-link:hover, .nav-link.active {
+    .nav-link:hover,
+    .nav-link.active {
       color: var(--text-primary);
     }
 
@@ -277,7 +286,7 @@
       inset: 0;
       z-index: 0;
       pointer-events: none;
-      background: 
+      background:
         radial-gradient(circle at 10% 20%, rgba(6, 182, 212, 0.04) 0%, transparent 40%),
         radial-gradient(circle at 90% 80%, rgba(245, 158, 11, 0.04) 0%, transparent 40%),
         radial-gradient(circle at 50% 50%, rgba(11, 15, 25, 1) 0%, transparent 100%);
@@ -286,9 +295,17 @@
     }
 
     @keyframes meshPulse {
-      0% { transform: scale(1) translate(0, 0); }
-      50% { transform: scale(1.08) translate(2%, -2%); }
-      100% { transform: scale(0.95) translate(-2%, 2%); }
+      0% {
+        transform: scale(1) translate(0, 0);
+      }
+
+      50% {
+        transform: scale(1.08) translate(2%, -2%);
+      }
+
+      100% {
+        transform: scale(0.95) translate(-2%, 2%);
+      }
     }
 
     /* SVG Network Topology Styling */
@@ -338,14 +355,19 @@
     .status-dot::after {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
       border-radius: 50%;
       background-color: var(--accent-cyan);
       animation: ping 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
     }
 
     @keyframes ping {
-      75%, 100% {
+
+      75%,
+      100% {
         transform: scale(2.8);
         opacity: 0;
       }
@@ -876,7 +898,8 @@
       }
 
       .nav-menu {
-        display: none; /* Hide navigation items to keep it clean on mobile */
+        display: none;
+        /* Hide navigation items to keep it clean on mobile */
       }
 
       .hero-ctas {
@@ -885,6 +908,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <!-- ── NAVIGATION HEADER ───────────────────────────────────── -->
@@ -910,7 +934,7 @@
     <section class="hero" id="hero-section">
       <!-- CSS Background Gradient Mesh -->
       <div class="hero-mesh" aria-hidden="true"></div>
-      
+
       <!-- Embedded SVG Abstract Network Topology -->
       <div class="hero-network" aria-hidden="true">
         <svg width="100%" height="100%" viewBox="0 0 1000 500" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -953,21 +977,24 @@
 
           <circle cx="350" cy="100" r="6" fill="#F59E0B" />
           <circle cx="350" cy="100" r="18" stroke="#F59E0B" stroke-opacity="0.3" stroke-width="1" />
-          <circle cx="350" cy="100" r="28" stroke="#F59E0B" stroke-opacity="0.1" stroke-width="0.5" stroke-dasharray="2 2" />
+          <circle cx="350" cy="100" r="28" stroke="#F59E0B" stroke-opacity="0.1" stroke-width="0.5"
+            stroke-dasharray="2 2" />
 
           <circle cx="250" cy="300" r="4" fill="#94A3B8" />
           <circle cx="250" cy="300" r="10" stroke="#94A3B8" stroke-opacity="0.2" stroke-width="1" />
 
           <circle cx="500" cy="280" r="7" fill="#06B6D4" />
           <circle cx="500" cy="280" r="20" stroke="#06B6D4" stroke-opacity="0.4" stroke-width="1" />
-          <circle cx="500" cy="280" r="32" stroke="#06B6D4" stroke-opacity="0.15" stroke-width="1" stroke-dasharray="4 2" />
+          <circle cx="500" cy="280" r="32" stroke="#06B6D4" stroke-opacity="0.15" stroke-width="1"
+            stroke-dasharray="4 2" />
 
           <circle cx="550" cy="120" r="5" fill="#94A3B8" />
           <circle cx="550" cy="120" r="14" stroke="#94A3B8" stroke-opacity="0.2" stroke-width="1" />
 
           <circle cx="750" cy="200" r="6" fill="#F59E0B" />
           <circle cx="750" cy="200" r="16" stroke="#F59E0B" stroke-opacity="0.3" stroke-width="1" />
-          <circle cx="750" cy="200" r="26" stroke="#F59E0B" stroke-opacity="0.1" stroke-width="1" stroke-dasharray="4 4" />
+          <circle cx="750" cy="200" r="26" stroke="#F59E0B" stroke-opacity="0.1" stroke-width="1"
+            stroke-dasharray="4 4" />
 
           <circle cx="800" cy="380" r="4" fill="#94A3B8" />
           <circle cx="800" cy="380" r="10" stroke="#94A3B8" stroke-opacity="0.2" stroke-width="1" />
@@ -983,22 +1010,24 @@
             <span class="status-dot"></span>
             Available for Core Infrastructure Roles
           </div>
-          
+
           <h1 class="hero-name">Sudarshan Patil H J</h1>
-          
+
           <p class="hero-title">
             Backend Infrastructure Engineer · Bengaluru, India
           </p>
-          
+
           <p class="hero-punchline">
-            7 merged PRs to a 12.2K★ YC-backed platform. I ship production fixes for security, database performance, and distributed systems.
+            7 merged PRs to a 12.2K★ YC-backed platform. I ship production fixes for security, database performance, and
+            distributed systems.
           </p>
-          
+
           <nav class="hero-ctas" aria-label="Social and contact links">
             <a href="https://github.com/Sudarshan25092007" target="_blank" rel="noopener" class="hero-cta-link">
               GitHub <span>↗</span>
             </a>
-            <a href="https://linkedin.com/in/sudarshan-patil-hj259227" target="_blank" rel="noopener" class="hero-cta-link">
+            <a href="https://linkedin.com/in/sudarshan-patil-hj259227" target="_blank" rel="noopener"
+              class="hero-cta-link">
               LinkedIn <span>↗</span>
             </a>
             <a href="https://leetcode.com/Sudarshan_patil_h_j" target="_blank" rel="noopener" class="hero-cta-link">
@@ -1053,7 +1082,9 @@
               <span class="pr-tag">#1660</span>
             </h3>
             <p class="oss-card-desc">
-              Replaced fail-fast string comparison with constant-time SHA-256 hashing via <code>crypto.timingSafeEqual</code>. Added 6 Vitest unit tests. Verified against 1,777-test suite with zero regressions. CWE-208 patched.
+              Replaced fail-fast string comparison with constant-time SHA-256 hashing via
+              <code>crypto.timingSafeEqual</code>. Added 6 Vitest unit tests. Verified against 1,777-test suite with
+              zero regressions. CWE-208 patched.
             </p>
           </article>
 
@@ -1064,7 +1095,9 @@
               <span class="pr-tag">#1494, #1519</span>
             </h3>
             <p class="oss-card-desc">
-              Eliminated O(n) <code>SELECT COUNT(*)</code> full-table scans by implementing trigger-backed O(1) PostgreSQL row counters. Added LRU-style cache bounding to prevent unbounded memory growth in long-running agents.
+              Eliminated O(n) <code>SELECT COUNT(*)</code> full-table scans by implementing trigger-backed O(1)
+              PostgreSQL row counters. Added LRU-style cache bounding to prevent unbounded memory growth in long-running
+              agents.
             </p>
           </article>
 
@@ -1075,7 +1108,8 @@
               <span class="pr-tag">#1351</span>
             </h3>
             <p class="oss-card-desc">
-              Centralized 55+ scattered <code>process.env</code> reads across 21 backend files into a single typed <code>AppConfig</code> interface. Fixed critical PORT default bug. Shipped 49 unit tests.
+              Centralized 55+ scattered <code>process.env</code> reads across 21 backend files into a single typed
+              <code>AppConfig</code> interface. Fixed critical PORT default bug. Shipped 49 unit tests.
             </p>
           </article>
         </div>
@@ -1097,7 +1131,8 @@
           <article class="card">
             <div class="project-card-header">
               <h3 class="project-title">IPL Mock Auction Platform</h3>
-              <a href="https://github.com/Sudarshan25092007/ipl-auction-app" target="_blank" rel="noopener" class="interactive-link">
+              <a href="https://github.com/Sudarshan25092007/ipl-auction-app" target="_blank" rel="noopener"
+                class="interactive-link">
                 Source Code <span>→</span>
               </a>
             </div>
@@ -1107,7 +1142,8 @@
               <span class="pill">WebSockets</span>
             </div>
             <p class="project-desc">
-              Real-time concurrent auction system. Redis atomic operations prevent race conditions on simultaneous bids. Pub/sub broadcasts live state to all clients. Sorted sets manage leaderboard ordering.
+              Real-time concurrent auction system. Redis atomic operations prevent race conditions on simultaneous bids.
+              Pub/sub broadcasts live state to all clients. Sorted sets manage leaderboard ordering.
             </p>
           </article>
 
@@ -1115,7 +1151,8 @@
           <article class="card">
             <div class="project-card-header">
               <h3 class="project-title">XAUUSD High-Frequency Ingestion</h3>
-              <a href="https://github.com/Sudarshan25092007/AI_COMMAND_CENTER" target="_blank" rel="noopener" class="interactive-link">
+              <a href="https://github.com/Sudarshan25092007/AI_COMMAND_CENTER" target="_blank" rel="noopener"
+                class="interactive-link">
                 Architecture <span>→</span>
               </a>
             </div>
@@ -1127,7 +1164,9 @@
               <span class="pill">Docker</span>
             </div>
             <p class="project-desc">
-              Custom Native TCP Bridge (Python ↔ MetaTrader 5) processing 1,000–3,000 ticks/minute with zero data loss. Statistical regime engine with μ+1.5σ threshold gating. Fault-tolerant PostgreSQL persistence with in-memory fallback.
+              Custom Native TCP Bridge (Python ↔ MetaTrader 5) processing 1,000–3,000 ticks/minute with zero data loss.
+              Statistical regime engine with μ+1.5σ threshold gating. Fault-tolerant PostgreSQL persistence with
+              in-memory fallback.
             </p>
           </article>
         </div>
@@ -1143,7 +1182,9 @@
         <div class="exp-edu-grid">
           <!-- Experience Column -->
           <div>
-            <h3 class="section-label" style="color: var(--accent-cyan); border-bottom: 1px solid var(--border-color); padding-bottom: 8px; width: 100%; margin-bottom: 24px;">Professional Experience</h3>
+            <h3 class="section-label"
+              style="color: var(--accent-cyan); border-bottom: 1px solid var(--border-color); padding-bottom: 8px; width: 100%; margin-bottom: 24px;">
+              Professional Experience</h3>
             <div class="timeline">
               <div class="timeline-item">
                 <div class="timeline-item-header">
@@ -1151,7 +1192,8 @@
                   <span class="timeline-date">May 2026 – Present</span>
                 </div>
                 <p class="timeline-desc">
-                  Optimized database queries, resolved API timing security vulnerabilities, and restructured configuration variables on a large-scale, production cloud deployment.
+                  Optimized database queries, resolved API timing security vulnerabilities, and restructured
+                  configuration variables on a large-scale, production cloud deployment.
                 </p>
               </div>
 
@@ -1161,7 +1203,8 @@
                   <span class="timeline-date">Apr 2026</span>
                 </div>
                 <p class="timeline-desc">
-                  Unified Euclidean calculations in Python computational chemistry modules, improving molecular distance computation performance.
+                  Unified Euclidean calculations in Python computational chemistry modules, improving molecular distance
+                  computation performance.
                 </p>
               </div>
             </div>
@@ -1169,7 +1212,9 @@
 
           <!-- Education Column -->
           <div>
-            <h3 class="section-label" style="color: var(--accent-cyan); border-bottom: 1px solid var(--border-color); padding-bottom: 8px; width: 100%; margin-bottom: 24px;">Education</h3>
+            <h3 class="section-label"
+              style="color: var(--accent-cyan); border-bottom: 1px solid var(--border-color); padding-bottom: 8px; width: 100%; margin-bottom: 24px;">
+              Education</h3>
             <div class="timeline">
               <div class="timeline-item">
                 <div class="timeline-item-header">
@@ -1198,7 +1243,8 @@
           <!-- Coursework Footer Row -->
           <div class="coursework-footer">
             <p class="coursework-text">
-              <strong>Relevant Coursework:</strong> Data Structures & Algorithms, Operating Systems, Computer Networks, Database Systems
+              <strong>Relevant Coursework:</strong> Data Structures & Algorithms, Operating Systems, Computer Networks,
+              Database Systems
             </p>
           </div>
         </div>
@@ -1317,12 +1363,13 @@
             Open to Backend Infrastructure internships and open-source collaborations. Based in Bengaluru, India.
           </p>
         </div>
-        
+
         <div class="footer-links">
           <a href="mailto:hjsudarshanpatil@gmail.com" class="footer-link-item">
             <span class="footer-link-icon">✉</span> hjsudarshanpatil@gmail.com
           </a>
-          <a href="https://linkedin.com/in/sudarshan-patil-hj259227" target="_blank" rel="noopener" class="footer-link-item">
+          <a href="https://linkedin.com/in/sudarshan-patil-hj259227" target="_blank" rel="noopener"
+            class="footer-link-item">
             <span class="footer-link-icon">in</span> linkedin.com/in/sudarshan-patil-hj259227
           </a>
           <a href="https://github.com/Sudarshan25092007" target="_blank" rel="noopener" class="footer-link-item">
@@ -1336,7 +1383,6 @@
 
       <div class="copyright">
         <span>© 2026 Sudarshan Patil H J</span>
-        <span>Built with Vanilla HTML & CSS</span>
       </div>
     </div>
   </footer>
@@ -1346,7 +1392,7 @@
     document.addEventListener("DOMContentLoaded", () => {
       // 1. Scroll-Reveal Logic via IntersectionObserver
       const revealElements = document.querySelectorAll(".reveal");
-      
+
       const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -1363,7 +1409,7 @@
 
       // 2. Sticky Header scroll state
       const header = document.getElementById("header");
-      
+
       const checkScroll = () => {
         if (window.scrollY > 20) {
           header.classList.add("scrolled");
@@ -1401,4 +1447,5 @@
     });
   </script>
 </body>
+
 </html>
