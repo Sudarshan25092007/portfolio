@@ -1,967 +1,1404 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sudarshan Patil H J — Backend · Full Stack · AI Engineer | Open Source</title>
-  <meta name="description"
-    content="Backend & AI engineer intern candidate. 6 merged PRs to InsForge (11.9K★, YC-backed). Production systems: algorithmic trading, Redis concurrency, AI pipelines. Dual CS @ SST + BITS Pilani. Amazon OA invite." />
-  <meta name="keywords"
-    content="Sudarshan Patil, backend engineer intern, full stack developer, AI engineer, open source, InsForge, BITS Pilani, SST, Node.js, TypeScript, Python" />
-  <meta name="author" content="Sudarshan Patil H J" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://sudarshan25092007.github.io/portfolio/" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sudarshan Patil H J — Backend Infrastructure Engineer</title>
+  <meta name="description" content="Portfolio of Sudarshan Patil H J, Backend Infrastructure Engineer and Open Source Contributor based in Bengaluru, India. Custom low-latency systems and database optimizations.">
+  <meta name="keywords" content="Sudarshan Patil, Backend Infrastructure, Distributed Systems, Open Source, InsForge, BITS Pilani, Scaler School of Technology">
+  
+  <!-- SEO Open Graph -->
+  <meta property="og:title" content="Sudarshan Patil H J — Backend Infrastructure Engineer">
+  <meta property="og:description" content="Backend Infrastructure Engineer specializing in distributed systems, security patches, and database optimization. Contributor to InsForge.">
+  <meta property="og:type" content="website">
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://sudarshan25092007.github.io/portfolio/" />
-  <meta property="og:title" content="Sudarshan Patil H J — Backend · Full Stack · AI Engineer" />
-  <meta property="og:description"
-    content="6 merged PRs to YC-backed InsForge. Production backends, AI pipelines, distributed systems. Open to internships." />
-  <meta property="og:locale" content="en_IN" />
-  <meta property="og:site_name" content="Sudarshan Patil H J Portfolio" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Sudarshan Patil H J — Backend · Full Stack · AI Engineer" />
-  <meta name="twitter:description"
-    content="6 merged PRs to InsForge (11.9K★). Backend, AI, and open-source engineer. Internship-ready." />
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Sudarshan Patil H J",
-    "url": "https://sudarshan25092007.github.io/portfolio/",
-    "jobTitle": "Backend & AI Developer",
-    "email": "hjsudarshanpatil@gmail.com",
-    "sameAs": [
-      "https://github.com/Sudarshan25092007",
-      "https://www.linkedin.com/in/sudarshan-patil-hj259227",
-      "https://leetcode.com/Sudarshan_patil_h_j/"
-    ],
-    "alumniOf": [
-      { "@type": "CollegeOrUniversity", "name": "Scaler School of Technology" },
-      { "@type": "CollegeOrUniversity", "name": "BITS Pilani" }
-    ],
-    "knowsAbout": ["Backend Engineering", "Artificial Intelligence", "Open Source", "Distributed Systems", "TypeScript", "Python"]
-  }
-  </script>
-
+  <!-- Google Fonts Preconnect & Font Loading -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap"
-    rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
-  <link rel="stylesheet" href="style.css" />
-</head>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+  <style>
+    /* ==========================================================================
+       DESIGN SYSTEM & TOKENS (Inspired by Linear & Vercel)
+       ========================================================================== */
+    :root {
+      --bg-color: #0B0F19;
+      --bg-gradient-end: #111827;
+      --text-primary: #F8FAFC;
+      --text-secondary: #94A3B8;
+      --text-muted: #64748B;
+      --accent-amber: #F59E0B;
+      --accent-cyan: #06B6D4;
+      --border-color: #1E293B;
+      --card-bg: #111827;
+      
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+      
+      --max-width: 1100px;
+      --nav-height: 64px;
+      --transition-smooth: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Selection Highlight */
+    ::selection {
+      background: rgba(6, 182, 212, 0.2);
+      color: var(--text-primary);
+    }
+
+    /* Reset */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg-color);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: linear-gradient(180deg, var(--bg-color) 0%, var(--bg-gradient-end) 100%);
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transition-smooth);
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    /* Utility Container */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 32px;
+      position: relative;
+    }
+
+    /* Section Header Label Styling */
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+
+    .section-title {
+      font-size: clamp(24px, 4vw, 32px);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 32px;
+    }
+
+    /* ==========================================================================
+       SCROLL ANIMATIONS (IntersectionObserver)
+       ========================================================================== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ==========================================================================
+       LIGHTWEIGHT CUSTOM COMPONENT STYLES
+       ========================================================================== */
+    
+    /* Card Styles: 1px border, slight hover lift & soft amber left-border glow */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 28px;
+      position: relative;
+      transition: var(--transition-smooth);
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 2px;
+      background: var(--accent-amber);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(245, 158, 11, 0.3);
+      box-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.5), 0 0 20px -5px rgba(245, 158, 11, 0.08);
+    }
+
+    .card:hover::before {
+      opacity: 1;
+    }
+
+    /* Pill Tags */
+    .pill {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: #1E293B;
+      color: var(--text-primary);
+      border: 1px solid rgba(255, 255, 255, 0.03);
+      transition: var(--transition-smooth);
+    }
+
+    .pill:hover {
+      background: #334155;
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Links with custom arrow animation */
+    .interactive-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: var(--text-secondary);
+      font-weight: 500;
+      position: relative;
+    }
+
+    .interactive-link:hover {
+      color: var(--accent-amber);
+    }
+
+    .interactive-link span {
+      transition: transform 0.2s ease;
+    }
+
+    .interactive-link:hover span {
+      transform: translateX(4px);
+    }
+
+    /* ==========================================================================
+       1. NAVIGATION HEADER
+       ========================================================================== */
+    header.site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: var(--nav-height);
+      z-index: 100;
+      border-bottom: 1px solid transparent;
+      transition: var(--transition-smooth);
+    }
+
+    header.site-header.scrolled {
+      background: rgba(11, 15, 25, 0.8);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: -0.03em;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo-dot {
+      width: 6px;
+      height: 6px;
+      background-color: var(--accent-cyan);
+      border-radius: 50%;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 24px;
+    }
+
+    .nav-link {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--text-primary);
+    }
+
+    /* ==========================================================================
+       2. HERO SECTION (With Gradient Mesh & SVG Topology)
+       ========================================================================== */
+    .hero {
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: calc(var(--nav-height) + 40px);
+      padding-bottom: 60px;
+    }
+
+    /* CSS Animated Gradient Mesh */
+    .hero-mesh {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background: 
+        radial-gradient(circle at 10% 20%, rgba(6, 182, 212, 0.04) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(245, 158, 11, 0.04) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(11, 15, 25, 1) 0%, transparent 100%);
+      filter: blur(80px);
+      animation: meshPulse 25s infinite alternate ease-in-out;
+    }
+
+    @keyframes meshPulse {
+      0% { transform: scale(1) translate(0, 0); }
+      50% { transform: scale(1.08) translate(2%, -2%); }
+      100% { transform: scale(0.95) translate(-2%, 2%); }
+    }
+
+    /* SVG Network Topology Styling */
+    .hero-network {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      max-width: 1100px;
+      height: 100%;
+      max-height: 550px;
+      opacity: 0.12;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 720px;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border-radius: 99px;
+      background: rgba(6, 182, 212, 0.06);
+      border: 1px solid rgba(6, 182, 212, 0.15);
+      color: var(--accent-cyan);
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      font-weight: 500;
+      margin-bottom: 24px;
+    }
+
+    .status-dot {
+      width: 6px;
+      height: 6px;
+      background-color: var(--accent-cyan);
+      border-radius: 50%;
+      position: relative;
+    }
+
+    .status-dot::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      border-radius: 50%;
+      background-color: var(--accent-cyan);
+      animation: ping 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    @keyframes ping {
+      75%, 100% {
+        transform: scale(2.8);
+        opacity: 0;
+      }
+    }
+
+    .hero-name {
+      font-size: clamp(38px, 6.5vw, 64px);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      line-height: 1.05;
+      margin-bottom: 12px;
+      color: var(--text-primary);
+    }
+
+    .hero-title {
+      font-family: var(--font-mono);
+      font-size: clamp(14px, 2.5vw, 17px);
+      color: var(--accent-amber);
+      font-weight: 500;
+      margin-bottom: 24px;
+      letter-spacing: -0.01em;
+    }
+
+    .hero-punchline {
+      font-size: clamp(16px, 3vw, 20px);
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 36px;
+      font-weight: 400;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .hero-cta-link {
+      font-family: var(--font-mono);
+      font-size: 13.5px;
+      color: var(--text-primary);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 500;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 2px;
+    }
+
+    .hero-cta-link:hover {
+      color: var(--accent-cyan);
+      border-bottom-color: var(--accent-cyan);
+    }
+
+    .hero-cta-link span {
+      transition: transform 0.2s ease;
+    }
+
+    .hero-cta-link:hover span {
+      transform: translate(2px, -2px);
+    }
+
+    /* ==========================================================================
+       3. METRICS BAR (4-Card Horizontal Flex Row)
+       ========================================================================== */
+    .metrics-section {
+      padding: 40px 0;
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      background: rgba(11, 15, 25, 0.5);
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .metric-card {
+      text-align: left;
+      padding: 16px 20px;
+      background: transparent;
+      border: 1px solid transparent;
+      border-radius: 8px;
+    }
+
+    .metric-card:hover {
+      background: rgba(255, 255, 255, 0.01);
+      border-color: rgba(255, 255, 255, 0.03);
+    }
+
+    .metric-number {
+      font-family: var(--font-mono);
+      font-size: clamp(26px, 3.5vw, 36px);
+      font-weight: 700;
+      color: var(--accent-amber);
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+
+    .metric-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-secondary);
+    }
+
+    /* ==========================================================================
+       4. OPEN SOURCE (Production Contributions)
+       ========================================================================== */
+    .oss-section {
+      padding: 80px 0;
+    }
+
+    .oss-meta {
+      margin-bottom: 36px;
+    }
+
+    .oss-h2 {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 4px;
+    }
+
+    .oss-sub {
+      font-family: var(--font-mono);
+      font-size: 13.5px;
+      color: var(--text-secondary);
+    }
+
+    .oss-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+
+    .oss-card-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+      color: var(--text-primary);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .oss-card-title span.pr-tag {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--accent-cyan);
+      background: rgba(6, 182, 212, 0.08);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .oss-card-desc {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* ==========================================================================
+       5. PROJECTS (Systems Built - 2-Column Grid)
+       ========================================================================== */
+    .projects-section {
+      padding: 80px 0;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .project-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+
+    .project-title {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+
+    .project-tags .pill {
+      font-size: 11px;
+      padding: 2px 8px;
+      background: rgba(30, 41, 59, 0.6);
+      color: var(--text-secondary);
+      border-color: rgba(255, 255, 255, 0.02);
+    }
+
+    .project-desc {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    /* ==========================================================================
+       6. EXPERIENCE & EDUCATION (Split Grid Layout)
+       ========================================================================== */
+    .exp-edu-section {
+      padding: 80px 0;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .exp-edu-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+    }
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: var(--accent-cyan);
+    }
+
+    .timeline-item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 6px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .timeline-role {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .timeline-date {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .timeline-school {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 2px;
+    }
+
+    .timeline-degree {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: var(--accent-amber);
+      margin-bottom: 4px;
+    }
+
+    .timeline-desc {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .coursework-footer {
+      grid-column: span 2;
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px dashed var(--border-color);
+    }
+
+    .coursework-text {
+      font-family: var(--font-mono);
+      font-size: 12.5px;
+      color: var(--text-secondary);
+    }
+
+    .coursework-text strong {
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    /* ==========================================================================
+       7. ACHIEVEMENTS (Compact Horizontal Row)
+       ========================================================================== */
+    .achievements-section {
+      padding: 80px 0;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .achievements-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .achievement-card {
+      background: rgba(17, 24, 39, 0.4);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 24px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      transition: var(--transition-smooth);
+    }
+
+    .achievement-card:hover {
+      border-color: rgba(6, 182, 212, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .achievement-icon {
+      color: var(--accent-cyan);
+      font-size: 18px;
+      font-family: var(--font-mono);
+      line-height: 1;
+      margin-top: 2px;
+    }
+
+    .achievement-text {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* ==========================================================================
+       8. TECHNICAL SKILLS (Categorized Pill Tags)
+       ========================================================================== */
+    .skills-section {
+      padding: 80px 0;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 24px;
+    }
+
+    .skills-category-title {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .skills-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .skills-list .pill {
+      text-align: center;
+      width: 100%;
+      background: #111827;
+      border-color: #1E293B;
+      padding: 6px 8px;
+      font-size: 11px;
+    }
+
+    /* ==========================================================================
+       9. CONTACT & FOOTER
+       ========================================================================== */
+    .footer-section {
+      padding: 100px 0 60px;
+      border-top: 1px solid var(--border-color);
+      background: rgba(11, 15, 25, 0.6);
+      position: relative;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 60px;
+      margin-bottom: 60px;
+    }
+
+    .footer-left h2 {
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      color: var(--text-primary);
+    }
+
+    .footer-left p {
+      font-size: 15px;
+      color: var(--text-secondary);
+      max-width: 460px;
+      line-height: 1.6;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      justify-content: center;
+    }
+
+    .footer-link-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--font-mono);
+      font-size: 14px;
+      color: var(--text-secondary);
+      border-bottom: 1px solid transparent;
+      padding: 4px 0;
+      width: fit-content;
+    }
+
+    .footer-link-item:hover {
+      color: var(--accent-cyan);
+    }
+
+    .footer-link-icon {
+      color: var(--accent-cyan);
+      width: 16px;
+      text-align: center;
+    }
+
+    .copyright {
+      border-top: 1px solid var(--border-color);
+      padding-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    /* ==========================================================================
+       RESPONSIVE MEDIA QUERIES
+       ========================================================================== */
+    @media (max-width: 1024px) {
+      .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 820px) {
+      .container {
+        padding: 0 24px;
+      }
+
+      .metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .oss-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .exp-edu-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+
+      .coursework-footer {
+        grid-column: span 1;
+      }
+
+      .achievements-row {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+    @media (max-width: 580px) {
+      :root {
+        --nav-height: 56px;
+      }
+
+      .hero-name {
+        font-size: 36px;
+      }
+
+      .metrics-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .nav-menu {
+        display: none; /* Hide navigation items to keep it clean on mobile */
+      }
+
+      .hero-ctas {
+        gap: 16px 20px;
+      }
+    }
+  </style>
+</head>
 <body>
 
-  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <!-- ── NAVIGATION HEADER ───────────────────────────────────── -->
+  <header class="site-header" id="header">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        sudarshan.patil<span class="logo-dot"></span>
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="#open-source" class="nav-link">Contributions</a></li>
+          <li><a href="#projects" class="nav-link">Systems</a></li>
+          <li><a href="#background" class="nav-link">Background</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  <!-- ── NAVIGATION ─────────────────────────────────────────── -->
-  <nav class="nav" id="nav" aria-label="Primary navigation">
-    <div class="nav-inner">
-      <a href="#home" class="nav-logo" aria-label="Sudarshan Patil — Home">Sudarshan<span class="accent-dot">.</span></a>
-      <ul class="nav-links" role="list">
-        <li><a href="#why-me" class="nav-link">Why Me</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#oss" class="nav-link">Open Source</a></li>
-        <li><a href="#github" class="nav-link">GitHub</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-      <div class="nav-actions">
-        <a href="https://github.com/Sudarshan25092007" target="_blank" rel="noopener" class="nav-github">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path
-              d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
-          </svg>
-          GitHub
+  <main>
+    <!-- ── HERO SECTION ───────────────────────────────────────── -->
+    <section class="hero" id="hero-section">
+      <!-- CSS Background Gradient Mesh -->
+      <div class="hero-mesh" aria-hidden="true"></div>
+      
+      <!-- Embedded SVG Abstract Network Topology -->
+      <div class="hero-network" aria-hidden="true">
+        <svg width="100%" height="100%" viewBox="0 0 1000 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="cyan-glow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.35" />
+              <stop offset="100%" stop-color="#06B6D4" stop-opacity="0" />
+            </radialGradient>
+            <radialGradient id="amber-glow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.3" />
+              <stop offset="100%" stop-color="#F59E0B" stop-opacity="0" />
+            </radialGradient>
+            <linearGradient id="line-grad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.15" />
+              <stop offset="50%" stop-color="#F59E0B" stop-opacity="0.15" />
+              <stop offset="100%" stop-color="#06B6D4" stop-opacity="0.02" />
+            </linearGradient>
+          </defs>
+
+          <!-- Intersecting Network Lines -->
+          <path d="M150 150 L350 100" stroke="url(#line-grad-1)" stroke-width="1.5" stroke-dasharray="5 5" />
+          <path d="M150 150 L250 300" stroke="#1E293B" stroke-width="1" />
+          <path d="M350 100 L550 120" stroke="url(#line-grad-1)" stroke-width="1.5" />
+          <path d="M250 300 L500 280" stroke="#1E293B" stroke-width="1" />
+          <path d="M350 100 L500 280" stroke="#1E293B" stroke-width="1" />
+          <path d="M550 120 L750 200" stroke="url(#line-grad-1)" stroke-width="1.5" stroke-dasharray="3 3" />
+          <path d="M500 280 L750 200" stroke="#1E293B" stroke-width="1" stroke-dasharray="8 4" />
+          <path d="M750 200 L900 150" stroke="url(#line-grad-1)" stroke-width="1.5" />
+          <path d="M500 280 L800 380" stroke="#1E293B" stroke-width="1" />
+          <path d="M800 380 L900 150" stroke="#1E293B" stroke-width="1" />
+
+          <!-- Regional Glow Highlights -->
+          <circle cx="350" cy="100" r="90" fill="url(#cyan-glow)" />
+          <circle cx="750" cy="200" r="110" fill="url(#amber-glow)" />
+          <circle cx="500" cy="280" r="100" fill="url(#cyan-glow)" />
+
+          <!-- Topology Nodes -->
+          <circle cx="150" cy="150" r="4" fill="#06B6D4" />
+          <circle cx="150" cy="150" r="12" stroke="#06B6D4" stroke-opacity="0.3" stroke-width="1" />
+
+          <circle cx="350" cy="100" r="6" fill="#F59E0B" />
+          <circle cx="350" cy="100" r="18" stroke="#F59E0B" stroke-opacity="0.3" stroke-width="1" />
+          <circle cx="350" cy="100" r="28" stroke="#F59E0B" stroke-opacity="0.1" stroke-width="0.5" stroke-dasharray="2 2" />
+
+          <circle cx="250" cy="300" r="4" fill="#94A3B8" />
+          <circle cx="250" cy="300" r="10" stroke="#94A3B8" stroke-opacity="0.2" stroke-width="1" />
+
+          <circle cx="500" cy="280" r="7" fill="#06B6D4" />
+          <circle cx="500" cy="280" r="20" stroke="#06B6D4" stroke-opacity="0.4" stroke-width="1" />
+          <circle cx="500" cy="280" r="32" stroke="#06B6D4" stroke-opacity="0.15" stroke-width="1" stroke-dasharray="4 2" />
+
+          <circle cx="550" cy="120" r="5" fill="#94A3B8" />
+          <circle cx="550" cy="120" r="14" stroke="#94A3B8" stroke-opacity="0.2" stroke-width="1" />
+
+          <circle cx="750" cy="200" r="6" fill="#F59E0B" />
+          <circle cx="750" cy="200" r="16" stroke="#F59E0B" stroke-opacity="0.3" stroke-width="1" />
+          <circle cx="750" cy="200" r="26" stroke="#F59E0B" stroke-opacity="0.1" stroke-width="1" stroke-dasharray="4 4" />
+
+          <circle cx="800" cy="380" r="4" fill="#94A3B8" />
+          <circle cx="800" cy="380" r="10" stroke="#94A3B8" stroke-opacity="0.2" stroke-width="1" />
+
+          <circle cx="900" cy="150" r="5" fill="#06B6D4" />
+          <circle cx="900" cy="150" r="14" stroke="#06B6D4" stroke-opacity="0.3" stroke-width="1" />
+        </svg>
+      </div>
+
+      <div class="container">
+        <div class="hero-content">
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            Available for Core Infrastructure Roles
+          </div>
+          
+          <h1 class="hero-name">Sudarshan Patil H J</h1>
+          
+          <p class="hero-title">
+            Backend Infrastructure Engineer · Bengaluru, India
+          </p>
+          
+          <p class="hero-punchline">
+            7 merged PRs to a 12.2K★ YC-backed platform. I ship production fixes for security, database performance, and distributed systems.
+          </p>
+          
+          <nav class="hero-ctas" aria-label="Social and contact links">
+            <a href="https://github.com/Sudarshan25092007" target="_blank" rel="noopener" class="hero-cta-link">
+              GitHub <span>↗</span>
+            </a>
+            <a href="https://linkedin.com/in/sudarshan-patil-hj259227" target="_blank" rel="noopener" class="hero-cta-link">
+              LinkedIn <span>↗</span>
+            </a>
+            <a href="https://leetcode.com/Sudarshan_patil_h_j" target="_blank" rel="noopener" class="hero-cta-link">
+              LeetCode <span>↗</span>
+            </a>
+            <a href="mailto:hjsudarshanpatil@gmail.com" class="hero-cta-link">
+              Email <span>↗</span>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── METRICS BAR ────────────────────────────────────────── -->
+    <section class="metrics-section">
+      <div class="container">
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-number">7</div>
+            <div class="metric-label">Merged PRs</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-number">12.2K+</div>
+            <div class="metric-label">GitHub Stars</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-number">9.56</div>
+            <div class="metric-label">CGPA (BITS Pilani)</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-number">2</div>
+            <div class="metric-label">Concurrent Systems Built</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── OPEN SOURCE CONTRIBUTIONS ───────────────────────────── -->
+    <section class="oss-section reveal" id="open-source">
+      <div class="container">
+        <div class="oss-meta">
+          <span class="section-label">PRODUCTION CONTRIBUTIONS</span>
+          <h2 class="oss-h2">InsForge — Backend Infrastructure</h2>
+          <p class="oss-sub">YC-backed cloud platform · May 2026 – Present</p>
+        </div>
+
+        <div class="oss-grid">
+          <!-- PR #1660 -->
+          <article class="card">
+            <h3 class="oss-card-title">
+              Timing Attack Fix
+              <span class="pr-tag">#1660</span>
+            </h3>
+            <p class="oss-card-desc">
+              Replaced fail-fast string comparison with constant-time SHA-256 hashing via <code>crypto.timingSafeEqual</code>. Added 6 Vitest unit tests. Verified against 1,777-test suite with zero regressions. CWE-208 patched.
+            </p>
+          </article>
+
+          <!-- PRs #1494, #1519 -->
+          <article class="card">
+            <h3 class="oss-card-title">
+              Database Performance
+              <span class="pr-tag">#1494, #1519</span>
+            </h3>
+            <p class="oss-card-desc">
+              Eliminated O(n) <code>SELECT COUNT(*)</code> full-table scans by implementing trigger-backed O(1) PostgreSQL row counters. Added LRU-style cache bounding to prevent unbounded memory growth in long-running agents.
+            </p>
+          </article>
+
+          <!-- PR #1351 -->
+          <article class="card">
+            <h3 class="oss-card-title">
+              Config Architecture
+              <span class="pr-tag">#1351</span>
+            </h3>
+            <p class="oss-card-desc">
+              Centralized 55+ scattered <code>process.env</code> reads across 21 backend files into a single typed <code>AppConfig</code> interface. Fixed critical PORT default bug. Shipped 49 unit tests.
+            </p>
+          </article>
+        </div>
+
+        <a href="https://github.com/Sudarshan25092007" target="_blank" rel="noopener" class="interactive-link">
+          View All PRs on GitHub <span>→</span>
         </a>
       </div>
-    </div>
-  </nav>
-
-  <main id="main-content">
-
-    <!-- ── HERO ───────────────────────────────────────────────── -->
-    <section class="hero" id="home" aria-labelledby="hero-name">
-      <div class="wrap">
-
-        <div class="avail-badge" role="status">
-          <span class="avail-dot" aria-hidden="true"></span>
-          Open to internships — Backend · Full Stack · AI
-        </div>
-
-        <h1 class="hero-name" id="hero-name">Sudarshan Patil H J</h1>
-        <p class="hero-role">Backend · Full Stack · AI Engineer &nbsp;·&nbsp; Open Source Contributor</p>
-
-        <p class="hero-tagline">
-          I ship production-grade backends, AI pipelines, and distributed systems —
-          with <strong>6 merged PRs</strong> to YC-backed InsForge (11.9K★).
-        </p>
-
-        <nav class="hero-ctas" aria-label="Primary actions">
-          <a href="https://github.com/Sudarshan25092007" target="_blank" rel="noopener" class="cta-primary">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path
-                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
-            </svg>
-            GitHub
-          </a>
-          <a href="https://www.linkedin.com/in/sudarshan-patil-hj259227" target="_blank" rel="noopener"
-            class="cta-outline">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path
-                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-            </svg>
-            LinkedIn
-          </a>
-          <a href="mailto:hjsudarshanpatil@gmail.com" class="cta-ghost">Email me</a>
-        </nav>
-
-        <div class="hero-metrics" role="list" aria-label="Key metrics">
-          <div class="metric" role="listitem">
-            <span class="metric-val">6</span>
-            <span class="metric-lbl">Merged PRs · InsForge</span>
-          </div>
-          <div class="metric-sep" aria-hidden="true"></div>
-          <div class="metric" role="listitem">
-            <span class="metric-val">8+</span>
-            <span class="metric-lbl">Projects shipped</span>
-          </div>
-          <div class="metric-sep" aria-hidden="true"></div>
-          <div class="metric" role="listitem">
-            <span class="metric-val">2</span>
-            <span class="metric-lbl">Dual CS degrees</span>
-          </div>
-        </div>
-
-      </div>
     </section>
 
-    <!-- ── WHY RECRUITERS SHORTLIST ME ────────────────────────── -->
-    <section class="section section-compact" id="why-me" aria-labelledby="why-me-title">
-      <div class="wrap">
-        <header class="section-hd reveal">
-          <span class="eyebrow">Recruiter Signal</span>
-          <h2 class="section-title" id="why-me-title">Why Recruiters Shortlist Me</h2>
-        </header>
-        <div class="why-grid">
-          <article class="why-card reveal">
-            <div class="why-icon why-icon-green" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+    <!-- ── PROJECTS SECTION ───────────────────────────────────── -->
+    <section class="projects-section reveal" id="projects">
+      <div class="container">
+        <span class="section-label">SYSTEMS BUILT</span>
+        <h2 class="section-title">Projects</h2>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="card">
+            <div class="project-card-header">
+              <h3 class="project-title">IPL Mock Auction Platform</h3>
+              <a href="https://github.com/Sudarshan25092007/ipl-auction-app" target="_blank" rel="noopener" class="interactive-link">
+                Source Code <span>→</span>
+              </a>
             </div>
-            <h3 class="why-title">Open Source Contributions</h3>
-            <p class="why-desc">6 merged PRs to InsForge (11.9K★, YC-backed) — config centralization, DB perf, memory safety, and AI gateway security.</p>
+            <div class="project-tags">
+              <span class="pill">Node.js</span>
+              <span class="pill">Redis</span>
+              <span class="pill">WebSockets</span>
+            </div>
+            <p class="project-desc">
+              Real-time concurrent auction system. Redis atomic operations prevent race conditions on simultaneous bids. Pub/sub broadcasts live state to all clients. Sorted sets manage leaderboard ordering.
+            </p>
           </article>
-          <article class="why-card reveal">
-            <div class="why-icon why-icon-blue" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+
+          <!-- Project 2 -->
+          <article class="card">
+            <div class="project-card-header">
+              <h3 class="project-title">XAUUSD High-Frequency Ingestion</h3>
+              <a href="https://github.com/Sudarshan25092007/AI_COMMAND_CENTER" target="_blank" rel="noopener" class="interactive-link">
+                Architecture <span>→</span>
+              </a>
             </div>
-            <h3 class="why-title">Backend Engineering</h3>
-            <p class="why-desc">Custom TCP bridges, Redis atomic ops, JWT auth, PostgreSQL RLS, and REST/WebSocket APIs built for real concurrency and scale.</p>
-          </article>
-          <article class="why-card reveal">
-            <div class="why-icon why-icon-purple" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 014 4c0 1.95-1.4 3.58-3.25 3.93L12 22l-.75-12.07A4.001 4.001 0 0112 2z"/><path d="M8 6h8M6 10h12"/></svg>
+            <div class="project-tags">
+              <span class="pill">Python</span>
+              <span class="pill">FastAPI</span>
+              <span class="pill">MQL5</span>
+              <span class="pill">Supabase</span>
+              <span class="pill">Docker</span>
             </div>
-            <h3 class="why-title">AI Development</h3>
-            <p class="why-desc">Gemini-powered pipelines for resume parsing, skill gap analysis, and trade rationale — multi-service orchestration with structured outputs.</p>
-          </article>
-          <article class="why-card reveal">
-            <div class="why-icon why-icon-gold" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            </div>
-            <h3 class="why-title">Production Mindset</h3>
-            <p class="why-desc">Docker deployments, flight-recorder DB fallbacks, ghost-trade elimination, and 49-unit test suites — code written for uptime, not demos.</p>
-          </article>
-          <article class="why-card reveal">
-            <div class="why-icon why-icon-blue" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-            </div>
-            <h3 class="why-title">Fast Learning Ability</h3>
-            <p class="why-desc">Amazon SDE-I OA invite as a first-year student. Dual-enrolled at SST + BITS Pilani while shipping 8+ production projects in parallel.</p>
-          </article>
-          <article class="why-card reveal">
-            <div class="why-icon why-icon-green" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
-            </div>
-            <h3 class="why-title">Real Project Experience</h3>
-            <p class="why-desc">Algorithmic trading engine processing 3K ticks/min, civic reporting app in production, and live rental platform with multi-tenant security.</p>
+            <p class="project-desc">
+              Custom Native TCP Bridge (Python ↔ MetaTrader 5) processing 1,000–3,000 ticks/minute with zero data loss. Statistical regime engine with μ+1.5σ threshold gating. Fault-tolerant PostgreSQL persistence with in-memory fallback.
+            </p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ── ACHIEVEMENT BANNER ─────────────────────────────────── -->
-    <section class="achieve-banner" id="achievements" aria-label="Achievement highlights">
-      <div class="wrap">
-        <div class="achieve-grid reveal">
-          <div class="achieve-item achieve-green">
-            <span class="achieve-val">6</span>
-            <span class="achieve-lbl">Merged PRs</span>
-            <span class="achieve-sub">InsForge · 11.9K★ · YC-backed</span>
-          </div>
-          <div class="achieve-item achieve-gold">
-            <span class="achieve-val">Amazon</span>
-            <span class="achieve-lbl">SDE-I OA Invite</span>
-            <span class="achieve-sub">Feb 2026 · Cleared human screening</span>
-          </div>
-          <div class="achieve-item achieve-blue">
-            <span class="achieve-val">GSSOC</span>
-            <span class="achieve-lbl">'26 Contributor</span>
-            <span class="achieve-sub">GirlScript Summer of Code</span>
-          </div>
-          <div class="achieve-item achieve-purple">
-            <span class="achieve-val">Dual</span>
-            <span class="achieve-lbl">Degree CS</span>
-            <span class="achieve-sub">Scaler SST + BITS Pilani</span>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- ── EXPERIENCE & EDUCATION ─────────────────────────────── -->
+    <section class="exp-edu-section reveal" id="background">
+      <div class="container">
+        <span class="section-label">TIMELINE</span>
+        <h2 class="section-title">Experience & Education</h2>
 
-    <!-- ── PROJECTS ───────────────────────────────────────────── -->
-    <section class="section" id="projects" aria-labelledby="projects-title">
-      <div class="wrap">
-
-        <header class="section-hd reveal">
-          <span class="eyebrow">Projects</span>
-          <h2 class="section-title" id="projects-title">What I've built</h2>
-        </header>
-
-        <!-- Featured: XAUUSD -->
-        <article class="proj-flagship reveal" aria-label="Featured project — XAUUSD Algorithmic Trading Engine">
-          <div class="proj-flagship-glow" aria-hidden="true"></div>
-          <div class="proj-flagship-inner">
-            <div class="proj-flagship-top">
-              <div class="proj-tags">
-                <span class="tag tag-flagship">Flagship · Production Engineering</span>
-                <span class="tag tag-ai">AI + Systems</span>
-                <span class="tag tag-muted">Jan – May 2026 · Paused</span>
-              </div>
-              <div class="proj-links-inline">
-                <a href="https://ai-command-center-nine.vercel.app/" target="_blank" rel="noopener" class="proj-link">Live Demo →</a>
-                <a href="https://github.com/Sudarshan25092007/AI_COMMAND_CENTER" target="_blank" rel="noopener" class="proj-link-ghost">Source</a>
-              </div>
-            </div>
-            <h3 class="proj-flagship-title">XAUUSD Algorithmic Trading Engine</h3>
-            <p class="proj-flagship-lead">Production-grade HFT system for gold (XAUUSD) with a custom Python↔MetaTrader 5 TCP bridge, statistical arbitrage engine, and AI-powered command center.</p>
-
-            <div class="proj-meta-grid">
-              <div class="proj-meta-block">
-                <span class="proj-meta-label">Business Impact</span>
-                <p>Automated trade decisions on live tick streams (1K–3K ticks/min) with session-aware regime constants — reducing manual monitoring and enabling data-driven gold trading.</p>
-              </div>
-              <div class="proj-meta-block">
-                <span class="proj-meta-label">Technical Complexity</span>
-                <p>Custom native TCP bridge with persistent read buffers and newline-delimited framing. Triggers at <code>μ + 1.5σ</code> tick density with order-flow imbalance confirmation.</p>
-              </div>
-            </div>
-
-            <div class="proj-arch">
-              <span class="proj-meta-label">Architecture</span>
-              <p>MT5 (MQL5) ↔ TCP Socket ↔ Python/FastAPI engine ↔ Supabase PostgreSQL flight recorder ↔ Next.js 15 dashboard (Gemini Flash rationale). Docker-deployed with 10s MT5 position sync.</p>
-            </div>
-
-            <ul class="proj-features" aria-label="Key features">
-              <li>Partial-read elimination via persistent TCP read buffers</li>
-              <li>Supabase flight recorder with in-memory fallback on network failure</li>
-              <li>Ghost trade elimination via 10-second MT5 position sync protocol</li>
-              <li>Session-level μ/σ constants from 30–90 days historical tick data</li>
-              <li>Live Next.js dashboard with AI-generated trade rationale</li>
-            </ul>
-
-            <div class="stack-row">
-              <span class="stack">Python</span>
-              <span class="stack">FastAPI</span>
-              <span class="stack">MQL5 / MetaTrader 5</span>
-              <span class="stack">Next.js 15</span>
-              <span class="stack">Gemini API</span>
-              <span class="stack">Supabase</span>
-              <span class="stack">PostgreSQL</span>
-              <span class="stack">Docker</span>
-              <span class="stack">TCP Sockets</span>
-              <span class="stack">Pandas / NumPy</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project Grid -->
-        <div class="proj-grid">
-
-          <article class="proj-card reveal">
-            <div class="proj-tags">
-              <span class="tag tag-backend">Concurrent Systems</span>
-              <span class="tag tag-muted">Jun 2026 · In progress</span>
-            </div>
-            <h3 class="proj-card-title">IPL Mock Auction Platform</h3>
-            <p class="proj-card-desc">Real-time concurrent auction system designed to solve race conditions in live bidding at scale.</p>
-            <div class="proj-card-meta">
-              <p><strong>Impact:</strong> Enables fair multi-team auctions with zero duplicate player wins under concurrent load.</p>
-              <p><strong>Architecture:</strong> Node.js API → Redis atomic ops + pub/sub → WebSocket clients. Sorted sets for leaderboard state.</p>
-            </div>
-            <ul class="proj-features proj-features-compact">
-              <li>Redis WATCH/MULTI for atomic bid commits</li>
-              <li>Pub/sub live bid broadcast to all clients</li>
-              <li>Sorted sets for session leaderboard management</li>
-            </ul>
-            <div class="stack-row">
-              <span class="stack">Node.js</span>
-              <span class="stack">Redis</span>
-              <span class="stack">WebSockets</span>
-            </div>
-            <a href="https://github.com/Sudarshan25092007/ipl-auction-app" target="_blank" rel="noopener" class="proj-link-ghost">GitHub →</a>
-          </article>
-
-          <article class="proj-card reveal">
-            <div class="proj-tags">
-              <span class="tag tag-ai">AI Pipeline</span>
-              <span class="tag tag-muted">2026</span>
-            </div>
-            <h3 class="proj-card-title">Student Skill Gap Analyzer</h3>
-            <p class="proj-card-desc">AI-powered career tool that parses resumes, maps skills to job requirements, and returns prioritized learning paths.</p>
-            <div class="proj-card-meta">
-              <p><strong>Impact:</strong> Reduces manual resume-to-JD matching from hours to seconds with structured gap reports.</p>
-              <p><strong>Architecture:</strong> React/Vite → Node.js/Express orchestrator → Python/FastAPI PDF microservice → Gemini API.</p>
-            </div>
-            <ul class="proj-features proj-features-compact">
-              <li>Structured skill extraction via Gemini API</li>
-              <li>Cross-reference engine against job descriptions</li>
-              <li>Three-service microservice pipeline</li>
-            </ul>
-            <div class="stack-row">
-              <span class="stack">Python</span>
-              <span class="stack">Gemini API</span>
-              <span class="stack">FastAPI</span>
-              <span class="stack">React</span>
-              <span class="stack">PostgreSQL</span>
-            </div>
-          </article>
-
-          <article class="proj-card reveal">
-            <div class="proj-tags">
-              <span class="tag tag-fullstack">Full Stack</span>
-              <span class="tag tag-muted">Feb 2026</span>
-            </div>
-            <h3 class="proj-card-title">RoomFinder</h3>
-            <p class="proj-card-desc">Rental marketplace with secure multi-tenant data isolation and real-time search.</p>
-            <div class="proj-card-meta">
-              <p><strong>Impact:</strong> Connects renters and owners with RLS-protected listings — live on Vercel.</p>
-              <p><strong>Architecture:</strong> Next.js 15 App Router → Supabase Auth + PostgreSQL RLS → Vercel edge deployment.</p>
-            </div>
-            <ul class="proj-features proj-features-compact">
-              <li>Row Level Security for tenant data isolation</li>
-              <li>Owner dashboards with image carousels</li>
-              <li>Server-side rendered search filtering</li>
-            </ul>
-            <div class="stack-row">
-              <span class="stack">Next.js 15</span>
-              <span class="stack">Supabase</span>
-              <span class="stack">PostgreSQL</span>
-              <span class="stack">Tailwind CSS</span>
-            </div>
-            <a href="https://room-finder-web-rouge.vercel.app/" target="_blank" rel="noopener" class="proj-link-ghost">Live Demo →</a>
-          </article>
-
-          <article class="proj-card reveal">
-            <div class="proj-tags">
-              <span class="tag tag-fullstack">Civic Tech</span>
-              <span class="tag tag-muted">Sep 2025</span>
-            </div>
-            <h3 class="proj-card-title">Civic Reporter</h3>
-            <p class="proj-card-desc">Production civic issue reporting platform with geo-tagged submissions and real-time updates.</p>
-            <div class="proj-card-meta">
-              <p><strong>Impact:</strong> Enables citizens to report infrastructure issues with precise geo-location — deployed and live.</p>
-              <p><strong>Architecture:</strong> Firebase Auth → Firestore real-time DB → Cloudinary uploads → Google Maps geo-tagging.</p>
-            </div>
-            <ul class="proj-features proj-features-compact">
-              <li>Real-time issue tracking via Firestore</li>
-              <li>Cloudinary image upload pipeline</li>
-              <li>Google Maps API precise geo-tagging</li>
-            </ul>
-            <div class="stack-row">
-              <span class="stack">Firebase</span>
-              <span class="stack">Firestore</span>
-              <span class="stack">Google Maps API</span>
-              <span class="stack">Cloudinary</span>
-            </div>
-            <a href="https://civic-reporter-2007.web.app" target="_blank" rel="noopener" class="proj-link-ghost">Live Demo →</a>
-          </article>
-
-          <article class="proj-card reveal">
-            <div class="proj-tags">
-              <span class="tag tag-backend">MERN Stack</span>
-              <span class="tag tag-muted">Dec 2025</span>
-            </div>
-            <h3 class="proj-card-title">TaskFlow</h3>
-            <p class="proj-card-desc">Full-stack task manager with JWT auth and priority-queue categorization — deployed on Render.</p>
-            <div class="proj-card-meta">
-              <p><strong>Impact:</strong> Stateless auth + persistent task management for multi-user productivity workflows.</p>
-              <p><strong>Architecture:</strong> React frontend → Express REST API → JWT middleware → MongoDB Atlas.</p>
-            </div>
-            <ul class="proj-features proj-features-compact">
-              <li>JWT-based stateless authentication</li>
-              <li>Priority-queue task categorization</li>
-              <li>MongoDB Atlas cloud persistence</li>
-            </ul>
-            <div class="stack-row">
-              <span class="stack">Node.js</span>
-              <span class="stack">Express</span>
-              <span class="stack">MongoDB</span>
-              <span class="stack">JWT</span>
-            </div>
-            <a href="https://task-flow-frontend-nb7t.onrender.com/" target="_blank" rel="noopener" class="proj-link-ghost">Live Demo →</a>
-          </article>
-
-          <article class="proj-card reveal">
-            <div class="proj-tags">
-              <span class="tag tag-mobile">React Native</span>
-              <span class="tag tag-muted">Jan 2026</span>
-            </div>
-            <h3 class="proj-card-title">ToDo App — Mobile</h3>
-            <p class="proj-card-desc">Cross-platform iOS/Android task manager with offline persistence and native UX patterns.</p>
-            <div class="proj-card-meta">
-              <p><strong>Impact:</strong> Offline-first mobile productivity with haptic feedback and custom dark mode.</p>
-              <p><strong>Architecture:</strong> Expo SDK → React Native → AsyncStorage persistence → TypeScript type safety.</p>
-            </div>
-            <ul class="proj-features proj-features-compact">
-              <li>AsyncStorage offline data persistence</li>
-              <li>Custom dark mode theming</li>
-              <li>Tactile haptic feedback patterns</li>
-            </ul>
-            <div class="stack-row">
-              <span class="stack">React Native</span>
-              <span class="stack">TypeScript</span>
-              <span class="stack">Expo</span>
-              <span class="stack">AsyncStorage</span>
-            </div>
-            <a href="https://github.com/Sudarshan25092007/react-native-todo-app" target="_blank" rel="noopener" class="proj-link-ghost">GitHub →</a>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ── OPEN SOURCE ─────────────────────────────────────────── -->
-    <section class="section section-oss" id="oss" aria-labelledby="oss-title">
-      <div class="wrap">
-
-        <header class="section-hd reveal">
-          <span class="eyebrow">Open Source</span>
-          <h2 class="section-title" id="oss-title">Contribution record</h2>
-        </header>
-
-        <!-- OSS Stats -->
-        <div class="oss-stats reveal" role="list" aria-label="Open source contribution statistics">
-          <div class="oss-stat" role="listitem">
-            <span class="oss-stat-val">8</span>
-            <span class="oss-stat-lbl">Total PRs</span>
-          </div>
-          <div class="oss-stat" role="listitem">
-            <span class="oss-stat-val">6</span>
-            <span class="oss-stat-lbl">Merged</span>
-          </div>
-          <div class="oss-stat" role="listitem">
-            <span class="oss-stat-val">2</span>
-            <span class="oss-stat-lbl">Repositories</span>
-          </div>
-          <div class="oss-stat" role="listitem">
-            <span class="oss-stat-val">11.9K</span>
-            <span class="oss-stat-lbl">Stars (InsForge)</span>
-          </div>
-        </div>
-
-        <!-- Impact badges -->
-        <div class="oss-badges reveal" aria-label="Contribution impact areas">
-          <span class="oss-badge oss-badge-green">Performance</span>
-          <span class="oss-badge oss-badge-blue">Configuration</span>
-          <span class="oss-badge oss-badge-gold">Security</span>
-          <span class="oss-badge oss-badge-purple">Memory Safety</span>
-          <span class="oss-badge oss-badge-green">Testing</span>
-          <span class="oss-badge oss-badge-blue">API Design</span>
-        </div>
-
-        <!-- PR Timeline -->
-        <div class="oss-timeline reveal" aria-label="Pull request timeline">
-          <div class="timeline-item timeline-merged"><span class="timeline-date">Jan 2026</span><span class="timeline-pr">#1351</span><span class="timeline-desc">Config centralization · 49 tests</span></div>
-          <div class="timeline-item timeline-merged"><span class="timeline-date">Feb 2026</span><span class="timeline-pr">#1443</span><span class="timeline-desc">Deno types · OAuth errors</span></div>
-          <div class="timeline-item timeline-merged"><span class="timeline-date">Feb 2026</span><span class="timeline-pr">#1494</span><span class="timeline-desc">O(1) row counters</span></div>
-          <div class="timeline-item timeline-merged"><span class="timeline-date">Mar 2026</span><span class="timeline-pr">#1519</span><span class="timeline-desc">LRU cache bounding</span></div>
-          <div class="timeline-item timeline-merged"><span class="timeline-date">Mar 2026</span><span class="timeline-pr">#1526</span><span class="timeline-desc">AI token caps · stampede fix</span></div>
-          <div class="timeline-item timeline-review"><span class="timeline-date">Mar 2026</span><span class="timeline-pr">#1541</span><span class="timeline-desc">Config externalization · In review</span></div>
-        </div>
-
-        <!-- Contribution Summary Cards -->
-        <div class="oss-summary-grid reveal">
-          <article class="oss-summary-card">
-            <div class="oss-summary-header">
-              <span class="oss-summary-repo">InsForge</span>
-              <span class="oss-count-badge">6 Merged</span>
-            </div>
-            <p class="oss-summary-impact">Performance, security, and config refactors on a YC-backed cloud platform serving 11.9K+ GitHub stars.</p>
-            <div class="oss-summary-metrics">
-              <span>55+ env vars centralized</span>
-              <span>49 unit tests shipped</span>
-              <span>O(n) → O(1) DB queries</span>
-            </div>
-          </article>
-          <article class="oss-summary-card">
-            <div class="oss-summary-header">
-              <span class="oss-summary-repo">PyChem-Pro</span>
-              <span class="oss-count-badge oss-count-purple">2 PRs</span>
-            </div>
-            <p class="oss-summary-impact">Computational chemistry refactoring — API encapsulation and physics module deduplication.</p>
-            <div class="oss-summary-metrics">
-              <span>Public API surface improved</span>
-              <span>Force field deduplication</span>
-            </div>
-          </article>
-        </div>
-
-        <!-- InsForge -->
-        <article class="oss-card reveal" aria-label="InsForge contributions">
-          <div class="oss-card-header">
-            <div class="oss-repo-info">
-              <a href="https://github.com/InsForge/InsForge" target="_blank" rel="noopener"
-                class="oss-repo-name">InsForge / InsForge</a>
-              <p class="oss-repo-meta">Node.js · TypeScript · PostgreSQL · Deno &nbsp;·&nbsp; YC-backed · 11.9K ★ ·
-                Cloud infrastructure platform</p>
-            </div>
-            <span class="oss-count-badge">6 Merged PRs</span>
-          </div>
-
-          <div class="git-log" role="list">
-            <div class="git-entry" role="listitem">
-              <span class="git-hash">#1351</span>
-              <span class="git-scope">config(arch)</span>
-              <span class="git-msg">Centralized 55+ scattered <code>process.env</code> reads across 21 backend files
-                into a typed <code>AppConfig</code> interface; fixed critical PORT default bug (3000 → 7130); shipped 49
-                unit tests</span>
-            </div>
-            <div class="git-entry" role="listitem">
-              <span class="git-hash">#1494</span>
-              <span class="git-scope">perf(db)</span>
-              <span class="git-msg">Replaced <code>SELECT COUNT(*)</code> full table scans with trigger-backed O(1) row
-                counters — eliminated the database metadata bottleneck on every agent interaction</span>
-            </div>
-            <div class="git-entry" role="listitem">
-              <span class="git-hash">#1519</span>
-              <span class="git-scope">fix(memory)</span>
-              <span class="git-msg">Added LRU-style size bounding to <code>tableCountCache</code> (previously an
-                unbounded <code>Map.set()</code> with no eviction) to prevent memory leaks in long-running
-                processes</span>
-            </div>
-            <div class="git-entry" role="listitem">
-              <span class="git-hash">#1526</span>
-              <span class="git-scope">fix(security)</span>
-              <span class="git-msg">AI gateway token cost caps to prevent financial abuse from runaway LLM API calls;
-                cache stampede prevention via promise-lock pattern protecting concurrency correctness</span>
-            </div>
-            <div class="git-entry" role="listitem">
-              <span class="git-hash">#1443</span>
-              <span class="git-scope">chore</span>
-              <span class="git-msg">Deno global type safety, OAuth <code>AppError</code> standardization, and OpenAPI
-                sunset policy headers across deprecated endpoints</span>
-            </div>
-            <div class="git-entry git-entry-review" role="listitem">
-              <span class="git-hash">#1541</span>
-              <span class="git-scope">chore(ai)</span>
-              <span class="git-msg">Externalized token cap configuration to <code>AppConfig</code>; added security
-                boundary test suite for maxTokens validation — in review</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- PyChem-Pro -->
-        <article class="oss-card reveal" aria-label="PyChem-Pro contributions">
-          <div class="oss-card-header">
-            <div class="oss-repo-info">
-              <a href="https://github.com/vijaymasand/PyChem-Pro" target="_blank" rel="noopener"
-                class="oss-repo-name">vijaymasand / PyChem-Pro</a>
-              <p class="oss-repo-meta">Python · Computational Chemistry · Molecular Modeling · Graph Algorithms</p>
-            </div>
-            <span class="oss-count-badge oss-count-purple">2 PRs</span>
-          </div>
-          <div class="git-log" role="list">
-            <div class="git-entry" role="listitem">
-              <span class="git-hash">#4</span>
-              <span class="git-scope">refactor</span>
-              <span class="git-msg">Centralized Euclidean distance calculation (<code>np.linalg.norm</code>) and
-                standardized epsilon values across the MMFF94 force field module — eliminated code duplication across
-                physics files</span>
-            </div>
-            <div class="git-entry" role="listitem">
-              <span class="git-hash">#6</span>
-              <span class="git-scope">refactor(api)</span>
-              <span class="git-msg">Replaced private <code>_adjacency</code> internal access with public
-                <code>get_neighbor_bonds()</code> API in the atom_typing module — improved encapsulation and API surface
-                clarity</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- GSSOC Banner -->
-        <div class="gssoc-banner reveal" role="complementary" aria-label="GSSOC selection">
-          <span class="gssoc-icon" aria-hidden="true">🌐</span>
+        <div class="exp-edu-grid">
+          <!-- Experience Column -->
           <div>
-            <div class="gssoc-title">GirlScript Summer of Code '26 &mdash; Selected Contributor</div>
-            <div class="gssoc-sub">Active participant in global open source contributor program · May 2026</div>
+            <h3 class="section-label" style="color: var(--accent-cyan); border-bottom: 1px solid var(--border-color); padding-bottom: 8px; width: 100%; margin-bottom: 24px;">Professional Experience</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-item-header">
+                  <span class="timeline-role">Backend Contributor — InsForge</span>
+                  <span class="timeline-date">May 2026 – Present</span>
+                </div>
+                <p class="timeline-desc">
+                  Optimized database queries, resolved API timing security vulnerabilities, and restructured configuration variables on a large-scale, production cloud deployment.
+                </p>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-item-header">
+                  <span class="timeline-role">Backend Contributor — PyChem-Pro</span>
+                  <span class="timeline-date">Apr 2026</span>
+                </div>
+                <p class="timeline-desc">
+                  Unified Euclidean calculations in Python computational chemistry modules, improving molecular distance computation performance.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education Column -->
+          <div>
+            <h3 class="section-label" style="color: var(--accent-cyan); border-bottom: 1px solid var(--border-color); padding-bottom: 8px; width: 100%; margin-bottom: 24px;">Education</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-item-header">
+                  <span class="timeline-school">Scaler School of Technology</span>
+                  <span class="timeline-date">2025 – 2029</span>
+                </div>
+                <div class="timeline-degree">B.Tech, Computer Science & AI</div>
+                <p class="timeline-desc">
+                  Bengaluru · Rising 2nd Year · CGR: 7+
+                </p>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-item-header">
+                  <span class="timeline-school">BITS Pilani</span>
+                  <span class="timeline-date">2025 – 2029</span>
+                </div>
+                <div class="timeline-degree">B.Sc, Computer Science</div>
+                <p class="timeline-desc">
+                  Online / Distance Learning · CGPA: 9.56
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coursework Footer Row -->
+          <div class="coursework-footer">
+            <p class="coursework-text">
+              <strong>Relevant Coursework:</strong> Data Structures & Algorithms, Operating Systems, Computer Networks, Database Systems
+            </p>
           </div>
         </div>
-
       </div>
     </section>
 
-    <!-- ── EXPERIENCE ─────────────────────────────────────────── -->
-    <section class="section" id="experience" aria-labelledby="exp-title">
-      <div class="wrap">
-        <header class="section-hd reveal">
-          <span class="eyebrow">Experience</span>
-          <h2 class="section-title" id="exp-title">Engineering track record</h2>
-        </header>
+    <!-- ── ACHIEVEMENTS ───────────────────────────────────────── -->
+    <section class="achievements-section reveal" id="achievements">
+      <div class="container">
+        <span class="section-label">RECOGNITION</span>
+        <h2 class="section-title">Milestones</h2>
 
-        <div class="exp-timeline">
-          <article class="exp-item reveal">
-            <div class="exp-marker" aria-hidden="true"></div>
-            <div class="exp-content">
-              <div class="exp-header">
-                <h3 class="exp-role">Open Source Contributor</h3>
-                <span class="exp-period">2025 – Present</span>
-              </div>
-              <p class="exp-org"><a href="https://github.com/InsForge/InsForge" target="_blank" rel="noopener">InsForge</a> · YC-backed Cloud Platform · 11.9K★</p>
-              <p class="exp-desc">Shipped 6 merged PRs addressing production bottlenecks: centralized 55+ env reads into typed AppConfig, replaced O(n) COUNT queries with trigger-backed counters, bounded memory caches, and AI gateway security caps.</p>
-              <ul class="exp-highlights">
-                <li>49 unit tests for config refactor (#1351)</li>
-                <li>Database perf: full table scan → O(1) counters (#1494)</li>
-                <li>Security: LLM token cost caps + cache stampede prevention (#1526)</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="exp-item reveal">
-            <div class="exp-marker exp-marker-green" aria-hidden="true"></div>
-            <div class="exp-content">
-              <div class="exp-header">
-                <h3 class="exp-role">Selected Contributor</h3>
-                <span class="exp-period">May 2026 – Present</span>
-              </div>
-              <p class="exp-org">GirlScript Summer of Code '26 (GSSOC)</p>
-              <p class="exp-desc">Active contributor in global open-source program. Building production features across distributed codebases with mentor-reviewed PRs.</p>
-            </div>
-          </article>
-
-          <article class="exp-item reveal">
-            <div class="exp-marker exp-marker-purple" aria-hidden="true"></div>
-            <div class="exp-content">
-              <div class="exp-header">
-                <h3 class="exp-role">Independent Engineer</h3>
-                <span class="exp-period">2025 – Present</span>
-              </div>
-              <p class="exp-org">Personal Projects · 8+ shipped applications</p>
-              <p class="exp-desc">Designed and deployed production systems spanning algorithmic trading (3K ticks/min), civic reporting, rental platforms, AI pipelines, and concurrent auction systems.</p>
-              <ul class="exp-highlights">
-                <li>XAUUSD HFT engine with custom TCP bridge + Docker deployment</li>
-                <li>Live apps on Vercel, Render, and Firebase</li>
-                <li>Amazon SDE-I OA invite (Feb 2026)</li>
-              </ul>
-            </div>
-          </article>
+        <div class="achievements-row">
+          <!-- Milestone 1 -->
+          <div class="achievement-card">
+            <span class="achievement-icon">↳</span>
+            <p class="achievement-text">
+              Amazon SDE-I OA: Invited via Amazon University Talent Acquisition (Feb 2026)
+            </p>
+          </div>
+          <!-- Milestone 2 -->
+          <div class="achievement-card">
+            <span class="achievement-icon">↳</span>
+            <p class="achievement-text">
+              GSSOC '26: Selected contributor, GirlScript Summer of Code
+            </p>
+          </div>
+          <!-- Milestone 3 -->
+          <div class="achievement-card">
+            <span class="achievement-icon">↳</span>
+            <p class="achievement-text">
+              7 merged PRs to a 12.2K★ production codebase
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ── GITHUB ─────────────────────────────────────────────── -->
-    <section class="section" id="github" aria-labelledby="github-title">
-      <div class="wrap">
-        <header class="section-hd reveal">
-          <span class="eyebrow">GitHub</span>
-          <h2 class="section-title" id="github-title">Development activity</h2>
-        </header>
-
-        <div class="github-grid reveal">
-          <figure class="github-card">
-            <figcaption class="github-card-label">GitHub Stats</figcaption>
-            <div class="github-img-wrap">
-              <img src="https://github-readme-stats.vercel.app/api?username=Sudarshan25092007&show_icons=true&theme=tokyonight&hide_border=true&bg_color=090912&title_color=EEEEF5&text_color=7B7B9A&icon_color=3B6BFF&rank_icon=percentile"
-                alt="GitHub statistics for Sudarshan25092007" loading="lazy" width="460" height="195" decoding="async" />
-            </div>
-          </figure>
-          <figure class="github-card">
-            <figcaption class="github-card-label">Contribution Streak</figcaption>
-            <div class="github-img-wrap">
-              <img src="https://github-readme-streak-stats.demolab.com/?user=Sudarshan25092007&theme=tokyonight&hide_border=true&background=090912&ring=3B6BFF&fire=3B6BFF&currStreakLabel=7B7B9A&sideLabels=7B7B9A&dates=4A4A64"
-                alt="GitHub contribution streak for Sudarshan25092007" loading="lazy" width="460" height="195" decoding="async" />
-            </div>
-          </figure>
-          <figure class="github-card github-card-wide">
-            <figcaption class="github-card-label">Activity Graph</figcaption>
-            <div class="github-img-wrap github-img-wide">
-              <img src="https://github-readme-activity-graph.vercel.app/graph?username=Sudarshan25092007&theme=tokyo-night&hide_border=true&bg_color=090912&color=7B7B9A&line=3B6BFF&point=3B6BFF&area=true"
-                alt="GitHub activity graph for Sudarshan25092007" loading="lazy" width="860" height="200" decoding="async" />
-            </div>
-          </figure>
-          <figure class="github-card github-card-wide">
-            <figcaption class="github-card-label">Contribution Snake</figcaption>
-            <div class="github-img-wrap github-img-snake">
-              <img src="https://raw.githubusercontent.com/Sudarshan25092007/Sudarshan25092007/output/github-contribution-grid-snake.svg"
-                alt="GitHub contribution snake animation" loading="lazy" width="860" height="120" decoding="async"
-                onerror="this.closest('.github-card').style.display='none'" />
-            </div>
-          </figure>
-        </div>
-
-        <p class="github-cta reveal">
-          <a href="https://github.com/Sudarshan25092007" target="_blank" rel="noopener" class="cta-outline">
-            View full profile on GitHub →
-          </a>
-        </p>
-      </div>
-    </section>
-
-    <!-- ── SKILLS ─────────────────────────────────────────────── -->
-    <section class="section" id="skills" aria-labelledby="skills-title">
-      <div class="wrap">
-
-        <header class="section-hd reveal">
-          <span class="eyebrow">Skills</span>
-          <h2 class="section-title" id="skills-title">Technical stack</h2>
-        </header>
+    <!-- ── TECHNICAL SKILLS ───────────────────────────────────── -->
+    <section class="skills-section reveal" id="skills">
+      <div class="container">
+        <span class="section-label">SKILLS MATRIX</span>
+        <h2 class="section-title">Technical Capabilities</h2>
 
         <div class="skills-grid">
-          <div class="skill-group reveal">
-            <h4 class="skill-group-label">Languages</h4>
-            <div class="skill-tags">
-              <span class="sk"><svg class="sk-icon" viewBox="0 0 24 24" fill="#F0DB4F" aria-hidden="true"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/></svg>JavaScript (ES6+)</span>
-              <span class="sk"><svg class="sk-icon" viewBox="0 0 24 24" fill="#3178C6" aria-hidden="true"><path d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z"/></svg>TypeScript</span>
-              <span class="sk"><svg class="sk-icon" viewBox="0 0 24 24" fill="#3776AB" aria-hidden="true"><path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.19 4.15l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09zm-4.14 7.24l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09z"/></svg>Python</span>
-              <span class="sk">Java</span>
-              <span class="sk">SQL</span>
-              <span class="sk">MQL5</span>
+          <!-- Languages -->
+          <div>
+            <h3 class="skills-category-title">Languages</h3>
+            <div class="skills-list">
+              <span class="pill">Java</span>
+              <span class="pill">TypeScript</span>
+              <span class="pill">JavaScript (ES6+)</span>
+              <span class="pill">Python</span>
+              <span class="pill">SQL</span>
             </div>
           </div>
-          <div class="skill-group reveal">
-            <h4 class="skill-group-label">Backend</h4>
-            <div class="skill-tags">
-              <span class="sk"><svg class="sk-icon" viewBox="0 0 24 24" fill="#339933" aria-hidden="true"><path d="M11.998,24c-0.321,0-0.641-0.084-0.922-0.247l-2.936-1.737c-0.438-0.245-0.224-0.332-0.08-0.383c0.585-0.203,0.703-0.25,1.328-0.604c0.065-0.037,0.151-0.023,0.218,0.017l2.256,1.339c0.082,0.045,0.197,0.045,0.272,0l8.795-5.076c0.082-0.047,0.134-0.141,0.134-0.238V6.921c0-0.099-0.053-0.192-0.137-0.242l-8.791-5.072c-0.081-0.047-0.189-0.047-0.271,0L3.075,6.68C2.99,6.729,2.936,6.825,2.936,6.921v10.15c0,0.097,0.054,0.189,0.139,0.235l2.409,1.392c1.307,0.654,2.108-0.116,2.108-0.89V7.787c0-0.142,0.114-0.253,0.256-0.253h1.115c0.139,0,0.255,0.112,0.255,0.253v10.021c0,1.745-0.95,2.745-2.604,2.745c-0.508,0-0.909,0-2.026-0.551L2.28,18.675c-0.57-0.329-0.922-0.945-0.922-1.604V6.921c0-0.659,0.353-1.275,0.922-1.603l8.795-5.082c0.557-0.315,1.296-0.315,1.848,0l8.794,5.082c0.57,0.329,0.924,0.944,0.924,1.603v10.15c0,0.659-0.354,1.275-0.924,1.604l-8.794,5.078C12.643,23.916,12.324,24,11.998,24z"/></svg>Node.js</span>
-              <span class="sk">Express.js</span>
-              <span class="sk">FastAPI</span>
-              <span class="sk">REST APIs</span>
-              <span class="sk">WebSockets</span>
-              <span class="sk">JWT Auth</span>
-              <span class="sk">TCP Sockets</span>
-            </div>
-          </div>
-          <div class="skill-group reveal">
-            <h4 class="skill-group-label">Frontend</h4>
-            <div class="skill-tags">
-              <span class="sk"><svg class="sk-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.5725 0c-.1763 0-.3098.0013-.3584.0067-.0516.0053-.2159.021-.3636.0328-3.4088.3073-6.6017 2.1463-8.624 4.9728C1.1004 6.584.3802 8.3666.1082 10.255c-.0962.659-.108.8537-.108 1.7474.0001.8938.0118 1.0884.108 1.7476.6759 4.6139 4.0917 8.5772 8.6242 9.9999.2552.0808.5139.1523.7808.2136.5988.1372 1.2305.2161 1.8932.2538.2599.0147.2768.0154 1.6237.0154.7424 0 1.1624-.0072 1.4978-.0156.6627-.0386 1.2944-.1175 1.8932-.2538.2669-.0613.5256-.1328.7808-.2136 4.5325-1.4227 7.9483-5.386 8.6242-9.9999.0962-.6591.108-.8538.108-1.7476 0-.8937-.0118-1.0884-.108-1.7474-.2772-1.8868-.9974-3.6694-2.1029-5.2406-2.0223-2.8277-5.2153-4.6655-8.6241-4.9728-.1477-.0118-.3119-.0275-.3635-.0328C11.882.0013 11.7486 0 11.5725 0z"/></svg>Next.js 15</span>
-              <span class="sk"><svg class="sk-icon" viewBox="0 0 24 24" fill="#61DAFB" aria-hidden="true"><path d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38-.318-.184-.688-.277-1.092-.278zm-.005 1.09c.225 0 .406.044.558.127.666.382.955 1.835.73 3.704-.054.46-.142.945-.25 1.44-.96-.236-2.006-.417-3.107-.534-.66-.905-1.345-1.727-2.035-2.447 1.592-1.48 3.087-2.292 4.105-2.29z"/></svg>React</span>
-              <span class="sk">React Native</span>
-              <span class="sk">Tailwind CSS</span>
-              <span class="sk">Expo</span>
-            </div>
-          </div>
-          <div class="skill-group reveal">
-            <h4 class="skill-group-label">Databases</h4>
-            <div class="skill-tags">
-              <span class="sk"><svg class="sk-icon" viewBox="0 0 24 24" fill="#336791" aria-hidden="true"><path d="M17.128 0a10.134 10.134 0 0 0-2.755.403C13.45.64 12.571 1.18 12 2.142c-.571-.963-1.45-1.503-2.373-1.739A10.134 10.134 0 0 0 6.872 0C3.073 0 0 2.582 0 5.767c0 .69.239 1.257.517 1.737.537.927 1.264 1.43 1.997 2.033C5.47 11.608 10.995 12.573 12 14c1.005-1.427 6.53-2.392 9.486-4.463.733-.603 1.46-1.106 1.997-2.033.278-.48.517-1.047.517-1.737C24 2.582 20.927 0 17.128 0z"/></svg>PostgreSQL</span>
-              <span class="sk"><svg class="sk-icon" viewBox="0 0 24 24" fill="#47A248" aria-hidden="true"><path d="M17.193 9.555c-1.264-5.58-4.252-7.414-4.573-8.115-.28-.394-.53-.954-.735-1.44-.036.495-.055.685-.523 1.184-.723.566-4.438 3.682-4.74 10.02-.282 5.912 4.27 9.435 4.888 9.884l.07.05A73.49 73.49 0 0 1 11.91 24h.481c.114-1.032.284-2.056.51-3.07.417-.296.604-.463.85-.693a11.342 11.342 0 0 0 3.639-8.464c.01-.814-.103-1.662-.197-2.218zm-5.336 8.195s0-8.571 1.705-11.127c0 0 1.242 4.914 0 11.127z"/></svg>MongoDB</span>
-              <span class="sk"><svg class="sk-icon" viewBox="0 0 24 24" fill="#DC382D" aria-hidden="true"><path d="M10.9 18.16c-.77.84-1.8 1.26-3.12 1.26-1.64 0-2.74-.52-3.26-1.56-.54-1.04-.66-2.66-.36-4.82l.32-1.86h2.08l-.32 1.9c-.18 1.3-.14 2.26.12 2.84.28.62.8.92 1.56.92.78 0 1.34-.28 1.7-.84.38-.58.62-1.48.72-2.74l.58-5.54h2.1L12.4 13c-.2 2.1-.72 3.74-1.5 4.78zM19.52 6.9c1.12 0 2.04.24 2.76.7.74.48 1.22 1.2 1.44 2.16.34 1.46.04 2.9-.9 4.32-1.04 1.56-2.62 2.34-4.74 2.34h-2.04l-.6 5.58H13.3l1.86-17.1h4.36zm-.98 7.24c.82 0 1.48-.22 1.98-.68.52-.46.82-1.1.92-1.94.1-.76-.02-1.36-.36-1.78-.34-.44-.88-.66-1.64-.66h-2.02l-.64 5.06h1.76z"/></svg>Redis</span>
-              <span class="sk"><svg class="sk-icon" viewBox="0 0 24 24" fill="#FFCA28" aria-hidden="true"><path d="M3.89 15.672L6.255.461A.542.542 0 0 1 7.27.288l2.543 4.771zm16.794 3.692l-2.25-14a.54.54 0 0 0-.919-.295L3.316 19.365l7.856 4.427a1.621 1.621 0 0 0 1.588 0zM14.3 7.147l-1.82-3.482a.542.542 0 0 0-.96 0L3.53 17.984z"/></svg>Firebase</span>
-              <span class="sk">Supabase</span>
-            </div>
-          </div>
-          <div class="skill-group reveal">
-            <h4 class="skill-group-label">Cloud</h4>
-            <div class="skill-tags">
-              <span class="sk">Vercel</span>
-              <span class="sk">Render</span>
-              <span class="sk">Firebase</span>
-              <span class="sk">Supabase</span>
-              <span class="sk">MongoDB Atlas</span>
-              <span class="sk">Cloudinary</span>
-            </div>
-          </div>
-          <div class="skill-group reveal">
-            <h4 class="skill-group-label">DevOps</h4>
-            <div class="skill-tags">
-              <span class="sk"><svg class="sk-icon" viewBox="0 0 24 24" fill="#2496ED" aria-hidden="true"><path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m0 2.716h2.118a.187.187 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.082.185.185.186m-2.93 5.733h2.12a.186.186 0 00.184-.185v-1.88a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.88c0 .102.083.185.185.185M5.05 11.078h2.12a.186.186 0 00.185-.185V9.006a.186.186 0 00-.185-.186H5.05a.185.185 0 00-.184.185v1.888c0 .102.083.185.185.185m0 2.716h2.12a.186.186 0 00.185-.186V11.72a.185.185 0 00-.185-.185H5.05a.185.185 0 00-.184.185v1.888c0 .101.083.185.185.185m5.07 2.687h2.119a.186.186 0 00.186-.186v-1.887a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.954 0h2.118a.186.186 0 00.186-.186v-1.887a.186.186 0 00-.186-.186h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185M2.096 11.078h2.12a.186.186 0 00.185-.185V9.006a.186.186 0 00-.186-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.083.185.184.185m0 2.716h2.12a.186.186 0 00.185-.186V11.72a.185.185 0 00-.185-.185h-2.12a.185.185 0 00-.184.185v1.888c0 .101.083.185.184.185m16.867-5.765a5.3 5.3 0 00-.408-1.72 4.56 4.56 0 00-.98-1.5 4.61 4.61 0 00-1.5-.98 5.3 5.3 0 00-1.72-.408c-.197-.01-.398-.016-.6-.016-.196 0-.395.006-.59.016a5.3 5.3 0 00-1.72.408 4.61 4.61 0 00-1.5.98 4.56 4.56 0 00-.98 1.5 5.3 5.3 0 00-.408 1.72 8.79 8.79 0 00-.016.6c0 .202.006.403.016.6a5.3 5.3 0 00.408 1.72 4.56 4.56 0 00.98 1.5 4.61 4.61 0 001.5.98 5.3 5.3 0 001.72.408c.195.01.394.016.59.016.202 0 .403-.006.6-.016a5.3 5.3 0 001.72-.408 4.61 4.61 0 001.5-.98 4.56 4.56 0 00.98-1.5 5.3 5.3 0 00.408-1.72c.01-.197.016-.398.016-.6 0-.196-.006-.395-.016-.59z"/></svg>Docker</span>
-              <span class="sk"><svg class="sk-icon" viewBox="0 0 24 24" fill="#F05032" aria-hidden="true"><path d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.658 2.66c.645-.223 1.387-.078 1.9.435.721.72.721 1.884 0 2.604-.719.719-1.881.719-2.6 0-.539-.541-.674-1.337-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348.713.721.713 1.883 0 2.6-.719.721-1.889.721-2.609 0-.719-.719-.719-1.879 0-2.598.182-.18.387-.316.605-.406V8.835c-.217-.091-.424-.222-.6-.401-.545-.545-.676-1.342-.396-2.009L7.636 3.67 .45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477c.604.604 1.582.604 2.186 0l10.43-10.43c.605-.603.605-1.582 0-2.187"/></svg>Git / GitHub</span>
-            </div>
-          </div>
-          <div class="skill-group reveal">
-            <h4 class="skill-group-label">AI / ML</h4>
-            <div class="skill-tags">
-              <span class="sk">Gemini API</span>
-              <span class="sk">LLM Orchestration</span>
-              <span class="sk">Multi-agent Pipelines</span>
-              <span class="sk">Prompt Engineering</span>
-              <span class="sk">Statistical Modeling</span>
-              <span class="sk">Pandas</span>
-              <span class="sk">NumPy</span>
-            </div>
-          </div>
-          <div class="skill-group reveal">
-            <h4 class="skill-group-label">Tools</h4>
-            <div class="skill-tags">
-              <span class="sk">Postman</span>
-              <span class="sk">MetaTrader 5</span>
-              <span class="sk">Google Maps API</span>
-              <span class="sk">VS Code</span>
-            </div>
-          </div>
-        </div>
 
-        <!-- Core CS Coursework -->
-        <div class="coursework reveal">
-          <span class="coursework-label">Currently studying</span>
-          <div class="coursework-tags">
-            <span class="sk sk-dim">Data Structures & Algorithms</span>
-            <span class="sk sk-dim">Operating Systems (Java)</span>
-            <span class="sk sk-dim">Data Analytics (Python)</span>
-            <span class="sk sk-dim">Database Design</span>
-            <span class="sk sk-dim">System Design Fundamentals</span>
+          <!-- Backend -->
+          <div>
+            <h3 class="skills-category-title">Backend</h3>
+            <div class="skills-list">
+              <span class="pill">Node.js</span>
+              <span class="pill">Express.js</span>
+              <span class="pill">FastAPI</span>
+              <span class="pill">REST API Design</span>
+              <span class="pill">WebSockets</span>
+              <span class="pill">OAuth / JWT</span>
+            </div>
           </div>
-        </div>
 
-      </div>
-    </section>
-
-    <!-- ── EDUCATION ──────────────────────────────────────────── -->
-    <section class="section" id="education">
-      <div class="wrap">
-
-        <header class="section-hd reveal">
-          <span class="eyebrow">Education</span>
-          <h2 class="section-title">Academic background</h2>
-        </header>
-
-        <div class="edu-grid">
-          <div class="edu-card reveal">
-            <span class="edu-year">2025 – 2029</span>
-            <h3 class="edu-school">Scaler School of Technology</h3>
-            <p class="edu-degree">B.Tech in Computer Science & AI</p>
-            <p class="edu-note">Bengaluru · In-person engineering residency</p>
+          <!-- Data -->
+          <div>
+            <h3 class="skills-category-title">Data</h3>
+            <div class="skills-list">
+              <span class="pill">PostgreSQL</span>
+              <span class="pill">Redis</span>
+              <span class="pill">MongoDB</span>
+              <span class="pill">Supabase</span>
+            </div>
           </div>
-          <div class="edu-card reveal">
-            <span class="edu-year">2025 – 2029</span>
-            <h3 class="edu-school">BITS Pilani</h3>
-            <p class="edu-degree">Bachelor of Science in Computer Science</p>
-            <p class="edu-note">Online program · Concurrent dual enrollment</p>
+
+          <!-- Infra -->
+          <div>
+            <h3 class="skills-category-title">Infra</h3>
+            <div class="skills-list">
+              <span class="pill">Docker</span>
+              <span class="pill">Git / GitHub</span>
+              <span class="pill">Linux</span>
+              <span class="pill">Vercel</span>
+              <span class="pill">Render</span>
+            </div>
           </div>
-        </div>
 
-      </div>
-    </section>
-
-    <!-- ── CONTACT ────────────────────────────────────────────── -->
-    <section class="section contact-section" id="contact" aria-labelledby="contact-title">
-      <div class="wrap">
-        <div class="contact-inner reveal">
-          <span class="eyebrow">Contact</span>
-          <h2 class="section-title" id="contact-title">Let's talk.</h2>
-          <p class="contact-desc">
-            Open to backend internships, AI developer roles, and open source collaborations.
-            Based in Bengaluru — available for remote roles.
-          </p>
-          <div class="contact-links" role="list">
-            <a href="mailto:hjsudarshanpatil@gmail.com" class="contact-link" role="listitem">
-              <span class="contact-icon" aria-hidden="true">✉</span>
-              hjsudarshanpatil@gmail.com
-            </a>
-            <a href="https://www.linkedin.com/in/sudarshan-patil-hj259227" target="_blank" rel="noopener"
-              class="contact-link" role="listitem">
-              <span class="contact-icon" aria-hidden="true">in</span>
-              linkedin.com/in/sudarshan-patil-hj259227
-            </a>
-            <a href="https://github.com/Sudarshan25092007" target="_blank" rel="noopener" class="contact-link"
-              role="listitem">
-              <span class="contact-icon contact-icon-svg" aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path
-                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
-                </svg>
-              </span>
-              github.com/Sudarshan25092007
-            </a>
-            <a href="https://leetcode.com/Sudarshan_patil_h_j/" target="_blank" rel="noopener" class="contact-link"
-              role="listitem">
-              <span class="contact-icon" aria-hidden="true">&lt;/&gt;</span>
-              LeetCode profile
-            </a>
+          <!-- Core -->
+          <div>
+            <h3 class="skills-category-title">Core</h3>
+            <div class="skills-list">
+              <span class="pill">System Design</span>
+              <span class="pill">Concurrent Systems</span>
+              <span class="pill">TCP Sockets</span>
+              <span class="pill">DB Optimization</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
-
   </main>
 
-  <!-- ── FOOTER ─────────────────────────────────────────────── -->
-  <footer class="footer">
-    <div class="wrap footer-inner">
-      <span>© 2026 Sudarshan Patil H J &nbsp;·&nbsp; Bengaluru, India</span>
-      <a href="https://sudarshan25092007.github.io/portfolio/"
-        class="footer-link">sudarshan25092007.github.io/portfolio</a>
+  <!-- ── CONTACT & FOOTER ────────────────────────────────────── -->
+  <footer class="footer-section" id="contact">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-left">
+          <h2>Let's build something reliable.</h2>
+          <p>
+            Open to Backend Infrastructure internships and open-source collaborations. Based in Bengaluru, India.
+          </p>
+        </div>
+        
+        <div class="footer-links">
+          <a href="mailto:hjsudarshanpatil@gmail.com" class="footer-link-item">
+            <span class="footer-link-icon">✉</span> hjsudarshanpatil@gmail.com
+          </a>
+          <a href="https://linkedin.com/in/sudarshan-patil-hj259227" target="_blank" rel="noopener" class="footer-link-item">
+            <span class="footer-link-icon">in</span> linkedin.com/in/sudarshan-patil-hj259227
+          </a>
+          <a href="https://github.com/Sudarshan25092007" target="_blank" rel="noopener" class="footer-link-item">
+            <span class="footer-link-icon">git</span> github.com/Sudarshan25092007
+          </a>
+          <a href="https://leetcode.com/Sudarshan_patil_h_j" target="_blank" rel="noopener" class="footer-link-item">
+            <span class="footer-link-icon">lc</span> leetcode.com/Sudarshan_patil_h_j
+          </a>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <span>© 2026 Sudarshan Patil H J</span>
+        <span>Built with Vanilla HTML & CSS</span>
+      </div>
     </div>
   </footer>
 
+  <!-- ── SCRIPTS (IntersectionObserver + Scroll Handler) ────── -->
   <script>
-    // ── Reveal on scroll ───────────────────────────────────────
-    const reveals = document.querySelectorAll('.reveal');
-    const revealObserver = new IntersectionObserver(
-      (entries) => entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('in-view');
-          revealObserver.unobserve(e.target);
-        }
-      }),
-      { threshold: 0.08, rootMargin: '0px 0px -32px 0px' }
-    );
-    reveals.forEach(el => revealObserver.observe(el));
-
-    // ── Nav scroll state ──────────────────────────────────────
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('nav-scrolled', window.scrollY > 48);
-    }, { passive: true });
-
-    // ── Active nav link highlighting ───────────────────────────
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-link');
-    const linkObserver = new IntersectionObserver(
-      (entries) => {
+    document.addEventListener("DOMContentLoaded", () => {
+      // 1. Scroll-Reveal Logic via IntersectionObserver
+      const revealElements = document.querySelectorAll(".reveal");
+      
+      const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            navLinks.forEach(link => {
-              link.classList.toggle(
-                'nav-link-active',
-                link.getAttribute('href') === '#' + entry.target.id
-              );
-            });
+            entry.target.classList.add("active");
+            revealObserver.unobserve(entry.target);
           }
         });
-      },
-      { rootMargin: '-40% 0px -55% 0px' }
-    );
-    sections.forEach(s => linkObserver.observe(s));
+      }, {
+        threshold: 0.05,
+        rootMargin: "0px 0px -40px 0px"
+      });
 
-    // ── Keyboard focus for nav links ───────────────────────────
-    navLinks.forEach(link => {
-      link.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          link.click();
+      revealElements.forEach(el => revealObserver.observe(el));
+
+      // 2. Sticky Header scroll state
+      const header = document.getElementById("header");
+      
+      const checkScroll = () => {
+        if (window.scrollY > 20) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
         }
+      };
+
+      window.addEventListener("scroll", checkScroll);
+      checkScroll(); // Trigger initially
+
+      // 3. Navigation link highlighting based on section scroll
+      const sections = document.querySelectorAll("section[id], footer[id]");
+      const navLinks = document.querySelectorAll(".nav-link");
+
+      window.addEventListener("scroll", () => {
+        let currentSectionId = "";
+        const scrollPosition = window.scrollY + 100; // Offset for accuracy
+
+        sections.forEach(sec => {
+          const top = sec.offsetTop;
+          const height = sec.offsetHeight;
+          if (scrollPosition >= top && scrollPosition < top + height) {
+            currentSectionId = sec.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${currentSectionId}`) {
+            link.classList.add("active");
+          }
+        });
       });
     });
   </script>
 </body>
-
 </html>
